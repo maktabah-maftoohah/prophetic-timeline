@@ -268,3 +268,18 @@
   font-weight: 600;
   text-align: center;
 }
+.hadith-badge a.hadith-link {
+  color: #34d399;
+}
+
+.hadith-badge a.hadith-link:hover {
+  color: #6ee7b7;
+}
+
+.source-tag a.hadith-link {
+  color: var(--primary);
+}
+
+.source-tag a.hadith-link:hover {
+  color: var(--primary-hover);
+}

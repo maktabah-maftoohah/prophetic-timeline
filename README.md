@@ -54,7 +54,7 @@ Aplikasi ini dibina berasaskan kajian bersejarah ahli falak dan matematik Mesir 
    - Penunjuk titik kepadatan peristiwa. Klik mana-mana bulan untuk terus melompat ke paparan bulanan.
 
 4. **🪐 Visualisasi Falak Interaktif (Astro Simulator)**:
-   - **Simulator Gerhana Matahari di Madinah (27 Januari 632 M / 29 Syawal 10 H)**: Simulasi kanvas gerhana anulus (litupan 87% / 10.5 jari) pada pagi kewafatan putera Nabi ﷺ, Ibrahim, lengkap dengan hadis Sahih al-Bukhari.
+   - **Simulator Gerhana Matahari di Madinah (27 Januari 632 M / 29 Syawal 10 H)**: Simulasi kanvas gerhana anulus (litupan 87% / 10.5 jari) pada pagi kewafatan putera Nabi ﷺ, Ibrahim, lengkap dengan hadis [Sahih al-Bukhari (No. 1043)](https://maktabah-maftoohah.github.io/sahih-al-bukhari/1043).
    - **Rajah Buruj Qiran Zuhal & Musytari (1 April 571 M)**: Paparan SVG buruj Scorpio (*al-Aqrab*) menunjukkan kedudukan Zuhal ($215^\circ 17'$) dan Musytari ($215^\circ 02'$) sebelum kelahiran Nabi ﷺ.
 
 5. **🔢 Kalkulator Jarak Hari Interaktif (Day-Count Calculator)**:

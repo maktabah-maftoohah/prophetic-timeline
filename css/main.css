@@ -363,6 +363,19 @@ body {
   margin-right: 0.5rem;
 }
 
+.hadith-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.hadith-link:hover {
+  color: var(--primary-hover);
+  opacity: 0.85;
+}
+
 /* Footer */
 .app-footer {
   background-color: var(--bg-surface);

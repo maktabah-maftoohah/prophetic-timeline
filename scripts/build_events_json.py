@@ -370,7 +370,7 @@ def build_events():
                 "summary_ar": "قدم أبرهة الحبشي بجيش عظيم تتقدمه الفيلة لهدم الكعبة، فحبس الله الفيل محموداً، وأرسل عليهم طيراً أبابيل ترميهم بحجارة من سجيل فجعلهم كعصف مأكول. ثبت عند المسعودي وصولهم مكة يوم الاثنين لثلاث عشرة ليلة بقيت من المحرم سنة ٨٨٢ للإسكندر، وكان مولد النبي ﷺ بعدها بـ ٥٠ يوماً في ٩ ربيع الأول.",
                 "classical_source": "Al-Mas'udi (Muruj al-Dhahab, MS BNF 714, fol. 279); Ibn Hisham; Mahmoud-Bey (1858, p. 139); Nata'ij al-Afham (p. 19)",
                 "quran_refs": ["105:1-5"],
-                "hadith_refs": ["Sahih al-Bukhari"]
+                "hadith_refs": ["Sahih al-Bukhari (Hadith 2434)"]
             },
             "astronomical_meta": {
                 "type": "historical_anchor",
@@ -794,7 +794,7 @@ def build_events():
                 "summary_ar": "فتح النبي ﷺ مكة المكرمة في رمضان سنة ٨ هـ، وحلل البيروني في الآثار الباقية وقوع هذا الفتح في السنة الثالثة والعشرين من دور النسيء الجاهلي.",
                 "classical_source": "Al-Biruni (al-Athar al-Baqiya); Abu Ma'shar; Mahmoud-Bey (1858, p. 119); Nata'ij al-Afham (p. 21)",
                 "quran_refs": ["48:1", "110:1-3"],
-                "hadith_refs": ["Sahih al-Bukhari"]
+                "hadith_refs": ["Sahih al-Bukhari (Hadith 4275)"]
             },
             "astronomical_meta": None
         },

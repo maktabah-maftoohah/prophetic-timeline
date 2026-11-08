@@ -911,7 +911,13 @@ export class TimelineView {
           <div class="modal-hadith-box">
             <h4>📜 Hadis & Riwayat Berkaitan:</h4>
             <ul>
-              ${ev.narrative.hadith_refs.map(ref => `<li>${ref}</li>`).join("")}
+              ${ev.narrative.hadith_refs.map(ref => {
+                const match = ref.match(/Sahih al-Bukhari[^\d]*(\d+)/i);
+                if (match) {
+                  return `<li><a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/${match[1]}" target="_blank" rel="noopener noreferrer" class="hadith-link">${ref} ↗</a></li>`;
+                }
+                return `<li>${ref}</li>`;
+              }).join("")}
             </ul>
           </div>
         ` : ""}
