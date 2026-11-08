@@ -3,7 +3,7 @@
  * 12-Month bird's-eye view showing event distribution across any given year.
  */
 
-import { julianToJDN, getWeekday, getMonthName } from "../core/calendar-engine.js";
+import { julianToJDN, getWeekday, getMonthName, getMultiCalendarSnapshot } from "../core/calendar-engine.js";
 import { eventStore } from "../core/event-store.js";
 import { i18n } from "../core/i18n.js";
 
@@ -23,8 +23,12 @@ export class CalendarYearView {
     if (!this.container) return;
     const lang = i18n.getLang();
 
-    const elephantYear = this.currentYear - 571 + 1;
-    const elephantLabel = elephantYear >= 1 ? `Tahun ${elephantYear} Gajah` : "Pra-Tahun Gajah";
+    const midJdn = julianToJDN(this.currentYear, 6, 15);
+    const snapMid = getMultiCalendarSnapshot(midJdn, lang);
+    const elephantLabel = snapMid.elephantEra.label;
+    const hijriLabel = snapMid.hijri.yearType === "BH"
+      ? `Tahun ${snapMid.hijri.year} Sebelum Hijrah (${snapMid.hijri.year} BH)`
+      : `Tahun ${snapMid.hijri.year} Hijrah (${snapMid.hijri.year} AH)`;
 
     this.container.innerHTML = `
       <div class="year-view-wrapper">
@@ -32,7 +36,7 @@ export class CalendarYearView {
           <button id="year-prev-btn" class="btn btn-sm btn-outline">◀ Tahun Sebelum</button>
           <div class="year-center-title">
             <h2>Tahun ${this.currentYear} Masihi (Julian)</h2>
-            <div class="year-sub">${elephantLabel} • ${this.currentYear >= 622 ? `Tahun ${this.currentYear - 622 + 1} Hijrah` : `Tahun ${622 - this.currentYear + 1} Sebelum Hijrah`}</div>
+            <div class="year-sub">${elephantLabel} • ${hijriLabel}</div>
           </div>
           <button id="year-next-btn" class="btn btn-sm btn-outline">Tahun Selepas ▶</button>
         </div>

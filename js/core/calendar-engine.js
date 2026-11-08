@@ -200,15 +200,22 @@ export function getDaysInHijriMonth(year, month, isBH = false) {
 
 /**
  * Convert JDN to Elephant Era ('Am al-Fil) Year
- * Year 1 of the Elephant starts in 571 CE / 53 BH.
+ * In classical Arab historiography, the Elephant Era is counted in lunar years
+ * commencing from Muharram 53 BH (Tahun 1 Gajah = 571 CE) through the 63rd year (11 AH = 632 CE).
  */
 export function jdnToElephantEra(jdn) {
-  const julian = jdnToJulian(jdn);
-  const elephantYear = julian.year - 571 + 1;
+  const hijri = jdnToHijri(jdn);
+  let elephantYear = 0;
+  if (hijri.isBH) {
+    elephantYear = 53 - hijri.year + 1;
+  } else {
+    elephantYear = 52 + hijri.year;
+  }
+  const isValidEra = elephantYear >= 1 && elephantYear <= 100;
   return {
     year: elephantYear,
-    isValidEra: elephantYear >= 1 && elephantYear <= 100,
-    label: elephantYear >= 1 ? `Tahun ${elephantYear} Gajah` : `Pra-Tahun Gajah`
+    isValidEra,
+    label: isValidEra ? `Tahun ${elephantYear} Gajah` : `Pra-Tahun Gajah`
   };
 }
 

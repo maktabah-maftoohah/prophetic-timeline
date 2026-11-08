@@ -406,9 +406,9 @@
       "date": {
         "julian_year": 571,
         "display_date": {
-          "ms": "Selasa, 19 Mac 571 M (15:11 waktu Madinah)",
-          "en": "Tuesday, 19 March 571 CE (15:11 Medina mean time)",
-          "ar": "الثلاثاء، ١٩ مارس ٥٧١ م (الساعة ١٥:١١ بالتوقيت المحلي)"
+          "ms": "Khamis, 19 Mac 571 M (15:11 waktu Madinah)",
+          "en": "Thursday, 19 March 571 CE (15:11 Medina mean time)",
+          "ar": "الخميس، ١٩ مارس ٥٧١ م (الساعة ١٥:١١ بالتوقيت المحلي)"
         },
         "jewish_am": "Nisan 4331 AM",
         "seleucid_alexander": "Adar 882 Iskandar",
@@ -420,7 +420,7 @@
           "year": 1,
           "label": "Tahun 1 Gajah"
         },
-        "weekday": "Selasa",
+        "weekday": "Khamis",
         "jdn": 1929693
       },
       "title": {
@@ -463,7 +463,7 @@
           "year": 1,
           "label": "Tahun 1 Gajah"
         },
-        "weekday": "Ahad / Isnin",
+        "weekday": "Isnin",
         "jdn": 1929704
       },
       "title": {
@@ -493,9 +493,9 @@
       "date": {
         "julian_year": 571,
         "display_date": {
-          "ms": "Jumaat, 11 April 571 M (9:41 malam waktu Makkah)",
-          "en": "Friday, 11 April 571 CE (9:41 PM mean Mecca time)",
-          "ar": "الجمعة، ١١ أبريل ٥٧١ م (الساعة ٩:٤١ مساء بتوقيت مكة)"
+          "ms": "Sabtu, 11 April 571 M (9:41 malam waktu Makkah)",
+          "en": "Saturday, 11 April 571 CE (9:41 PM mean Mecca time)",
+          "ar": "السبت، ١١ أبريل ٥٧١ م (الساعة ٩:٤١ مساء بتوقيت مكة)"
         },
         "jewish_am": "Nisan 4331 AM",
         "seleucid_alexander": "Nisan 882 Iskandar",
@@ -507,7 +507,7 @@
           "year": 1,
           "label": "Tahun 1 Gajah"
         },
-        "weekday": "Jumaat (malam)",
+        "weekday": "Sabtu",
         "jdn": 1929716
       },
       "title": {
@@ -596,7 +596,7 @@
           "year": 3,
           "label": "Tahun 3 Gajah (Umur 2 tahun 2–3 bulan)"
         },
-        "weekday": "Tengah hari",
+        "weekday": "Rabu",
         "jdn": 1930560
       },
       "title": {
@@ -664,9 +664,9 @@
       "date": {
         "julian_year": 610,
         "display_date": {
-          "ms": "Awal Februari 610 Masihi",
-          "en": "Early February 610 CE",
-          "ar": "أوائل فبراير ٦١٠ م / رمضان ١٣ ق.هـ"
+          "ms": "Isnin, 9 Februari 610 Masihi",
+          "en": "Monday, 9 February 610 CE",
+          "ar": "الاثنين، ٩ فبراير ٦١٠ م / رمضان ١٣ ق.هـ"
         },
         "jewish_am": "Shebat 4370 AM",
         "seleucid_alexander": "921–922 Iskandar (Shebat)",
@@ -687,9 +687,9 @@
         "ar": "المبعث النبوي الشريف ونزول الوحي بغار حراء"
       },
       "narrative": {
-        "summary_ms": "Nabi Muhammad ﷺ dilantik menjadi Rasul pada usia genap 40 tahun qamari (bersamaan tepat 14,174 hari dari hari kelahiran). Mengira 14,174 hari dari 20 April 571 M mendarat tepat pada awal Februari 610 M (hari Isnin). Suasana dingin musim sejuk Hijaz pada bulan Februari digambarkan dalam wahyu awal 'Wahai orang yang berselimut!' (Surah al-Muddaththir).",
-        "summary_en": "Prophet Muhammad (ﷺ) received his first revelation at age 40 lunar years (exactly 14,174 days from Mawlid), landing in early February 610 CE on a Monday. The winter cold of February is reflected in the early Meccan command: 'O you wrapped up in garments!' (Surah al-Muddaththir 74:1).",
-        "summary_ar": "بعث النبي ﷺ على رأس أربعين سنة قمرية من مولده الشريف، وهي تعادل بالحساب الفلكي الدقيق ١٤١٧٤ يوماً، تنتهي في أوائل فبراير ٦١٠ م في يوم الاثنين مصداقاً لحديث مسلم: (ذاك يوم ولدت فيه ويوم بعثت فيه). وتدل آيات المدثر على شدة برد الشتاء في مكة وقتئذ.",
+        "summary_ms": "Nabi Muhammad ﷺ dilantik menjadi Rasul pada usia genap 40 tahun qamari (bersamaan tepat 14,175 hari dari hari kelahiran). Mengira 14,175 hari dari 20 April 571 M mendarat tepat pada Isnin 9 Februari 610 M. Suasana dingin musim sejuk Hijaz pada bulan Februari digambarkan dalam wahyu awal 'Wahai orang yang berselimut!' (Surah al-Muddaththir).",
+        "summary_en": "Prophet Muhammad (ﷺ) received his first revelation at age 40 lunar years (exactly 14,175 days from Mawlid), landing on Monday, 9 February 610 CE. The winter cold of February is reflected in the early Meccan command: 'O you wrapped up in garments!' (Surah al-Muddaththir 74:1).",
+        "summary_ar": "بعث النبي ﷺ على رأس أربعين سنة قمرية من مولده الشريف، وهي تعادل بالحساب الفلكي الدقيق ١٤١٧٥ يوماً، تنتهي في يوم الاثنين ٩ فبراير ٦١٠ م مصداقاً لحديث مسلم: (ذاك يوم ولدت فيه ويوم بعثت فيه). وتدل آيات المدثر على شدة برد الشتاء في مكة وقتئذ.",
         "classical_source": "Sahih Muslim; Surah al-Muddaththir; Mahmoud-Bey (1858, p. 148); Nata'ij al-Afham (p. 31)",
         "quran_refs": [
           "96:1-5",
@@ -702,7 +702,7 @@
       },
       "astronomical_meta": {
         "type": "lifespan_interval",
-        "day_count_from_mawlid": 14174,
+        "day_count_from_mawlid": 14175,
         "equivalent_years": "40 lunar years (40 x 354.367 days)"
       }
     },
@@ -736,9 +736,9 @@
         "ar": "الهجرة النبوية الشريفة ودخول قباء والمدينة المنورة"
       },
       "narrative": {
-        "summary_ms": "Ketibaan Rasulullah ﷺ di Quba di pinggir Madinah pada hari Isnin 8 Rabiulawal 1 H (20 September 622 M), genap 18,780 hari dari hari kelahiran (53 tahun qamari). Hadis Sahih al-Bukhari & Muslim merekodkan bahawa orang Yahudi Madinah sedang berpuasa pada hari ketibaan baginda kerana merayakan pembebasan Nabi Musa daripada Firaun. Pengiraan kalendar Yahudi rabani membuktikan 10 Tishrei 4383 AM (Yom Kippur / Hari Penebusan Dosa) bertepatan tepat dengan hari Isnin 20 September 622 M, memberikan bukti astronomi saling-mengabsahkan yang kukuh.",
-        "summary_en": "The Prophet's arrival at Quba on Monday, 8 Rabi' al-Awwal 1 AH (20 September 622 CE), exactly 18,780 days from Mawlid (53 lunar years). Sahih hadiths record Medina Jews were fasting on that day in commemoration of Moses. Rabbinic calendar calculation proves 10 Tishrei 4383 AM (Yom Kippur) coincided precisely with Monday, 20 September 622 CE.",
-        "summary_ar": "دخل النبي ﷺ قباء والمدينة المنورة يوم الاثنين ٨ ربيع الأول سنة ١ هـ الموافق ٢٠ سبتمبر ٦٢٢ م، بعد ١٨٧٨٠ يوماً من مولده. وافق هذا اليوم بالدقة الفلكية صوم يوم كيبور (عاشوراء اليهود: ١٠ تشرى ٤٣٨٣ للخليقة) الذي وجد النبي ﷺ يهود يثرب يصومونه شكراً لنجاة موسى عليه السلام.",
+        "summary_ms": "Ketibaan Rasulullah ﷺ di Quba di pinggir Madinah pada hari Isnin 8/9 Rabiulawal 1 H (20 September 622 M), genap 18,781 hari dari hari kelahiran (53 tahun qamari). Hadis Sahih al-Bukhari & Muslim merekodkan bahawa orang Yahudi Madinah sedang berpuasa pada hari ketibaan baginda kerana merayakan pembebasan Nabi Musa daripada Firaun. Pengiraan kalendar Yahudi rabani membuktikan 10 Tishrei 4383 AM (Yom Kippur / Hari Penebusan Dosa) bertepatan tepat dengan hari Isnin 20 September 622 M, memberikan bukti astronomi saling-mengabsahkan yang kukuh.",
+        "summary_en": "The Prophet's arrival at Quba on Monday, 8/9 Rabi' al-Awwal 1 AH (20 September 622 CE), exactly 18,781 days from Mawlid (53 lunar years). Sahih hadiths record Medina Jews were fasting on that day in commemoration of Moses. Rabbinic calendar calculation proves 10 Tishrei 4383 AM (Yom Kippur) coincided precisely with Monday, 20 September 622 CE.",
+        "summary_ar": "دخل النبي ﷺ قباء والمدينة المنورة يوم الاثنين ٨/٩ ربيع الأول سنة ١ هـ الموافق ٢٠ سبتمبر ٦٢٢ م، بعد ١٨٧٨١ يوماً من مولده (٥٣ سنة قمرية). وافق هذا اليوم بالدقة الفلكية صوم يوم كيبور (عاشوراء اليهود: ١٠ تشرى ٤٣٨٣ للخليقة) الذي وجد النبي ﷺ يهود يثرب يصومونه شكراً لنجاة موسى عليه السلام.",
         "classical_source": "Sahih al-Bukhari; Sahih Muslim; C.L. Ideler; Mahmoud-Bey (1858, p. 116); Nata'ij al-Afham (p. 23)",
         "quran_refs": [
           "9:40"
@@ -750,7 +750,7 @@
       },
       "astronomical_meta": {
         "type": "master_anchor",
-        "day_count_from_mawlid": 18780,
+        "day_count_from_mawlid": 18781,
         "equivalent_years": "53 lunar years (53 x 354.367 days)",
         "interfaith_synchronization": "8 Rabi' I 1 AH == 10 Tishrei 4383 AM (Yom Kippur) == Monday 20 September 622 CE"
       }
@@ -984,9 +984,9 @@
       "date": {
         "julian_year": 632,
         "display_date": {
-          "ms": "Isnin, 7 / 8 Jun 632 Masihi (Julian) [10 / 11 Jun 632 M (Gregorian)]",
-          "en": "Monday, 7 / 8 June 632 CE (Julian) [10 / 11 June 632 CE (Gregorian)]",
-          "ar": "الاثنين، ١٢ ربيع الأول ١١ هـ / ٧–٨ يونيو ٦٣٢ م"
+          "ms": "Isnin, 8 Jun 632 Masihi (Julian) [11 Jun 632 M (Gregorian)]",
+          "en": "Monday, 8 June 632 CE (Julian) [11 June 632 CE (Gregorian)]",
+          "ar": "الاثنين، ١٢/١٣ ربيع الأول ١١ هـ / ٨ يونيو ٦٣٢ م"
         },
         "jewish_am": "13/14 Sivan 4392 AM",
         "seleucid_alexander": "943 Iskandar (Haziran)",
@@ -1007,9 +1007,9 @@
         "ar": "وفاة خاتم الأنبياء والمرسلين نبينا محمد ﷺ بالمدينة المنورة"
       },
       "narrative": {
-        "summary_ms": "Kewafatan Rasulullah ﷺ pada waktu dhuha hari Isnin, 12 Rabiulawal 11 H. Jumlah tempoh hayat baginda dari hari kelahiran (20 April 571 M) hingga kewafatan (7/8 Jun 632 M) adalah tepat 22,329 hari. Kiraan matematik membuktikan: 22,329 / 354.367 = 63 tahun qamari dan 9 hari, atau 22,329 / 365.2422 = 61 tahun solar dan 48 hari. Ini mengabsahkan riwayat majoriti dalam Sahih al-Bukhari & Muslim (Sayyidatina Aisyah, Ibn Abbas, dan Anas) bahawa baginda wafat pada usia 63 tahun.",
-        "summary_en": "The passing of Prophet Muhammad (ﷺ) on Monday mid-morning, 12 Rabi' al-Awwal 11 AH. Total lifespan from Mawlid (20 April 571 CE) was exactly 22,329 days, which precisely equals 63 lunar years + 9 days (or 61 solar years + 48 days), fully validating the dominant consensus in Sahih al-Bukhari and Muslim that he lived 63 years.",
-        "summary_ar": "انتقل النبي ﷺ إلى الرفيق الأعلى ضحى يوم الاثنين ١٢ ربيع الأول سنة ١١ هـ. وبلغ مجموع أيام عمره الشريف من ولادته (٢٠ أبريل ٥٧١ م) إلى وفاته (٧–٨ يونيو ٦٣٢ م) تمام ٢٢٣٢٩ يوماً. وبالحساب: ٢٢٣٢٩ / ٣٥٤.٣٦٧ = ٦٣ سنة قمرية و٩ أيام، وهو مطابق تمام المطابقة لما في الصحيحين من إجماع الصحابة (عائشة وابن عباس وأنس) أنه ﷺ عاش ٦٣ سنة.",
+        "summary_ms": "Kewafatan Rasulullah ﷺ pada waktu dhuha hari Isnin, 12/13 Rabiulawal 11 H (8 Jun 632 M). Jumlah tempoh hayat baginda dari hari kelahiran (20 April 571 M) hingga kewafatan (8 Jun 632 M) adalah tepat 22,330 hari. Kiraan matematik membuktikan: 22,330 / 354.367 = 63 tahun qamari dan 9 hari, atau 22,330 / 365.2422 = 61 tahun solar dan 48 hari. Ini mengabsahkan riwayat majoriti dalam Sahih al-Bukhari & Muslim (Sayyidatina Aisyah, Ibn Abbas, dan Anas) bahawa baginda wafat pada usia 63 tahun.",
+        "summary_en": "The passing of Prophet Muhammad (ﷺ) on Monday mid-morning, 12/13 Rabi' al-Awwal 11 AH (8 June 632 CE). Total lifespan from Mawlid (20 April 571 CE) was exactly 22,330 days, which precisely equals 63 lunar years + 9 days (or 61 solar years + 48 days), fully validating the dominant consensus in Sahih al-Bukhari and Muslim that he lived 63 years.",
+        "summary_ar": "انتقل النبي ﷺ إلى الرفيق الأعلى ضحى يوم الاثنين ١٢/١٣ ربيع الأول سنة ١١ هـ الموافق ٨ يونيو ٦٣٢ م. وبلغ مجموع أيام عمره الشريف من ولادته (٢٠ أبريل ٥٧١ م) إلى وفاته تمام ٢٢٣٣٠ يوماً. وبالحساب: ٢٢٣٣٠ / ٣٥٤.٣٦٧ = ٦٣ سنة قمرية و٩ أيام، وهو مطابق تمام المطابقة لما في الصحيحين من إجماع الصحابة (عائشة وابن عباس وأنس) أنه ﷺ عاش ٦٣ سنة.",
         "classical_source": "Sahih al-Bukhari; Sahih Muslim; Ibn Ishaq; al-Biruni; Mahmoud-Bey (1858, p. 150); Nata'ij al-Afham (p. 33)",
         "quran_refs": [
           "3:144",
@@ -1022,9 +1022,9 @@
       },
       "astronomical_meta": {
         "type": "master_anchor",
-        "day_count_from_mawlid": 22329,
-        "lunar_lifespan": "63 lunar years and 9 days (22,329 / 354.367)",
-        "solar_lifespan": "61 solar years and 48 days (22,329 / 365.2422)"
+        "day_count_from_mawlid": 22330,
+        "lunar_lifespan": "63 lunar years and 9 days (22,330 / 354.367)",
+        "solar_lifespan": "61 solar years and 48 days (22,330 / 365.2422)"
       }
     },
     {

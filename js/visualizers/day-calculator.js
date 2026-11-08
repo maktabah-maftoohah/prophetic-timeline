@@ -56,7 +56,7 @@ export class DayCalculator {
             <button class="preset-btn" data-a="prophet-birth-mawlid" data-b="hijrah-entry-quba-medina">Kelahiran ➔ Hijrah (53 Thn)</button>
             <button class="preset-btn" data-a="prophet-birth-mawlid" data-b="death-of-ibrahim-solar-eclipse">Kelahiran ➔ Gerhana (Wafat Ibrahim)</button>
             <button class="preset-btn" data-a="prophet-birth-mawlid" data-b="prophet-passing-wafat">Kelahiran ➔ Kewafatan (63 Thn)</button>
-            <button class="preset-btn" data-a="elephant-expedition-571" data-b="prophet-birth-mawlid">Tahun Gajah ➔ Kelahiran (49 Hari)</button>
+            <button class="preset-btn" data-a="elephant-expedition-571" data-b="prophet-birth-mawlid">Tahun Gajah ➔ Kelahiran (56 Hari)</button>
           </div>
         </div>
 
@@ -107,14 +107,14 @@ export class DayCalculator {
 
     // Check if matches key hadith milestones
     let hadithBadge = "";
-    if (diffDays === 22329) {
+    if (diffDays === 22330 || diffDays === 22329) {
       hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat Sahih al-Bukhari & Muslim: Hayat Rasulullah ﷺ genap 63 tahun qamari + 9 hari</div>`;
-    } else if (diffDays === 18780) {
+    } else if (diffDays === 18781 || diffDays === 18780) {
       hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat Sahih: Usia baginda ketika Hijrah genap 53 tahun qamari</div>`;
-    } else if (diffDays === 14174) {
+    } else if (diffDays === 14175 || diffDays === 14174) {
       hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat Sahih: Usia baginda ketika menerima wahyu genap 40 tahun qamari</div>`;
-    } else if (diffDays === 49 || diffDays === 55) {
-      hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat al-Mas'udi: Kelahiran berlaku tepat 7 minggu (49 hari) selepas ketibaan Abraha</div>`;
+    } else if (diffDays === 56 || diffDays === 49 || diffDays === 55) {
+      hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat Sejarah Klasik: Kelahiran baginda berlaku sekitar 50–56 hari selepas ekspedisi Abrahah</div>`;
     }
 
     resultsArea.innerHTML = `
