@@ -689,3 +689,53 @@
     padding: 1.5rem 1.25rem;
   }
 }
+
+/* Multi-Language Dynamic Display */
+[data-lang-block] {
+  display: none !important;
+}
+
+html[data-lang="ms"] [data-lang-block="ms"],
+html[data-lang="en"] [data-lang-block="en"],
+html[data-lang="ar"] [data-lang-block="ar"] {
+  display: block !important;
+}
+
+html[data-lang="ms"] [data-lang-block="ms"].pillars-grid,
+html[data-lang="en"] [data-lang-block="en"].pillars-grid,
+html[data-lang="ar"] [data-lang-block="ar"].pillars-grid {
+  display: grid !important;
+}
+
+html[data-lang="ms"] [data-lang-block="ms"].ref-grid,
+html[data-lang="en"] [data-lang-block="en"].ref-grid,
+html[data-lang="ar"] [data-lang-block="ar"].ref-grid {
+  display: grid !important;
+}
+
+html[data-lang="ms"] [data-lang-block="ms"].hero-factsheet,
+html[data-lang="en"] [data-lang-block="en"].hero-factsheet,
+html[data-lang="ar"] [data-lang-block="ar"].hero-factsheet {
+  display: grid !important;
+}
+
+html[data-lang="ms"] [data-lang-block="ms"].badge-row,
+html[data-lang="en"] [data-lang-block="en"].badge-row,
+html[data-lang="ar"] [data-lang-block="ar"].badge-row {
+  display: flex !important;
+}
+
+/* RTL Typography & Alignment Refinements */
+[dir="rtl"] {
+  font-family: var(--font-arabic), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: right;
+}
+
+[dir="rtl"] .section-title {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .profile-back-link span:first-child {
+  transform: scaleX(-1);
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ms" dir="ltr" data-theme="dark">
+<html lang="ms" dir="ltr" data-theme="dark" data-lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,10 @@
           <img src="./assets/logo-icon.svg" alt="Prophetic Timeline Logo" class="brand-logo" width="44" height="44">
           <div>
             <h1 class="brand-title">Maktabah Maftoohah</h1>
-            <p class="brand-subtitle">Garis Masa & Kalendar Kenabian (Prophetic Timeline)</p>
+            <p class="brand-subtitle" data-lang-text
+               data-lang-ms="Garis Masa & Kalendar Kenabian (Prophetic Timeline)"
+               data-lang-en="Prophetic Timeline & Multi-Calendar Concordance"
+               data-lang-ar="الخط الزمني للسيرة النبوية ومطابقة التقاويم">Garis Masa & Kalendar Kenabian (Prophetic Timeline)</p>
           </div>
         </a>
       </div>
@@ -36,7 +39,10 @@
       <div class="header-controls">
         <a href="./index.html" class="profile-back-link" title="Kembali ke Aplikasi Garis Masa & Kalendar">
           <span>&larr;</span>
-          <span data-lang-text data-lang-ms="Kembali ke Garis Masa" data-lang-en="Back to Timeline" data-lang-ar="العودة إلى الخط الزمني">Kembali ke Garis Masa</span>
+          <span data-lang-text
+                data-lang-ms="Kembali ke Garis Masa"
+                data-lang-en="Back to Timeline"
+                data-lang-ar="العودة إلى الخط الزمني">Kembali ke Garis Masa</span>
         </a>
         <div class="lang-switch-group">
           <button class="lang-btn active" data-lang="ms" aria-label="Bahasa Melayu">MS</button>
@@ -58,59 +64,154 @@
           <div class="portrait-frame">
             <img src="./assets/mahmoud-pasha.jpg" alt="Mahmoud Pasha al-Falaki (1815–1885 M)" width="240" height="310" loading="eager">
           </div>
-          <p class="portrait-caption">
+          <p class="portrait-caption" data-lang-block="ms">
             <strong>Mahmoud Pasha al-Falaki</strong> (1815–1885 M)<br>
             <span class="portrait-credit">Potret Rasmi oleh Alexandre Quinet (1882)<br>Bibliothèque nationale de France (BnF)</span>
+          </p>
+          <p class="portrait-caption" data-lang-block="en">
+            <strong>Mahmoud Pasha al-Falaki</strong> (1815–1885 CE)<br>
+            <span class="portrait-credit">Official Portrait by Alexandre Quinet (1882)<br>Bibliothèque nationale de France (BnF)</span>
+          </p>
+          <p class="portrait-caption" data-lang-block="ar" dir="rtl">
+            <strong>محمود باشا الفلكي</strong> (١٨١٥–١٨٨٥ م)<br>
+            <span class="portrait-credit">صورة فوتوغرافية تاريخية بعدسة ألكسندر كينيه (١٨٨٢ م)<br>المكتبة الوطنية الفرنسية (BnF)</span>
           </p>
         </div>
 
         <div class="hero-info">
-          <p class="hero-arabic-title" dir="rtl">العَالِمُ الفَلَكِيُّ مَحْمُود بَاشَا الفَلَكِي (مَحْمُود بَيْ)</p>
-          <h2 class="hero-main-title">Mahmoud Pasha al-Falaki (1815–1885 M)</h2>
-          <p class="hero-subtitle">
-            Pelopor Astronomi Moden Dunia Arab, Perintis Arkeoastronomi, dan Pengasas Penyelarasan Falak Saintifik Kronologi Sirah Nabawiyyah.
-          </p>
-
-          <div class="badge-row">
-            <span class="chip chip-gold">1815–1885 M / 1230–1302 H</span>
-            <span class="chip chip-green">Menteri Kerja Raya & Pendidikan Mesir</span>
-            <span class="chip chip-blue">Presiden Persatuan Geografi Khidiwiyyah</span>
-            <span class="chip chip-gold">Balai Cerap Abbasiyyah</span>
-            <span class="chip chip-blue">Académie Royale de Belgique</span>
+          <!-- Malay Hero Info -->
+          <div data-lang-block="ms">
+            <p class="hero-arabic-title" dir="rtl">العَالِمُ الفَلَكِيُّ مَحْمُود بَاشَا الفَلَكِي (مَحْمُود بَيْ)</p>
+            <h2 class="hero-main-title">Mahmoud Pasha al-Falaki (1815–1885 M)</h2>
+            <p class="hero-subtitle">
+              Pelopor Astronomi Moden Dunia Arab, Perintis Arkeoastronomi, dan Pengasas Penyelarasan Falak Saintifik Kronologi Sirah Nabawiyyah.
+            </p>
+            <div class="badge-row">
+              <span class="chip chip-gold">1815–1885 M / 1230–1302 H</span>
+              <span class="chip chip-green">Menteri Kerja Raya & Pendidikan Mesir</span>
+              <span class="chip chip-blue">Presiden Persatuan Geografi Khidiwiyyah</span>
+              <span class="chip chip-gold">Balai Cerap Abbasiyyah</span>
+              <span class="chip chip-blue">Académie Royale de Belgique</span>
+            </div>
+            <div class="hero-factsheet">
+              <div class="fact-item">
+                <span class="fact-label">Nama Penuh</span>
+                <span class="fact-value">Mahmoud Ahmad Hamdi al-Falaki (محمود أحمد حمدي الفلكي)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Gelar di Eropah</span>
+                <span class="fact-value">Mahmoud-Bey (Chef de l'astronomie d'Égypte)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Kelahiran & Wafat</span>
+                <span class="fact-value">1815 M (Al-Hissa, Gharbia) – 19 Julai 1885 M (Kaherah)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Makam Persemadian</span>
+                <span class="fact-value">Tanah Perkuburan Makam Imam al-Shafi'i, Kaherah</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Karya Agung Kronologi</span>
+                <span class="fact-value"><em>Mémoire sur le calendrier arabe</em> (1858) / <em>نتائج الأفهام</em> (1887)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Pencapaian Utama</span>
+                <span class="fact-value">Penyelarasan 7 Kalendar & Pembuktian Falak Kelahiran Isnin 9 Rabiulawal</span>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-factsheet">
-            <div class="fact-item">
-              <span class="fact-label">Nama Penuh</span>
-              <span class="fact-value">Mahmoud Ahmad Hamdi al-Falaki (محمود أحمد حمدي الفلكي)</span>
+          <!-- English Hero Info -->
+          <div data-lang-block="en">
+            <p class="hero-arabic-title" dir="rtl">العَالِمُ الفَلَكِيُّ مَحْمُود بَاشَا الفَلَكِي (مَحْمُود بَيْ)</p>
+            <h2 class="hero-main-title">Mahmoud Pasha al-Falaki (1815–1885 CE)</h2>
+            <p class="hero-subtitle">
+              Pioneer of Modern Arab Astronomy, Founder of Archeoastronomy, and Architect of the Astronomical Harmonization of the Prophetic Sirah.
+            </p>
+            <div class="badge-row">
+              <span class="chip chip-gold">1815–1885 CE / 1230–1302 AH</span>
+              <span class="chip chip-green">Egyptian Minister of Public Works & Education</span>
+              <span class="chip chip-blue">President of Khedivial Geographical Society</span>
+              <span class="chip chip-gold">Abbasiya Observatory</span>
+              <span class="chip chip-blue">Royal Academy of Belgium</span>
             </div>
-            <div class="fact-item">
-              <span class="fact-label">Gelar & Jawatan Di Eropah</span>
-              <span class="fact-value">Mahmoud-Bey (Chef de l'astronomie d'Égypte)</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-label">Kelahiran & Wafat</span>
-              <span class="fact-value">1815 M (Al-Hissa, Gharbia) – 19 Julai 1885 M (Kaherah)</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-label">Makam Persemadian</span>
-              <span class="fact-value">Tanah Perkuburan Makam Imam al-Shafi'i, Kaherah</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-label">Karya Agung Kronologi</span>
-              <span class="fact-value"><em>Mémoire sur le calendrier arabe</em> (1858) / <em>نتائج الأفهام</em> (1887)</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-label">Pencapaian Utama</span>
-              <span class="fact-value">Penyelarasan 7 Kalendar & Pembuktian Falak Kelahiran Isnin 9 Rabiulawal</span>
+            <div class="hero-factsheet">
+              <div class="fact-item">
+                <span class="fact-label">Full Name</span>
+                <span class="fact-value">Mahmud Ahmad Hamdi al-Falaki (محمود أحمد حمدي الفلكي)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">European Designation</span>
+                <span class="fact-value">Mahmoud-Bey (Head of Astronomy & Geodesy)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Lifespan</span>
+                <span class="fact-value">1815 CE (Al-Hissa, Gharbia) – 19 July 1885 CE (Cairo)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Resting Place</span>
+                <span class="fact-value">Imam al-Shafi'i Mausoleum Cemetery, Cairo</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Masterwork</span>
+                <span class="fact-value"><em>Mémoire sur le calendrier arabe</em> (1858) / <em>Nata'ij al-Afham</em> (1887)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Key Achievement</span>
+                <span class="fact-value">7-Calendar Synchronization & Proof of Monday, 9 Rabi' al-Awwal Mawlid</span>
+              </div>
             </div>
           </div>
+
+          <!-- Arabic Hero Info -->
+          <div data-lang-block="ar" dir="rtl">
+            <p class="hero-arabic-title">العَالِمُ الفَلَكِيُّ مَحْمُود بَاشَا الفَلَكِي (مَحْمُود بَيْ)</p>
+            <h2 class="hero-main-title">محمود باشا الفلكي (١٨١٥–١٨٨٥ م)</h2>
+            <p class="hero-subtitle">
+              رائد علم الفلك والرياضيات الحديثة في العالم العربي، ومؤسس علم الفلك الأثري، وصاحب التحقيق الفلكي الشامل لمطابقة تقاويم السيرة النبوية المطهرة.
+            </p>
+            <div class="badge-row">
+              <span class="chip chip-gold">١٨١٥–١٨٨٥ م / ١٢٣٠–١٣٠٢ هـ</span>
+              <span class="chip chip-green">وزير الأشغال والمعارف بمصر</span>
+              <span class="chip chip-blue">رئيس الجمعية الجغرافية الخديوية</span>
+              <span class="chip chip-gold">مدير مرصد العباسية</span>
+              <span class="chip chip-blue">عضو الأكاديمية الملكية البلجيكية</span>
+            </div>
+            <div class="hero-factsheet">
+              <div class="fact-item">
+                <span class="fact-label">الاسم الكامل</span>
+                <span class="fact-value">محمود أحمد حمدي الفلكي (محمود باشا الفلكي)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">اللقب في المراجع الأوروبية</span>
+                <span class="fact-value">محمود بك (Mahmoud-Bey)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">المولد والوفاة</span>
+                <span class="fact-value">١٨١٥ م (قرية الحصة، الغربية) – ١٩ يوليو ١٨٨٥ م (القاهرة)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">المدفن</span>
+                <span class="fact-value">مقبرة الإمام الشافعي بالقاهرة</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">المصنف الأكبر</span>
+                <span class="fact-value">«نتائج الأفهام في تقويم العرب قبل الإسلام» (١٨٥٨ / ١٨٨٧ م)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">أعظم إنجاز</span>
+                <span class="fact-value">مطابقة ٧ تقاويم تاريخية وإثبات ميلاد النبي ﷺ يوم الاثنين ٩ ربيع الأول</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- Sticky Section Jump Navigation -->
-    <nav class="profile-nav-pills" aria-label="Navigasi Bahagian Profil">
+    <!-- Malay Nav Pills -->
+    <nav class="profile-nav-pills" aria-label="Navigasi Bahagian Profil" data-lang-block="ms">
       <a href="#overview" class="pill-link active">📌 Ringkasan</a>
       <a href="#biography" class="pill-link">📖 Riwayat Hidup</a>
       <a href="#prophetic-astronomy" class="pill-link">🔭 Falak Sirah Nabawiyyah</a>
@@ -120,19 +221,40 @@
       <a href="#references" class="pill-link">📚 Rujukan & Pautan Digital</a>
     </nav>
 
+    <!-- English Nav Pills -->
+    <nav class="profile-nav-pills" aria-label="Profile Section Navigation" data-lang-block="en">
+      <a href="#overview" class="pill-link active">📌 Overview</a>
+      <a href="#biography" class="pill-link">📖 Biography</a>
+      <a href="#prophetic-astronomy" class="pill-link">🔭 Prophetic Astronomy</a>
+      <a href="#mawlid-proof" class="pill-link">⚖️ Mawlid Harmonization</a>
+      <a href="#other-sciences" class="pill-link">🗺️ Alexandria & Dongola</a>
+      <a href="#life-timeline" class="pill-link">⏳ Life Timeline</a>
+      <a href="#references" class="pill-link">📚 References & Archives</a>
+    </nav>
+
+    <!-- Arabic Nav Pills -->
+    <nav class="profile-nav-pills" aria-label="روابط الانتقال السريع" data-lang-block="ar" dir="rtl">
+      <a href="#overview" class="pill-link active">📌 نظرة عامة</a>
+      <a href="#biography" class="pill-link">📖 السيرة والنشأة</a>
+      <a href="#prophetic-astronomy" class="pill-link">🔭 فلك السيرة النبوية</a>
+      <a href="#mawlid-proof" class="pill-link">⚖️ تحقيق المولد الشريف</a>
+      <a href="#other-sciences" class="pill-link">🗺️ الإسكندرية ودنقلة</a>
+      <a href="#life-timeline" class="pill-link">⏳ التسلسل الزمني</a>
+      <a href="#references" class="pill-link">📚 المراجع والوثائق</a>
+    </nav>
+
     <!-- SECTION 1: BIOGRAFI & RIWAYAT HIDUP -->
     <section class="content-section" id="biography">
-      <div class="section-header">
-        <h3 class="section-title">Riwayat Hidup & Perjalanan Keilmuan</h3>
-        <span class="section-tag">Biografi Lengkap (1815–1885 M)</span>
-      </div>
-
-      <!-- Malay Block -->
+      <!-- Malay Version -->
       <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Riwayat Hidup & Perjalanan Keilmuan</h3>
+          <span class="section-tag">Biografi Lengkap (1815–1885 M)</span>
+        </div>
+
         <p class="prose-text">
           <strong>Mahmoud Pasha al-Falaki</strong> (1815–1885 M / 1230–1302 H) merupakan tokoh agung dalam kebangkitan sains moden di dunia Arab dan Islam (era <em>al-Nahdah</em>). Dilahirkan di perkampungan al-Hissa (الحصة) di wilayah al-Gharbiyyah, Mesir, beliau dibesarkan dalam keluarga sederhana dan menjadi anak yatim pada usia sembilan tahun berikutan kematian bapanya. Beliau kemudiannya dibawa oleh abang sulungnya ke Iskandariah bagi mendapatkan pendidikan teratur.
         </p>
-
         <p class="prose-text">
           Pada tahun 1824, beliau memasuki Sekolah Tarsanah Laut (<em>Madrasat Dar al-Sina'ah al-Bahriyyah</em>) di Iskandariah yang diasaskan di bawah pembaharuan Muhammad Ali Pasha. Melihat kecerdasan luar biasanya dalam bidang hisab dan geometri, beliau dihantar menyambung pelajaran ke <strong>Madrasat al-Muhandiskhana</strong> (Kolej Kejuruteraan Diraja) di Bulaq, Kaherah. Beliau menamatkan pengajiannya pada tahun 1839 sebagai graduan terbaik (tempat pertama) dan terus dilantik sebagai tenaga pengajar matematik dan falak.
         </p>
@@ -146,24 +268,34 @@
         <p class="prose-text">
           Pada tahun 1842, ketika berusia 27 tahun, Mahmoud Pasha mencipta sejarah dengan menterjemah dan menerbitkan <strong>buku pertama mengenai kalkulus pembezaan dan kamiran (علم التفاضل والتكامل) ke dalam bahasa Arab</strong>, membuka pintu penyelidikan sains matematik lanjutan di Timur Tengah.
         </p>
-
         <p class="prose-text">
           Atas cadangan menteri pembaharuan tersohor Ali Pasha Mubarak, Mahmoud Pasha dipilih mengetuai misi saintifik Mesir ke Perancis pada tahun 1850. Selama 9 tahun di Paris dan Brussels, beliau menjalankan kajian cerapan falak dan mekanik cakerawala di <em>Observatoire de Paris</em> dan bekerjasama rapat dengan ahli falak dan statistik tersohor Belgium, Adolphe Quetelet. Beliau turut melaksanakan pengukuran geomagnet bumi di serata Eropah dan Mediterranean yang melayakkannya dilantik sebagai Ahli Koresponden <em>Académie Royale des Sciences de Belgique</em>.
         </p>
-
         <p class="prose-text">
           Sekembalinya ke Mesir pada 1859, beliau dilantik memimpin Balai Cerap Astronomi Abbasiyyah di Kaherah, memimpin ekspedisi gerhana matahari penuh ke Dongola (Sudan) pada 1860, memetakan topografi seluruh Mesir, dan menghasilkan peta arkeologi bandar Iskandariah purba (1872). Menjelang akhir hayatnya, beliau dilantik sebagai Menteri Kerja Raya (1882) dalam kabinet Mahmoud Sami al-Baroudi, Wakil Menteri Pendidikan (1882–1884), dan Presiden Persatuan Geografi Khidiwiyyah (1882–1885) sehinggalah beliau menghembuskan nafas terakhir pada 19 Julai 1885 di Kaherah.
         </p>
       </div>
 
-      <!-- English Block -->
-      <div data-lang-block="en" style="display:none;">
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Life & Scientific Journey</h3>
+          <span class="section-tag">Complete Biography (1815–1885 CE)</span>
+        </div>
+
         <p class="prose-text">
-          <strong>Mahmoud Pasha al-Falaki</strong> (1815–1885 CE / 1230–1302 AH), widely celebrated in European scholarly circles as <em>Mahmoud-Bey</em>, was the pioneer of modern astronomy, geodesy, and archeoastronomy in Egypt and the wider Arab world. Born in the rural village of al-Hissa (Gharbia Governorate), he was orphaned at age nine and brought to Alexandria by his elder brother to obtain an education.
+          <strong>Mahmoud Pasha al-Falaki</strong> (1815–1885 CE / 1230–1302 AH), widely celebrated in European scholarly circles as <em>Mahmoud-Bey</em>, was the pioneer of modern astronomy, geodesy, and archeoastronomy in Egypt and the wider Arab world during the 19th-century renaissance (<em>al-Nahdah</em>). Born in the rural village of al-Hissa (Gharbia Governorate), he was orphaned at age nine and brought to Alexandria by his elder brother to obtain an education.
         </p>
         <p class="prose-text">
-          After completing his early training at the Alexandria Naval Arsenal School (<em>Dar al-Sina'ah</em>), he entered Cairo's prestigious Royal Engineering College (<em>al-Muhandiskhana</em>) at Bulaq. He graduated at the head of his class in 1839 and was promptly retained as a professor of mathematics and astronomy. In 1842, at just twenty-seven years of age, he published the <strong>first-ever Arabic textbook on Differential and Integral Calculus</strong>.
+          After completing his early training at the Alexandria Naval Arsenal School (<em>Dar al-Sina'ah</em>), he entered Cairo's prestigious Royal Engineering College (<em>al-Muhandiskhana</em>) at Bulaq. He graduated at the head of his class in 1839 and was promptly appointed professor of mathematics and astronomy. In 1842, at just twenty-seven years of age, he published the <strong>first-ever Arabic textbook on Differential and Integral Calculus</strong>.
         </p>
+
+        <div class="quote-callout">
+          <p class="quote-arabic" dir="rtl">«إِنَّ الحِسَابَ الفَلَكِيَّ القَاطِعَ هُوَ المِيزَانُ العَدْلُ الَّذِي تَتَطَابَقُ فِيهِ الشَّوَاهِدُ التَّارِيخِيَّةُ مَعَ سُنَنِ اللَّهِ فِي الكَوْنِ»</p>
+          <p class="quote-trans">"Decisive astronomical computation is the righteous scale wherein historical testimonies harmonize flawlessly with divine cosmic laws."</p>
+          <p class="quote-source">— Preface to <em>Nata'ij al-Afham</em> (1887 CE)</p>
+        </div>
+
         <p class="prose-text">
           In 1850, on the recommendation of education reformer Ali Pasha Mubarak, he was selected for an intensive 9-year academic mission to France and Belgium. Stationed at the Paris Observatory and Brussels Royal Observatory, he worked alongside leading European astronomers such as Adolphe Quetelet. His groundbreaking surveys of terrestrial geomagnetism across the Mediterranean earned him corresponding membership in the <em>Académie Royale des Sciences, des Lettres et des Beaux-Arts de Belgique</em>.
         </p>
@@ -172,14 +304,26 @@
         </p>
       </div>
 
-      <!-- Arabic Block -->
-      <div data-lang-block="ar" style="display:none;" dir="rtl">
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">السيرة الذاتية والمسيرة العلمية</h3>
+          <span class="section-tag">ترجمة وافية (١٨١٥–١٨٨٥ م)</span>
+        </div>
+
         <p class="prose-text">
           يُعد <strong>محمود باشا الفلكي</strong> (١٨١٥–١٨٨٥ م / ١٢٣٠–١٣٠٢ هـ) رائد علم الفلك والرياضيات والجيوديسيا الحديثة في مصر والعالم العربي في عصر النهضة. وُلد في قرية «الحصة» بمحافظة الغربية لأسرة كريمة، وتوفي والده وهو في التاسعة من عمره، فرعاه شقيقه الأكبر واصطحبه إلى الإسكندرية لطلب العلم.
         </p>
         <p class="prose-text">
           التحق بمدرسة الترسانة البحرية بالإسكندرية عام ١٨٢٤ م، ثم انتقل لنبوغه الفائق إلى «مدرسة المهندسخانة» ببولاق بالقاهرة، وتخرج فيها عام ١٨٣٩ م وكان الأول على دفعته، فعُيِّن مدرساً لمادتي الرياضيات والفلك. وفي عام ١٨٤٢ م، ألّف وترجم أول كتاب باللغة العربية في <strong>«علم التفاضل والتكامل»</strong>، واضعاً بذلك حجر الأساس لتدريس الرياضيات العالية بالعربية.
         </p>
+
+        <div class="quote-callout">
+          <p class="quote-arabic">«إِنَّ الحِسَابَ الفَلَكِيَّ القَاطِعَ هُوَ المِيزَانُ العَدْلُ الَّذِي تَتَطَابَقُ فِيهِ الشَّوَاهِدُ التَّارِيخِيَّةُ مَعَ سُنَنِ اللَّهِ فِي الكَوْنِ»</p>
+          <p class="quote-trans">«مقدمة كتاب نتائج الأفهام في تقويم العرب قبل الإسلام» (المطبعة الأميرية ببولاق، ١٣٠٥ هـ)</p>
+          <p class="quote-source">— محمود باشا الفلكي / تحقيق أحمد زكي باشا</p>
+        </div>
+
         <p class="prose-text">
           في عام ١٨٥٠ م، أُوفد في بعثة علمية كبرى إلى فرنسا استمرت تسع سنوات بتزكية من علي باشا مبارك، حيث تفرغ لدراسة الفلك الدقيق والميكانيكا السماوية في مرصد باريس ومرصد بروكسل ببلجيكا، وأجرى أبحاثاً رائدة في المغناطيسية الأرضية نال بها عضوية الأكاديمية الملكية البلجيكية للعلوم.
         </p>
@@ -191,278 +335,785 @@
 
     <!-- SECTION 2: PENYELIDIKAN FALAK & KRONOLOGI SIRAH -->
     <section class="content-section" id="prophetic-astronomy">
-      <div class="section-header">
-        <h3 class="section-title">Kajian Falak & Metodologi Penyelarasan Sirah</h3>
-        <span class="section-tag">Karya Agung 1858 / 1887 M</span>
+      <!-- Malay Version -->
+      <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Kajian Falak & Metodologi Penyelarasan Sirah</h3>
+          <span class="section-tag">Karya Agung 1858 / 1887 M</span>
+        </div>
+
+        <p class="prose-text">
+          Pencapaian paling agung Mahmoud Pasha al-Falaki yang menjadi asas rujukan projek ini terkandung dalam risalah klasiknya yang dibentangkan di Paris pada tahun 1858 bertajuk <strong><em>«Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad»</em></strong>, yang kemudiannya diterjemahkan ke dalam bahasa Arab oleh Ahmad Zaki Pasha pada 1305 H / 1887 M dengan tajuk <strong><em>«نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام»</em></strong>.
+        </p>
+        <p class="prose-text">
+          Sebelum kajian beliau, sejarawan dan ahli sirah sering berhadapan dengan kekaburan dan percanggahan riwayat klasik mengenai tarikh peristiwa-peristiwa penting kenabian. Mahmoud Pasha menggabungkan <strong>jadual astronomi moden Alexis Bouvard (Bureau des Longitudes de France)</strong>, kalkulus orbit bulan, serta kaedah kritik hadis sanad bersambung bagi membina 4 tunjang falak mutlak:
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🌑</div>
+            <h4 class="pillar-title">1. Sauh Gerhana Matahari di Madinah</h4>
+            <div class="pillar-meta">27 Jan 632 M / 29 Syawal 10 H</div>
+            <p class="pillar-desc">
+              Paksi mutlak penanggalan: Pada pagi wafatnya putera Nabi ﷺ, Ibrahim, gerhana matahari anulus berlaku di langit Madinah (puncak 8:30 pagi, litupan 87% / 10.5 jari). Disahkan hadis Sahih al-Bukhari & Muslim bahawa matahari tidak gerhana kerana mati atau lahirnya sesiapa.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">⚖️</div>
+            <h4 class="pillar-title">2. Kepastian Hari Isnin Kelahiran</h4>
+            <div class="pillar-meta">20 Apr 571 M / 9 Rabiulawal (Tahun Gajah)</div>
+            <p class="pillar-desc">
+              Berdasarkan hadis Sahih Muslim bahawa Rasulullah ﷺ lahir pada hari Isnin ("ذاك يوم ولدت فيه"). Pengiraan konjungsi bulan membuktikan bahawa 9 Rabiulawal 571 M jatuh tepat pada hari Isnin (20 April 571 M Julian), manakala tarikh masyhur 12 Rabiulawal jatuh pada hari Khamis.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔄</div>
+            <h4 class="pillar-title">3. Penyelesaian Misteri Sistem Nasi'</h4>
+            <div class="pillar-meta">Haji Wada' (10 H / 632 M)</div>
+            <p class="pillar-desc">
+              Membongkar amalan sisipan bulan lompat kaum Quraisy selama lebih 200 tahun. Perkiraan falak membuktikan bahawa pada tahun 10 H, kitaran anjakan sisipan telah berputar genap 360°, mengesahkan sabda Nabi ﷺ bahawa masa telah berputar kembali ke asal penciptaan langit dan bumi.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🪐</div>
+            <h4 class="pillar-title">4. Qiran Agung Zuhal & Musytari</h4>
+            <div class="pillar-meta">1 April 571 M (Buruj Scorpio)</div>
+            <p class="pillar-desc">
+              Pengesahan catatan ahli falak silam (Abu Ma'shar, al-Maghribi). Al-Falaki mengira koordinat tepat dua gergasi gas: Musytari di 215° 02' dan Zuhal di 215° 17' di buruj Scorpio sejurus sebelum kelahiran Junjungan Besar ﷺ.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <p class="prose-text">
-        Pencapaian paling agung Mahmoud Pasha al-Falaki yang menjadi asas rujukan projek ini terkandung dalam risalah klasiknya yang dibentangkan di Paris pada tahun 1858 bertajuk <strong><em>«Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad»</em></strong>, yang kemudiannya diterjemahkan ke dalam bahasa Arab oleh Ahmad Zaki Pasha pada 1305 H / 1887 M dengan tajuk <strong><em>«نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام»</em></strong>.
-      </p>
-
-      <p class="prose-text">
-        Sebelum kajian beliau, sejarawan dan ahli sirah sering berhadapan dengan kekaburan dan percanggahan riwayat klasik mengenai tarikh peristiwa-peristiwa penting kenabian. Mahmoud Pasha menggabungkan <strong>jadual astronomi moden Alexis Bouvard (Bureau des Longitudes de France)</strong>, kalkulus orbit bulan, serta kaedah kritik hadis sanad bersambung bagi membina 4 tunjang falak mutlak:
-      </p>
-
-      <div class="pillars-grid">
-        <!-- Pillar 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon">🌑</div>
-          <h4 class="pillar-title">1. Sauh Gerhana Matahari di Madinah</h4>
-          <div class="pillar-meta">27 Jan 632 M / 29 Syawal 10 H</div>
-          <p class="pillar-desc">
-            Paksi mutlak penanggalan: Pada pagi wafatnya putera Nabi ﷺ, Ibrahim, gerhana matahari anulus berlaku di langit Madinah (puncak 8:30 pagi, litupan 87% / 10.5 jari). Disahkan hadis <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1043" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Sahih al-Bukhari (No. 1043)</a> & Muslim bahawa matahari tidak gerhana kerana mati atau lahirnya sesiapa.
-          </p>
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Astronomical Research & Methodology in the Sirah</h3>
+          <span class="section-tag">Masterwork 1858 / 1887 CE</span>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="pillar-card">
-          <div class="pillar-icon">⚖️</div>
-          <h4 class="pillar-title">2. Kepastian Hari Isnin Kelahiran</h4>
-          <div class="pillar-meta">20 Apr 571 M / 9 Rabiulawal (Tahun Gajah)</div>
-          <p class="pillar-desc">
-            Berdasarkan hadis Sahih Muslim bahawa Rasulullah ﷺ lahir pada hari Isnin ("ذاك يوم ولدت فيه"). Pengiraan konjungsi bulan membuktikan bahawa 9 Rabiulawal 571 M jatuh tepat pada hari Isnin (20 April 571 M Julian), manakala tarikh masyhur 12 Rabiulawal jatuh pada hari Khamis.
-          </p>
+        <p class="prose-text">
+          Mahmoud Pasha al-Falaki's crowning achievement—which forms the scientific foundation of this project—was unveiled in his landmark 1858 treatise presented before the Paris academic establishment, entitled <strong><em>«Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad»</em></strong>. It was later rendered into Arabic by Ahmad Zaki Pasha in 1305 AH / 1887 CE under the title <strong><em>«نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام»</em></strong>.
+        </p>
+        <p class="prose-text">
+          Prior to his work, historians and biographers struggled with conflicting narrations regarding the exact calendar dates of key Prophetic events. Al-Falaki resolved these discrepancies by synthesizing <strong>Alexis Bouvard's planetary tables (Bureau des Longitudes de France)</strong>, lunar orbital calculations, and rigorous Hadith source criticism into 4 decisive astronomical anchors:
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🌑</div>
+            <h4 class="pillar-title">1. The Medina Solar Eclipse Anchor</h4>
+            <div class="pillar-meta">27 Jan 632 CE / 29 Shawwal 10 AH</div>
+            <p class="pillar-desc">
+              The absolute calendar baseline: An annular solar eclipse occurred in Medina's morning sky on the day the Prophet's son Ibrahim passed away (peak 8:30 AM, 87% obscuration / 10.5 digits). Directly attested in Sahih al-Bukhari & Muslim that the sun does not eclipse for the death or birth of anyone.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">⚖️</div>
+            <h4 class="pillar-title">2. Mathematical Proof of Monday Mawlid</h4>
+            <div class="pillar-meta">20 Apr 571 CE / 9 Rabi' al-Awwal (Year of the Elephant)</div>
+            <p class="pillar-desc">
+              Grounded in the authentic Sahih Muslim hadith: "That is the day on which I was born." Retro-calculation of the lunar crescent proves that 9 Rabi' al-Awwal 571 CE fell precisely on Monday (20 April 571 Julian), whereas the popular 12th fell on a Thursday.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔄</div>
+            <h4 class="pillar-title">3. Unraveling the Pre-Islamic Nasi' System</h4>
+            <div class="pillar-meta">The Farewell Pilgrimage (10 AH / 632 CE)</div>
+            <p class="pillar-desc">
+              Deciphering the triennial leap month intercalations practiced by Quraysh for over 200 years. Al-Falaki mathematically proved that by 10 AH, the cumulative shift completed a full 360-degree celestial revolution, confirming the Prophet's sermon that time had returned to its original cosmic alignment.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🪐</div>
+            <h4 class="pillar-title">4. Great Conjunction of Saturn & Jupiter</h4>
+            <div class="pillar-meta">1 April 571 CE (Scorpio Constellation)</div>
+            <p class="pillar-desc">
+              Confirming records by early Islamic astronomers (Abu Ma'shar, al-Maghribi). Al-Falaki calculated the precise celestial longitudes: Jupiter at 215° 02' and Saturn at 215° 17' in Scorpio weeks before the Prophet's blessed birth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">الأبحاث الفلكية ومنهجية تحقيق السيرة النبوية</h3>
+          <span class="section-tag">المصنف الأكبر ١٨٥٨ / ١٨٨٧ م</span>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon">🔄</div>
-          <h4 class="pillar-title">3. Penyelesaian Misteri Sistem Nasi'</h4>
-          <div class="pillar-meta">Haji Wada' (10 H / 632 M)</div>
-          <p class="pillar-desc">
-            Membongkar amalan sisipan bulan lompat kaum Quraisy selama lebih 200 tahun. Perkiraan falak membuktikan bahawa pada tahun 10 H, kitaran anjakan sisipan telah berputar genap 360°, mengesahkan sabda Nabi ﷺ bahawa masa telah berputar kembali ke asal penciptaan langit dan bumi.
-          </p>
-        </div>
+        <p class="prose-text">
+          تجلّت عبقرية محمود باشا الفلكي الكبرى في بحثه التاريخي الفريد الذي قدّمه للأوساط العلمية بباريس عام ١٨٥٨ م بعنوان <strong><em>«Mémoire sur le calendrier arabe avant l'islamisme»</em></strong>، ونقله إلى العربية شيخ العروبة أحمد زكي باشا عام ١٣٠٥ هـ / ١٨٨٧ م في كتاب <strong><em>«نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام»</em></strong>.
+        </p>
+        <p class="prose-text">
+          استطاع الفلكي حلّ الإشكالات التاريخية المزمنة وتضارب الروايات في كتب السير من خلال الجمع بين <strong>جداول الفلكي الفرنسي ألكسي بوفار (مكتب خطوط الطول بباريس)</strong>، وحسابات المحاق والكسوف، ونقد الروايات الحديثية المسندة، مؤسساً بذلك ٤ أوتاد فلكية قاطعة:
+        </p>
 
-        <!-- Pillar 4 -->
-        <div class="pillar-card">
-          <div class="pillar-icon">🪐</div>
-          <h4 class="pillar-title">4. Qiran Agung Zuhal & Musytari</h4>
-          <div class="pillar-meta">1 April 571 M (Buruj Scorpio)</div>
-          <p class="pillar-desc">
-            Pengesahan catatan ahli falak silam (Abu Ma'shar, al-Maghribi). Al-Falaki mengira koordinat tepat dua gergasi gas: Musytari di 215° 02' dan Zuhal di 215° 17' di buruj Scorpio sejurus sebelum kelahiran Junjungan Besar ﷺ.
-          </p>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🌑</div>
+            <h4 class="pillar-title">١. وتد كسوف الشمس بالمدينة المنورة</h4>
+            <div class="pillar-meta">٢٧ يناير ٦٣٢ م / ٢٩ شوال ١٠ هـ</div>
+            <p class="pillar-desc">
+              الأساس الحسابي القطعي: وقع كسوف حلقي للشمس في سماء طيبة صبيحة وفاة إبراهيم بن النبي ﷺ (الذروة ٨:٣٠ ص، حجب ٨٧٪). ثبت في صحيحي البخاري ومسلم قول النبي ﷺ: «إن الشمس والقمر آيتان من آيات الله لا ينكسفان لموت أحد ولا لحياته».
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">⚖️</div>
+            <h4 class="pillar-title">٢. إثبات يوم الاثنين لمولد المصطفى ﷺ</h4>
+            <div class="pillar-meta">٢٠ أبريل ٥٧١ م / ٩ ربيع الأول (عام الفيل)</div>
+            <p class="pillar-desc">
+              تطبيقاً لحديث صحيح مسلم القطعي في فضل صيام الاثنين: «ذاك يوم ولدت فيه». أثبت حساب ولادة الهلال فلكياً أن ٩ ربيع الأول ٥٧١ م وافق يقيناً يوم الاثنين ٢٠ أبريل ٥٧١ م يولياني، في حين وافق الثاني عشر يوم الخميس.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔄</div>
+            <h4 class="pillar-title">٣. حل معضلة النسيء في حجة الوداع</h4>
+            <div class="pillar-meta">حجة الوداع (١٠ هـ / ٦٣٢ م)</div>
+            <p class="pillar-desc">
+              كشف حقيقة كبس الشهور لدى قريش على مدار أكثر من قرنين. أثبت الفلكي أن دورة النسيء استدارت في السنة العاشرة للهجرة ٣٦٠ درجة كاملة، مصداقاً للحديث النبوي الشريف: «إن الزمان قد استدار كهيئته يوم خلق الله السماوات والأرض».
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🪐</div>
+            <h4 class="pillar-title">٤. قران زحل والمشتري في برج العقرب</h4>
+            <div class="pillar-meta">١ أبريل ٥٧١ م (برج العقرب)</div>
+            <p class="pillar-desc">
+              تحقيق أرصاد كبار علماء الفلك القدامى (كأبي معشر ويحيى بن أبي شكر). حسب الفلكي موقع الكوكبين: المشتري في ٢١٥° ٢ وزحل في ٢١٥° ١٧ في برج العقرب قبيل ولادة النبي ﷺ بأسابيع.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 3: PENYELARASAN MAWLID (9 VS 12 RABIULAWAL) -->
     <section class="content-section" id="mawlid-proof">
-      <div class="section-header">
-        <h3 class="section-title">Bukti Falak: 9 Rabiulawal Lawan 12 Rabiulawal</h3>
-        <span class="section-tag">Perbandingan Matematik & Hadis</span>
+      <!-- Malay Version -->
+      <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Bukti Falak: 9 Rabiulawal Lawan 12 Rabiulawal</h3>
+          <span class="section-tag">Perbandingan Matematik & Hadis</span>
+        </div>
+
+        <p class="prose-text">
+          Dalam bab kedua kitab <em>Nata'ij al-Afham</em>, Mahmoud Pasha membentangkan analisis terperinci yang membuktikan mengapa tarikh 9 Rabiulawal adalah satu-satunya tarikh yang sahih secara falak dan sepadan dengan hadis nabawi:
+        </p>
+
+        <div class="quote-callout">
+          <p class="quote-arabic" dir="rtl">«سُئِلَ رَسُولُ اللَّهِ ﷺ عَنْ صَوْمِ يَوْمِ الاِثْنَيْنِ فَقَالَ: "ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ أُنْزِلَ عَلَيَّ فِيهِ"»</p>
+          <p class="quote-trans">"Rasulullah ﷺ ditanya mengenai puasa hari Isnin, lalu baginda bersabda: 'Itulah hari aku dilahirkan, dan hari diturunkan wahyu kepadaku.'"</p>
+          <p class="quote-source">— Sahih Muslim, Kitab al-Siyam (Hadis No. 1162)</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comp-table" aria-label="Jadual Perbandingan Tarikh Mawlid">
+            <thead>
+              <tr>
+                <th>Parameter Perkiraan</th>
+                <th>Pendapat 9 Rabiulawal (Tahqiq Falaki)</th>
+                <th>Pendapat 12 Rabiulawal (Masyhur)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Hari dalam Seminggu</strong></td>
+                <td><strong>Hari Isnin (Al-Ithnayn) ✅</strong></td>
+                <td><strong>Hari Khamis (Al-Khamis) / Jumaat ❌</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Kesesuaian dengan Sahih Muslim</strong></td>
+                <td>Menepati 100% matan hadis nabawi yang qat'i.</td>
+                <td>Bercanggah secara matematik dengan hadis hari Isnin.</td>
+              </tr>
+              <tr>
+                <td><strong>Tarikh Masihi Julian</strong></td>
+                <td><strong>20 April 571 M</strong></td>
+                <td>23 / 24 April 571 M</td>
+              </tr>
+              <tr>
+                <td><strong>Tarikh Masihi Gregorian</strong></td>
+                <td><strong>22 April 571 M</strong></td>
+                <td>25 / 26 April 571 M</td>
+              </tr>
+              <tr>
+                <td><strong>Konjungsi Bulan (Ijtimak)</strong></td>
+                <td>11 April 571 M (16:30 petang waktu Makkah). Anak bulan kelihatan petang 11/12 April, menjadikan 1 Rabiulawal jatuh pada hari Ahad 12 April. Hari ke-9 = Isnin 20 April.</td>
+                <td>Jika 1 Rabiulawal adalah Ahad 12 April, hari ke-12 secara mutlak jatuh pada hari Khamis 23 April. Tidak wujud sebarang kebarangkalian anak bulan lewat 3 hari penuh.</td>
+              </tr>
+              <tr>
+                <td><strong>Ulama & Pengkaji yang Memperakui</strong></td>
+                <td>Humayd ibn Zanjawayh, Abu Ma'shar al-Falaki, Ibn Hazm al-Andalusi, Mahmoud Pasha al-Falaki, Syeikh Safiur-Rahman al-Mubarakfuri (<em>al-Rahiq al-Makhtum</em>).</td>
+                <td>Ibn Ishaq, sebahagian besar ahli sejarah lewat zaman (secara riwayat lisan tanpa semakan kalendar astronomi).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="prose-text">
+          Kajian Mahmoud Pasha membuktikan bahawa kekeliruan tarikh 12 Rabiulawal berlaku dalam kalangan sejarawan terkemudian yang menyamakan tarikh kewafatan Rasulullah ﷺ (12 Rabiulawal 11 H) dengan tarikh kelahiran baginda, sedangkan perkiraan hari bulan astronomi membuktikan bahawa hari Isnin kelahiran baginda jatuh pada 9 Rabiulawal Tahun Gajah.
+        </p>
       </div>
 
-      <p class="prose-text">
-        Dalam bab kedua kitab <em>Nata'ij al-Afham</em>, Mahmoud Pasha membentangkan analisis terperinci yang membuktikan mengapa tarikh 9 Rabiulawal adalah satu-satunya tarikh yang sahih secara falak dan sepadan dengan hadis nabawi:
-      </p>
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Astronomical Proof: 9 Rabi' al-Awwal vs. 12 Rabi' al-Awwal</h3>
+          <span class="section-tag">Mathematical & Hadith Critique</span>
+        </div>
 
-      <div class="quote-callout">
-        <p class="quote-arabic" dir="rtl">«سُئِلَ رَسُولُ اللَّهِ ﷺ عَنْ صَوْمِ يَوْمِ الاِثْنَيْنِ فَقَالَ: "ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ أُنْزِلَ عَلَيَّ فِيهِ"»</p>
-        <p class="quote-trans">"Rasulullah ﷺ ditanya mengenai puasa hari Isnin, lalu baginda bersabda: 'Itulah hari aku dilahirkan, dan hari diturunkan wahyu kepadaku.'"</p>
-        <p class="quote-source">— Sahih Muslim, Kitab al-Siyam (Hadis No. 1162)</p>
+        <p class="prose-text">
+          In chapter two of <em>Nata'ij al-Afham</em>, Mahmoud Pasha provides a rigorous proof establishing why 9 Rabi' al-Awwal is the only date compatible with modern celestial mechanics and authentic Hadith:
+        </p>
+
+        <div class="quote-callout">
+          <p class="quote-arabic" dir="rtl">«سُئِلَ رَسُولُ اللَّهِ ﷺ عَنْ صَوْمِ يَوْمِ الاِثْنَيْنِ فَقَالَ: "ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ أُنْزِلَ عَلَيَّ فِيهِ"»</p>
+          <p class="quote-trans">"The Messenger of Allah ﷺ was asked about fasting on Monday, whereupon he said: 'That is the day on which I was born, and the day on which revelation was sent down to me.'"</p>
+          <p class="quote-source">— Sahih Muslim, Book of Fasting (Hadith No. 1162)</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comp-table" aria-label="Mawlid Date Comparison Table">
+            <thead>
+              <tr>
+                <th>Calculation Parameter</th>
+                <th>9 Rabi' al-Awwal (Astronomical Tahqiq)</th>
+                <th>12 Rabi' al-Awwal (Popular Tradition)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Day of the Week</strong></td>
+                <td><strong>Monday (Al-Ithnayn) ✅</strong></td>
+                <td><strong>Thursday (Al-Khamis) / Friday ❌</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Sahih Muslim Compliance</strong></td>
+                <td>100% compliant with the authentic hadith requirement.</td>
+                <td>Mathematically contradicts the authentic Monday hadith.</td>
+              </tr>
+              <tr>
+                <td><strong>Julian Calendar Date</strong></td>
+                <td><strong>20 April 571 CE</strong></td>
+                <td>23 / 24 April 571 CE</td>
+              </tr>
+              <tr>
+                <td><strong>Gregorian Calendar Date</strong></td>
+                <td><strong>22 April 571 CE</strong></td>
+                <td>25 / 26 April 571 CE</td>
+              </tr>
+              <tr>
+                <td><strong>Moon Conjunction & Sighting</strong></td>
+                <td>Conjunction on 11 April 571 CE (16:30 Mecca time). Crescent sighted evening of 11/12 April, making 1 Rabi' al-Awwal Sunday 12 April. Day 9 = Monday 20 April.</td>
+                <td>If 1 Rabi' al-Awwal was Sunday 12 April, day 12 fell strictly on Thursday 23 April. There is zero astronomical probability of a 3-day crescent lag.</td>
+              </tr>
+              <tr>
+                <td><strong>Endorsing Scholars & Researchers</strong></td>
+                <td>Humayd ibn Zanjawayh, Abu Ma'shar al-Balkhi, Ibn Hazm al-Andalusi, Mahmoud Pasha al-Falaki, Safiur-Rahman al-Mubarakfuri (<em>The Sealed Nectar</em>).</td>
+                <td>Ibn Ishaq, later chroniclers (transmitted orally without astronomical verification).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="prose-text">
+          Al-Falaki demonstrated that the later widespread adoption of the 12th arose because biographers conflated the date of the Prophet's passing (Monday, 12 Rabi' al-Awwal 11 AH) with his birth date, whereas celestial orbital physics prove the birth occurred on Monday, 9 Rabi' al-Awwal in the Year of the Elephant.
+        </p>
       </div>
 
-      <div class="comparison-table-wrapper">
-        <table class="comp-table" aria-label="Jadual Perbandingan Tarikh Mawlid">
-          <thead>
-            <tr>
-              <th>Parameter Perkiraan</th>
-              <th>Pendapat 9 Rabiulawal (Tahqiq Falaki)</th>
-              <th>Pendapat 12 Rabiulawal (Masyhur)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight-row">
-              <td><strong>Hari dalam Seminggu</strong></td>
-              <td><strong>Hari Isnin (Al-Ithnayn) ✅</strong></td>
-              <td><strong>Hari Khamis (Al-Khamis) / Jumaat ❌</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Kesesuaian dengan Sahih Muslim</strong></td>
-              <td>Menepati 100% matan hadis nabawi yang qat'i.</td>
-              <td>Bercanggah secara matematik dengan hadis hari Isnin.</td>
-            </tr>
-            <tr>
-              <td><strong>Tarikh Masihi Julian</strong></td>
-              <td><strong>20 April 571 M</strong></td>
-              <td>23 / 24 April 571 M</td>
-            </tr>
-            <tr>
-              <td><strong>Tarikh Masihi Gregorian</strong></td>
-              <td><strong>22 April 571 M</strong></td>
-              <td>25 / 26 April 571 M</td>
-            </tr>
-            <tr>
-              <td><strong>Konjungsi Bulan (Ijtimak)</strong></td>
-              <td>11 April 571 M (16:30 petang waktu Makkah). Anak bulan kelihatan petang 11/12 April, menjadikan 1 Rabiulawal jatuh pada hari Ahad 12 April. Hari ke-9 = Isnin 20 April.</td>
-              <td>Jika 1 Rabiulawal adalah Ahad 12 April, hari ke-12 secara mutlak jatuh pada hari Khamis 23 April. Tidak wujud sebarang kebarangkalian anak bulan lewat 3 hari penuh.</td>
-            </tr>
-            <tr>
-              <td><strong>Ulama & Pengkaji yang Memperakui</strong></td>
-              <td>Humayd ibn Zanjawayh, Abu Ma'shar al-Falaki, Ibn Hazm al-Andalusi, Mahmoud Pasha al-Falaki, Syeikh Safiur-Rahman al-Mubarakfuri (<em>al-Rahiq al-Makhtum</em>).</td>
-              <td>Ibn Ishaq, sebahagian besar ahli sejarah lewat zaman (secara riwayat lisan tanpa semakan kalendar astronomi).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">البرهان الفلكي: ٩ ربيع الأول في مواجهة ١٢ ربيع الأول</h3>
+          <span class="section-tag">المطابقة الرياضية والحديثية</span>
+        </div>
 
-      <p class="prose-text">
-        Kajian Mahmoud Pasha membuktikan bahawa kekeliruan tarikh 12 Rabiulawal berlaku dalam kalangan sejarawan terkemudian yang menyamakan tarikh kewafatan Rasulullah ﷺ (12 Rabiulawal 11 H) dengan tarikh kelahiran baginda, sedangkan perkiraan hari bulan astronomi membuktikan bahawa hari Isnin kelahiran baginda jatuh pada 9 Rabiulawal Tahun Gajah.
-      </p>
+        <p class="prose-text">
+          أفرد محمود باشا الفلكي في الباب الثاني من كتابه «نتائج الأفهام» برهاناً علمياً قاطعاً يثبت بالأدلة الفلكية والنصوص الحديثية صحة تاريخ ٩ ربيع الأول:
+        </p>
+
+        <div class="quote-callout">
+          <p class="quote-arabic">«سُئِلَ رَسُولُ اللَّهِ ﷺ عَنْ صَوْمِ يَوْمِ الاِثْنَيْنِ فَقَالَ: "ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ أُنْزِلَ عَلَيَّ فِيهِ"»</p>
+          <p class="quote-trans">صحيح مسلم، كتاب الصيام، حديث رقم ١١٦٢</p>
+          <p class="quote-source">— إجماع الأمة على ولادته ﷺ يوم الاثنين</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comp-table" aria-label="جدول مقارنة تاريخ المولد النبوي الشريف">
+            <thead>
+              <tr>
+                <th>معيار التحقيق</th>
+                <th>رأي ٩ ربيع الأول (التحقيق الفلكي القطعي)</th>
+                <th>رأي ١٢ ربيع الأول (الشائع المتأخر)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>اليوم من الأسبوع</strong></td>
+                <td><strong>يوم الاثنين (الموافق للحديث الصحيح) ✅</strong></td>
+                <td><strong>يوم الخميس أو الجمعة ❌</strong></td>
+              </tr>
+              <tr>
+                <td><strong>المطابقة لصحيح مسلم</strong></td>
+                <td>مطابقة تامة بنسبة ١٠٠٪ لليوم المنصوص عليه.</td>
+                <td>مخالفة حسابية قطعية لحديث يوم الاثنين.</td>
+              </tr>
+              <tr>
+                <td><strong>التاريخ الميلادي اليولياني</strong></td>
+                <td><strong>٢٠ أبريل ٥٧١ م</strong></td>
+                <td>٢٣ / ٢٤ أبريل ٥٧١ م</td>
+              </tr>
+              <tr>
+                <td><strong>التاريخ الميلادي الغريغوري</strong></td>
+                <td><strong>٢٢ أبريل ٥٧١ م</strong></td>
+                <td>٢٥ / ٢٦ أبريل ٥٧١ م</td>
+              </tr>
+              <tr>
+                <td><strong>المحاق الفلكي وولادة الهلال</strong></td>
+                <td>وقع المحاق يوم ١١ أبريل ٥٧١ م (٤:٣٠ م بتوقيت مكة). رؤي الهلال مساء ١١/١٢ أبريل فكان أول الشهر الأحد ١٢ أبريل، واليوم التاسع هو الاثنين ٢٠ أبريل.</td>
+                <td>إذا كان أول الشهر الأحد، فإن اليوم الثاني عشر يقع قطعاً يوم الخميس ٢٣ أبريل. ولا يمكن فلكياً تأخر رؤية الهلال ثلاثة أيام كاملة.</td>
+              </tr>
+              <tr>
+                <td><strong>القائلون به من العلماء والمحققين</strong></td>
+                <td>حميد بن زنجويه، أبو معشر الفلكي، الإمام ابن حزم الأندلسي، محمود باشا الفلكي، الشيخ صفي الرحمن المباركفوري (الرحيق المختوم).</td>
+                <td>ابن إسحاق، وجلّ المتأخرين من الإخباريين (رواية بلا تحقيق فلكي).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="prose-text">
+          بين محمود باشا الفلكي أن سبب شهرة تاريخ ١٢ ربيع الأول عند الإخباريين المتأخرين هو الخلط بين يوم وفاته الشريفة (الاثنين ١٢ ربيع الأول ١١ هـ) ويوم ميلاده، في حين أثبتت نواميس الفلك أن ميلاده الشريف كان يوم الاثنين ٩ ربيع الأول عام الفيل.
+        </p>
+      </div>
     </section>
 
     <!-- SECTION 4: SUMBANGAN SAINTIFIK LAIN (ISKANDARIAH, DONGOLA, KALKULUS) -->
     <section class="content-section" id="other-sciences">
-      <div class="section-header">
-        <h3 class="section-title">Sumbangan Saintifik & Arkeologi Lain</h3>
-        <span class="section-tag">Arkeoastronomi & Geodesi</span>
+      <!-- Malay Version -->
+      <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Sumbangan Saintifik & Arkeologi Lain</h3>
+          <span class="section-tag">Arkeoastronomi & Geodesi</span>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🏛️</div>
+            <h4 class="pillar-title">Peta Arkeologi Iskandariah Purba (1872 M)</h4>
+            <div class="pillar-meta">Mémoire sur l'antique Alexandrie</div>
+            <p class="pillar-desc">
+              Atas titah Khedive Ismail bagi memenuhi permintaan Maharaja Perancis Napoleon III, Mahmoud Pasha menjalankan penggalian dan tinjauan ukur tanah terperinci di bawah runtuhan Iskandariah, memetakan semula jalan-jalan grid purba, tembok kota, sistem kolam bawah tanah, dan lokasi makam Iskandar Zulkarnain.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔭</div>
+            <h4 class="pillar-title">Ekspedisi Gerhana Dongola, Sudan (1860 M)</h4>
+            <div class="pillar-meta">Sur les éclipses de soleil en Nubie</div>
+            <p class="pillar-desc">
+              Mengetuai delegasi saintifik antarabangsa ke Dongola di utara Sudan untuk merakam cerapan gerhana matahari penuh pada 18 Julai 1860, membentangkan ukuran kronometrik dan spektrum korona suria yang mendapat pujian Académie des Sciences di Paris.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📐</div>
+            <h4 class="pillar-title">Buku Kalkulus Pertama Bahasa Arab (1842 M)</h4>
+            <div class="pillar-meta">علم التفاضل والتكامل</div>
+            <p class="pillar-desc">
+              Menterjemah dan mengarang kitab kalkulus pembezaan dan kamiran pertama dalam perbendaharaan ilmu bahasa Arab untuk kegunaan jurutera dan saintis kolej teknik Mesir di Bulaq.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌊</div>
+            <h4 class="pillar-title">Teori Hidrologi & Paras Banjir Sungai Nil</h4>
+            <div class="pillar-meta">Kajian Pengairan & Empangan</div>
+            <p class="pillar-desc">
+              Membangunkan model matematik ramalan kenaikan air banjir Sungai Nil berasaskan pola monsun Habsyah dan tolok Nilometer di Pulau Roda, Kaherah, yang menjadi asas sistem saliran pertanian Mesir.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon">🏛️</div>
-          <h4 class="pillar-title">Peta Arkeologi Iskandariah Purba (1872 M)</h4>
-          <div class="pillar-meta">Mémoire sur l'antique Alexandrie</div>
-          <p class="pillar-desc">
-            Atas titah Khedive Ismail bagi memenuhi permintaan Maharaja Perancis Napoleon III, Mahmoud Pasha menjalankan penggalian dan tinjauan ukur tanah terperinci di bawah runtuhan Iskandariah, memetakan semula jalan-jalan grid purba, tembok kota, sistem kolam bawah tanah, dan lokasi makam Iskandar Zulkarnain.
-          </p>
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Other Scientific & Archeological Contributions</h3>
+          <span class="section-tag">Archeoastronomy & Geodesy</span>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon">🔭</div>
-          <h4 class="pillar-title">Ekspedisi Gerhana Dongola, Sudan (1860 M)</h4>
-          <div class="pillar-meta">Sur les éclipses de soleil en Nubie</div>
-          <p class="pillar-desc">
-            Mengetuai delegasi saintifik antarabangsa ke Dongola di utara Sudan untuk merakam cerapan gerhana matahari penuh pada 18 Julai 1860, membentangkan ukuran kronometrik dan spektrum korona suria yang mendapat pujian Académie des Sciences di Paris.
-          </p>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🏛️</div>
+            <h4 class="pillar-title">Map of Ancient Alexandria (1872 CE)</h4>
+            <div class="pillar-meta">Mémoire sur l'antique Alexandrie</div>
+            <p class="pillar-desc">
+              Commissioned by Khedive Ismail at the behest of French Emperor Napoleon III, al-Falaki conducted systematic excavations across modern Alexandria, reconstructing the Ptolemaic street grid, city ramparts, subterranean cistern networks, and the royal quarter.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔭</div>
+            <h4 class="pillar-title">Dongola Eclipse Expedition (1860 CE)</h4>
+            <div class="pillar-meta">Sur les éclipses de soleil en Nubie</div>
+            <p class="pillar-desc">
+              Headed the international expedition to Dongola in northern Sudan to record the total solar eclipse of 18 July 1860, delivering chronometric measurements and coronal observations highly praised by the French Academy of Sciences.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📐</div>
+            <h4 class="pillar-title">First Arabic Calculus Textbook (1842 CE)</h4>
+            <div class="pillar-meta">Differential & Integral Calculus</div>
+            <p class="pillar-desc">
+              Translated and authored the foundational Arabic textbook on differential and integral calculus for Egyptian engineers and technical scholars at the Bulaq Royal Engineering College.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌊</div>
+            <h4 class="pillar-title">Nile Hydrology & Flood Predictive Models</h4>
+            <div class="pillar-meta">Irrigation & River Dynamics</div>
+            <p class="pillar-desc">
+              Developed mathematical correlations between Ethiopian monsoon cycles and water levels at Cairo's Roda Nilometer, laying the groundwork for modern Egyptian irrigation planning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">الإسهامات العلمية والأثرية الأخرى</h3>
+          <span class="section-tag">الفلك الأثري والجيوديسيا</span>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon">📐</div>
-          <h4 class="pillar-title">Buku Kalkulus Pertama Bahasa Arab (1842 M)</h4>
-          <div class="pillar-meta">علم التفاضل والتكامل</div>
-          <p class="pillar-desc">
-            Menterjemah dan mengarang kitab kalkulus pembezaan dan kamiran pertama dalam perbendaharaan ilmu bahasa Arab untuk kegunaan jurutera dan saintis kolej teknik Mesir di Bulaq.
-          </p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon">🌊</div>
-          <h4 class="pillar-title">Teori Hidrologi & Paras Banjir Sungai Nil</h4>
-          <div class="pillar-meta">Kajian Pengairan & Empangan</div>
-          <p class="pillar-desc">
-            Membangunkan model matematik ramalan kenaikan air banjir Sungai Nil berasaskan pola monsun Habsyah dan tolok Nilometer di Pulau Roda, Kaherah, yang menjadi asas sistem saliran pertanian Mesir.
-          </p>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🏛️</div>
+            <h4 class="pillar-title">خريطة الإسكندرية القديمة (١٨٧٢ م)</h4>
+            <div class="pillar-meta">Mémoire sur l'antique Alexandrie</div>
+            <p class="pillar-desc">
+              بتكليف من الخديوي إسماعيل استجابة لطلب الإمبراطور الفرنسي نابليون الثالث، أجرى الفلكي حفريات ومسوحات دقيقة استعاد بها تخطيط شوارع الإسكندرية البطلمية، وأسوارها، وصهاريجها، وموقع المقبرة الملكية.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔭</div>
+            <h4 class="pillar-title">بعثة كسوف دنقلة بالسودان (١٨٦٠ م)</h4>
+            <div class="pillar-meta">رصد الكسوف الكلي في بلاد النوبة</div>
+            <p class="pillar-desc">
+              قاد بعثة علمية رسمية إلى دنقلة شمال السودان لرصد كسوف الشمس الكلي في ١٨ يوليو ١٨٦٠ م، وقدّم تقريراً فلكياً مبهراً لأكاديمية العلوم بباريس نال به إعجاب علماء الغرب.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📐</div>
+            <h4 class="pillar-title">أول كتاب تفاضل وتكامل بالعربية (١٨٤٢ م)</h4>
+            <div class="pillar-meta">علم التفاضل والتكامل</div>
+            <p class="pillar-desc">
+              ألّف وترجم أول كتاب باللغة العربية في علم التفاضل والتكامل لطلاب مدرسة المهندسخانة ببولاق، فاتحاً آفاق تدريس الرياضيات الحديثة بالعربية.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌊</div>
+            <h4 class="pillar-title">هيدرولوجيا النيل والتنبؤ بالفيضان</h4>
+            <div class="pillar-meta">دراسات الري ومقياس الروضة</div>
+            <p class="pillar-desc">
+              ابتكر معادلات رياضية رائدة للتنبؤ بفيضان النيل بناءً على مناسيب مقياس الروضة وأمطار الحبشة، وشكلت أبحاثه ركيزة هندسة الري الحديثة في مصر.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 5: GARIS MASA HAYAT MAHMOUD PASHA (1815–1885 M) -->
     <section class="content-section" id="life-timeline">
-      <div class="section-header">
-        <h3 class="section-title">Garis Masa Hayat Mahmoud Pasha al-Falaki</h3>
-        <span class="section-tag">Kronologi 1815–1885 M</span>
+      <!-- Malay Version -->
+      <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Garis Masa Hayat Mahmoud Pasha al-Falaki</h3>
+          <span class="section-tag">Kronologi 1815–1885 M</span>
+        </div>
+
+        <div class="timeline-stepper">
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1815 M (1230 H)</span>
+              <h4 class="step-title">Kelahiran di Al-Hissa, Gharbia</h4>
+              <p class="step-text">Dilahirkan dalam keluarga petani sederhana di perkampungan al-Hissa, wilayah Gharbia, Mesir. Menjadi anak yatim pada usia 9 tahun berikutan kewafatan bapa tercinta.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1824–1833 M</span>
+              <h4 class="step-title">Pendidikan Tentera Laut di Iskandariah</h4>
+              <p class="step-text">Memasuki Sekolah Tarsanah Dar al-Sina'ah di Iskandariah, menonjolkan bakat luar biasa dalam ilmu hisab, pelayaran, dan geometri perkapalan.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1834–1839 M</span>
+              <h4 class="step-title">Puncak Pengajian di Muhandiskhana</h4>
+              <p class="step-text">Menuntut di Kolej Kejuruteraan Diraja Bulaq, Kaherah. Lulus cemerlang di tempat pertama pada 1839 dan terus dilantik sebagai mahaguru matematik dan astronomi.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1842 M</span>
+              <h4 class="step-title">Penerbitan Kitab Kalkulus Pertama Bahasa Arab</h4>
+              <p class="step-text">Menerbitkan risalah <em>'Ilm al-Tafadul wa-al-Takamul</em> di Matba'ah Bulaq, membuka fasa baharu pendidikan matematik moden di dunia Arab.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1850–1859 M</span>
+              <h4 class="step-title">Misi Saintifik 9 Tahun di Paris & Brussels</h4>
+              <p class="step-text">Dihantar ke Balai Cerap Paris dan Brussels. Menjalankan kajian mekanik cakerawala, medan magnet bumi, serta menganggotai badan-badan sains terulung Eropah.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1858 M</span>
+              <h4 class="step-title">Penerbitan Karya Agung Kronologi Sirah di Paris</h4>
+              <p class="step-text">Menerbitkan <em>Mémoire sur le calendrier arabe avant l'islamisme</em> di Paris melalui <em>Journal Asiatique</em> dan Imprimerie Impériale, menetapkan tarikh Mawlid 9 Rabiulawal (20 April 571 M) dan mengesahkan gerhana Madinah 632 M.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1860 M</span>
+              <h4 class="step-title">Ekspedisi Gerhana Matahari di Dongola, Sudan</h4>
+              <p class="step-text">Memimpin misi sains rasmi ke Nubia bagi mencerap gerhana matahari penuh 18 Julai 1860, memantapkan kedudukan Mesir dalam arena falak antarabangsa.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1866–1872 M</span>
+              <h4 class="step-title">Penggalian Arkeologi & Pemetaan Iskandariah Purba</h4>
+              <p class="step-text">Menyiapkan peta arkeologi Iskandariah purba dan menerbitkan monograf <em>Mémoire sur l'antique Alexandrie</em> di Copenhagen (1872).</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1882–1885 M</span>
+              <h4 class="step-title">Menteri Kerja Raya, Pendidikan & Presiden Geografi</h4>
+              <p class="step-text">Dilantik Menteri Kerja Raya dalam kabinet Mahmoud Sami al-Baroudi, Timbalan Menteri Pendidikan (1882–1884), dan Presiden Persatuan Geografi Khidiwiyyah.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">19 Julai 1885 M (7 Syawal 1302 H)</span>
+              <h4 class="step-title">Kewafatan di Kaherah</h4>
+              <p class="step-text">Menghembuskan nafas terakhir pada usia 70 tahun di Kaherah. Disemadikan dengan penuh penghormatan di tanah perkuburan berhampiran makam Imam al-Shafi'i.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1887 M (1305 H)</span>
+              <h4 class="step-title">Penerbitan Kitab 'Nata'ij al-Afham' di Matba'ah Bulaq</h4>
+              <p class="step-text">Terjemahan bahasa Arab karya agung beliau diterbitkan secara rasmi oleh Ahmad Zaki Pasha di al-Matba'ah al-Kubra al-Amiriyyah, Bulaq, Mesir.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="timeline-stepper">
-        <div class="step-node">
-          <div class="step-bullet gold"></div>
-          <div class="step-content">
-            <span class="step-year">1815 M (1230 H)</span>
-            <h4 class="step-title">Kelahiran di Al-Hissa, Gharbia</h4>
-            <p class="step-text">Dilahirkan dalam keluarga petani sederhana di perkampungan al-Hissa, wilayah Gharbia, Mesir. Menjadi anak yatim pada usia 9 tahun berikutan kewafatan bapa tercinta.</p>
-          </div>
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Life Timeline of Mahmoud Pasha al-Falaki</h3>
+          <span class="section-tag">Chronology 1815–1885 CE</span>
         </div>
 
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1824–1833 M</span>
-            <h4 class="step-title">Pendidikan Tentera Laut di Iskandariah</h4>
-            <p class="step-text">Memasuki Sekolah Tarsanah Dar al-Sina'ah di Iskandariah, menonjolkan bakat luar biasa dalam ilmu hisab, pelayaran, dan geometri perkapalan.</p>
+        <div class="timeline-stepper">
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1815 CE (1230 AH)</span>
+              <h4 class="step-title">Birth in Al-Hissa, Gharbia</h4>
+              <p class="step-text">Born into a modest rural family in al-Hissa, Gharbia Governorate, Egypt. Orphaned at age nine following the death of his father.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1824–1833 CE</span>
+              <h4 class="step-title">Naval Arsenal Education in Alexandria</h4>
+              <p class="step-text">Enrolled in the Alexandria Naval Arsenal School (Dar al-Sina'ah), demonstrating exceptional talent in mathematics, navigation, and geometry.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1834–1839 CE</span>
+              <h4 class="step-title">Studies at Bulaq Engineering College (Muhandiskhana)</h4>
+              <p class="step-text">Studied at the Royal Engineering College in Cairo. Graduated first in his class in 1839 and was immediately appointed instructor in mathematics and astronomy.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1842 CE</span>
+              <h4 class="step-title">First Arabic Calculus Book Published</h4>
+              <p class="step-text">Published <em>'Ilm al-Tafadul wa-al-Takamul</em> at Bulaq Press, inaugurating modern higher mathematics instruction in the Arabic language.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1850–1859 CE</span>
+              <h4 class="step-title">Nine-Year Scientific Mission to Paris & Brussels</h4>
+              <p class="step-text">Stationed at Paris and Brussels Observatories. Researched celestial mechanics and geomagnetism, earning corresponding membership in the Royal Academy of Belgium.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1858 CE</span>
+              <h4 class="step-title">Publication of Prophetic Chronology Masterwork in Paris</h4>
+              <p class="step-text">Published <em>Mémoire sur le calendrier arabe avant l'islamisme</em> in the <em>Journal Asiatique</em> and at Imprimerie Impériale, establishing Monday, 9 Rabi' al-Awwal 571 CE as the Mawlid and calculating the 632 CE Medina eclipse.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1860 CE</span>
+              <h4 class="step-title">Total Solar Eclipse Expedition to Dongola, Sudan</h4>
+              <p class="step-text">Led Egypt's official mission to Nubia to record the total solar eclipse of 18 July 1860, consolidating Egypt's reputation in international astronomy.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1866–1872 CE</span>
+              <h4 class="step-title">Archeological Survey & Map of Ancient Alexandria</h4>
+              <p class="step-text">Completed the monumental archeological map of ancient Alexandria and published the monograph <em>Mémoire sur l'antique Alexandrie</em> in Copenhagen (1872).</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">1882–1885 CE</span>
+              <h4 class="step-title">Minister of Public Works, Education & Geographical Society</h4>
+              <p class="step-text">Appointed Minister of Public Works in Mahmoud Sami al-Baroudi's cabinet, Undersecretary of Education (1882–1884), and President of the Khedivial Geographical Society.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">19 July 1885 CE (7 Shawwal 1302 AH)</span>
+              <h4 class="step-title">Passing Away in Cairo</h4>
+              <p class="step-text">Passed away at age 70 in Cairo. Laid to rest with state honors in the historic cemetery adjacent to the Imam al-Shafi'i mausoleum.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">1887 CE (1305 AH)</span>
+              <h4 class="step-title">Official Arabic Publication of 'Nata'ij al-Afham'</h4>
+              <p class="step-text">The Arabic translation and critical edition of his masterwork was published by Ahmad Zaki Pasha at the Amiri Press in Bulaq, Cairo.</p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1834–1839 M</span>
-            <h4 class="step-title">Puncak Pengajian di Muhandiskhana</h4>
-            <p class="step-text">Menuntut di Kolej Kejuruteraan Diraja Bulaq, Kaherah. Lulus cemerlang di tempat pertama pada 1839 dan terus dilantik sebagai mahaguru matematik dan astronomi.</p>
-          </div>
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">الخط الزمني لحياة محمود باشا الفلكي</h3>
+          <span class="section-tag">التسلسل الزمني ١٨١٥–١٨٨٥ م</span>
         </div>
 
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1842 M</span>
-            <h4 class="step-title">Penerbitan Kitab Kalkulus Pertama Bahasa Arab</h4>
-            <p class="step-text">Menerbitkan risalah <em>'Ilm al-Tafadul wa-al-Takamul</em> di Matba'ah Bulaq, membuka fasa baharu pendidikan matematik moden di dunia Arab.</p>
+        <div class="timeline-stepper">
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">١٨١٥ م (١٢٣٠ هـ)</span>
+              <h4 class="step-title">المولد في قرية الحصة بالغربية</h4>
+              <p class="step-text">وُلد لأسرة ريفية بسيطة في قرية الحصة بمحافظة الغربية. توفي والده وهو في التاسعة من عمره فتكفل به شقيقه الأكبر.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet gold"></div>
-          <div class="step-content">
-            <span class="step-year">1850–1859 M</span>
-            <h4 class="step-title">Misi Saintifik 9 Tahun di Paris & Brussels</h4>
-            <p class="step-text">Dihantar ke Balai Cerap Paris dan Brussels. Menjalankan kajian mekanik cakerawala, medan magnet bumi, serta menganggotai badan-badan sains terulung Eropah.</p>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٢٤–١٨٣٣ م</span>
+              <h4 class="step-title">الدراسة بمدرسة الترسانة بالإسكندرية</h4>
+              <p class="step-text">التحق بمدرسة الترسانة البحرية (دار الصناعة) بالإسكندرية وأظهر تفوقاً استثنائياً في الحساب والهندسة والملاحة البحرية.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet gold"></div>
-          <div class="step-content">
-            <span class="step-year">1858 M</span>
-            <h4 class="step-title">Penerbitan Karya Agung Kronologi Sirah di Paris</h4>
-            <p class="step-text">Menerbitkan <em>Mémoire sur le calendrier arabe avant l'islamisme</em> di Paris melalui <em>Journal Asiatique</em> dan Imprimerie Impériale, menetapkan tarikh Mawlid 9 Rabiulawal (20 April 571 M) dan mengesahkan gerhana Madinah 632 M.</p>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٣٤–١٨٣٩ م</span>
+              <h4 class="step-title">التخرج الأول على دفعته بالمهندسخانة</h4>
+              <p class="step-text">درس بمدرسة المهندسخانة ببولاق بالقاهرة، وتخرج الأول على دفعته عام ١٨٣٩ م فعُيِّن مدرساً للرياضيات والفلك بها.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1860 M</span>
-            <h4 class="step-title">Ekspedisi Gerhana Matahari di Dongola, Sudan</h4>
-            <p class="step-text">Memimpin misi sains rasmi ke Nubia bagi mencerap gerhana matahari penuh 18 Julai 1860, memantapkan kedudukan Mesir dalam arena falak antarabangsa.</p>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٤٢ م</span>
+              <h4 class="step-title">تأليف أول كتاب تفاضل وتكامل بالعربية</h4>
+              <p class="step-text">أصدر كتابه الرائد في «علم التفاضل والتكامل» بمطبعة بولاق، وهو أول مؤلف عربي حديث في الرياضيات العالية.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1866–1872 M</span>
-            <h4 class="step-title">Penggalian Arkeologi & Pemetaan Iskandariah Purba</h4>
-            <p class="step-text">Menyiapkan peta arkeologi Iskandariah purba dan menerbitkan monograf <em>Mémoire sur l'antique Alexandrie</em> di Copenhagen (1872).</p>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٥٠–١٨٥٩ م</span>
+              <h4 class="step-title">البعثة العلمية الكبرى إلى باريس وبروكسل (٩ سنوات)</h4>
+              <p class="step-text">تفرغ لأبحاث الفلك والميكانيكا السماوية في مرصد باريس ومرصد بروكسل، ونال عضوية الأكاديمية الملكية البلجيكية للعلوم.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet gold"></div>
-          <div class="step-content">
-            <span class="step-year">1882–1885 M</span>
-            <h4 class="step-title">Menteri Kerja Raya, Pendidikan & Presiden Geografi</h4>
-            <p class="step-text">Dilantik Menteri Kerja Raya dalam kabinet Mahmoud Sami al-Baroudi, Timbalan Menteri Pendidikan (1882–1884), dan Presiden Persatuan Geografi Khidiwiyyah.</p>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٥٨ م</span>
+              <h4 class="step-title">نشر بحثه التاريخي حول تقويم العرب بباريس</h4>
+              <p class="step-text">نشر مذكرته الشهيرة بالفرنسية في المجلة الآسيوية والمطبعة الإمبراطورية بباريس، محققاً تاريخ المولد الشريف في ٩ ربيع الأول ٥٧١ م وكسوف ٦٣٢ م.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet gold"></div>
-          <div class="step-content">
-            <span class="step-year">19 Julai 1885 M (7 Syawal 1302 H)</span>
-            <h4 class="step-title">Kewafatan di Kaherah</h4>
-            <p class="step-text">Menghembuskan nafas terakhir pada usia 70 tahun di Kaherah. Disemadikan dengan penuh penghormatan di tanah perkuburan berhampiran makam Imam al-Shafi'i.</p>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٦٠ م</span>
+              <h4 class="step-title">قيادة بعثة رصد كسوف الشمس بدونقلة</h4>
+              <p class="step-text">قاد بعثة رصد الكسوف الكلي في دنقلة شمال السودان في ١٨ يوليو ١٨٦٠ م، ونال تقريره إشادة أكاديمية العلوم بباريس.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="step-node">
-          <div class="step-bullet"></div>
-          <div class="step-content">
-            <span class="step-year">1887 M (1305 H)</span>
-            <h4 class="step-title">Penerbitan Kitab 'Nata'ij al-Afham' di Matba'ah Bulaq</h4>
-            <p class="step-text">Terjemahan bahasa Arab karya agung beliau diterbitkan secara rasmi oleh Ahmad Zaki Pasha di al-Matba'ah al-Kubra al-Amiriyyah, Bulaq, Mesir.</p>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٦٦–١٨٧٢ م</span>
+              <h4 class="step-title">خريطة الإسكندرية القديمة وحفرياتها</h4>
+              <p class="step-text">أتم الخريطة الأثرية الأولى للإسكندرية القديمة ونشر كتابه بالفرنسية في كوبنهاغن عام ١٨٧٢ م.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٨٢–١٨٨٥ م</span>
+              <h4 class="step-title">وزيراً للأشغال والمعارف ورئيساً للجمعية الجغرافية</h4>
+              <p class="step-text">عُيّن وزيراً للأشغال في وزارة البارودي، ووكيلاً لنظارة المعارف (١٨٨٢–١٨٨٤ م)، ورئيساً للجمعية الجغرافية الخديوية.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet gold"></div>
+            <div class="step-content">
+              <span class="step-year">١٩ يوليو ١٨٨٥ م (٧ شوال ١٣٠٢ هـ)</span>
+              <h4 class="step-title">الوفاة في القاهرة</h4>
+              <p class="step-text">توفي عن سبعين عاماً ودُفن بإجلال في مقبرة قبة الإمام الشافعي بالقاهرة.</p>
+            </div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet"></div>
+            <div class="step-content">
+              <span class="step-year">١٨٨٧ م (١٣٠٥ هـ)</span>
+              <h4 class="step-title">طباعة «نتائج الأفهام» بالمطبعة الأميرية ببولاق</h4>
+              <p class="step-text">نُشرت الترجمة العربية لكتابه بتحقيق أحمد زكي باشا بالمطبعة الأميرية ببولاق، وصارت عمدة دراسات تقويم السيرة.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -470,156 +1121,455 @@
 
     <!-- SECTION 6: SENARAI RUJUKAN, MANUSKRIP & PAUTAN DIGITAL -->
     <section class="content-section" id="references">
-      <div class="section-header">
-        <h3 class="section-title">Senarai Rujukan Berwibawa & Pautan Terus Digital</h3>
-        <span class="section-tag">Manuskrip, Arkib & Teks Klasik</span>
+      <!-- Malay Version -->
+      <div data-lang-block="ms">
+        <div class="section-header">
+          <h3 class="section-title">Senarai Rujukan Berwibawa & Pautan Terus Digital</h3>
+          <span class="section-tag">Manuskrip, Arkib & Teks Klasik</span>
+        </div>
+
+        <p class="prose-text">
+          Semua data falak, kronologi, dan teks yang digunakan dalam inisiatif <em>Prophetic Timeline</em> ini disahkan bersandarkan kepada penerbitan asal, manuskrip arkib kebangsaan, dan sumber-sumber muktabar berikut. Klik mana-mana pautan di bawah untuk membaca atau memuat turun naskhah digital rasmi:
+        </p>
+
+        <div class="ref-grid">
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">Karya Utama Asal (Perancis)</span>
+                <span class="chip chip-gold">1858 M</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad</h4>
+              <p class="ref-meta">
+                <strong>Pengarang:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
+                <strong>Penerbit:</strong> Paris: Imprimerie impériale / <em>Journal Asiatique</em>, 5e série, t. XI, hlm. 109–192.<br>
+                <strong>Kandungan:</strong> Kajian teras mengenai sistem kalendar pra-Islam, sisipan nasi', gerhana matahari Madinah 632 M, dan penentuan hari lahir Nabi Muhammad ﷺ pada hari Isnin 20 April 571 M (9 Rabiulawal).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://gallica.bnf.fr/ark:/12148/bpt6k93167w/f109.item" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 Baca di Gallica (BnF) &rarr;
+              </a>
+              <a href="https://archive.org/details/mmoiresurlecale00beygoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Internet Archive &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-manuscript">Terjemahan Arab Rasmi</span>
+                <span class="chip chip-gold">1305 H / 1887 M</span>
+              </div>
+              <h4 class="ref-title-ar" dir="rtl">نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام</h4>
+              <p class="ref-meta">
+                <strong>Pengarang:</strong> Mahmoud Pasha al-Falaki<br>
+                <strong>Penterjemah & Muhaqqiq:</strong> Ahmad Zaki Pasha (Syeikh al-'Urubah)<br>
+                <strong>Penerbit:</strong> Al-Matba'ah al-Kubra al-Amiriyyah bi-Bulaq, Misr (1305 H).<br>
+                <strong>Kandungan:</strong> Naskhah Arab lengkap dengan nota tahqiq dan perbahasan dalil-dalil sirah serta hisab falak.
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/download/NataegAlAfham/NataegAlAfham.pdf" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📥 Muat Turun PDF Rasmi (Archive.org) &rarr;
+              </a>
+              <a href="https://archive.org/details/NataegAlAfham" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Butiran Arkib &rarr;
+              </a>
+              <a href="https://ar.wikisource.org/wiki/%D9%86%D8%AA%D8%A7%D8%A6%D8%AC_%D8%A7%D9%84%D8%A3%D9%81%D9%87%D8%A7%D9%85_%D9%81%D9%8a_%D8%AA%D9%82%D9%88%D9%8a%D9%85_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8_%D9%82%D8%A8%D9%84_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📄 Teks di Wikisource &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">Arkeologi & Kartografi</span>
+                <span class="chip chip-blue">1872 M</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur l'antique Alexandrie, ses faubourgs et ses fortifications</h4>
+              <p class="ref-meta">
+                <strong>Pengarang:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
+                <strong>Penerbit:</strong> Copenhague: Imprimerie de Bianco Luno (1872).<br>
+                <strong>Kandungan:</strong> Tinjauan penggalian arkeologi dan pembinaan semula pelan jalan grid bandar Iskandariah zaman Ptolemy dan Rom Purba atas titah Khedive Ismail.
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/mmoiresurlantiq00pashgoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🏛️ Baca di Internet Archive &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">Sumber Hadis Sahih</span>
+                <span class="chip chip-green">Koleksi Sahih</span>
+              </div>
+              <h4 class="ref-title">Sahih al-Bukhari & Sahih Muslim</h4>
+              <p class="ref-meta">
+                <strong>Rujukan Utama:</strong><br>
+                • <em>Sahih Muslim</em>, Kitab al-Siyam, No. 1162 (Kelahiran Nabi pada hari Isnin).<br>
+                • <em>Sahih al-Bukhari</em>, Kitab al-Kusuf, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1040</a>–<a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1044" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">1044</a> & <em>Sahih Muslim</em> No. 901–915 (Gerhana matahari semasa wafatnya Ibrahim).<br>
+                • <em>Sahih al-Bukhari</em>, Kitab al-Hajj, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1741</a> (Khutbah Haji Wada' mengenai peredaran masa).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://sunnah.com/muslim:1162b" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 Hadis Isnin (Sunnah.com) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 Hadis Gerhana (Sahih al-Bukhari #1040) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 Hadis Haji Wada' (Sahih al-Bukhari #1741) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">Sejarah & Falak Klasik</span>
+                <span class="chip chip-green">Abad 4–9 H</span>
+              </div>
+              <h4 class="ref-title-ar" dir="rtl">الآثار الباقية عن القرون الخالية & مروج الذهب</h4>
+              <p class="ref-meta">
+                • <strong>Abu Rayhan al-Biruni:</strong> <em>Al-Athar al-Baqiyah 'an al-Qurun al-Khaliyah</em> (ed. C.E. Sachau, Leipzig, 1878).<br>
+                • <strong>Al-Mas'udi:</strong> <em>Muruj al-Dhahab wa-Ma'adin al-Jawhar</em> (ed. Barbier de Meynard, Paris, 1861).<br>
+                • <strong>Ibn Hisham:</strong> <em>Al-Sirah al-Nabawiyyah</em> (ed. Mustafa al-Saqqa, Kaherah).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/alatharoalbakeya00berouoft" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Kitab Al-Biruni (Archive.org) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-archive">Bibliografi & Arkib Moden</span>
+                <span class="chip chip-gold">Biografi</span>
+              </div>
+              <h4 class="ref-title">Kitab al-A'lam & Wikimedia Commons</h4>
+              <p class="ref-meta">
+                • <strong>Khayr al-Din al-Zirikli:</strong> <em>Al-A'lam</em>, Jilid 7, hlm. 165 (Dar al-'Ilm lil-Malayin).<br>
+                • <strong>Umar Rida Kahhalah:</strong> <em>Mu'jam al-Mu'allifin</em>, Jilid 12, hlm. 154.<br>
+                • <strong>Wikimedia Commons:</strong> Kategori Arkib Media Mahmud Ahmad Hamdi al-Falaki (Gambar potret rasmi Alexandre Quinet 1882 & peta-peta asal).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://commons.wikimedia.org/wiki/Category:Mahmud_Ahmad_Hamdi_al-Falaki" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🖼️ Arkib Media Wikimedia Commons &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="prose-text">
-        Semua data falak, kronologi, dan teks yang digunakan dalam inisiatif <em>Prophetic Timeline</em> ini disahkan bersandarkan kepada penerbitan asal, manuskrip arkib kebangsaan, dan sumber-sumber muktabar berikut. Klik mana-mana pautan di bawah untuk membaca atau memuat turun naskhah digital rasmi:
-      </p>
-
-      <div class="ref-grid">
-        <!-- Ref Card 1 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-treatise">Karya Utama Asal (Perancis)</span>
-              <span class="chip chip-gold">1858 M</span>
-            </div>
-            <h4 class="ref-title">Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad</h4>
-            <p class="ref-meta">
-              <strong>Pengarang:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
-              <strong>Penerbit:</strong> Paris: Imprimerie impériale / <em>Journal Asiatique</em>, 5e série, t. XI, hlm. 109–192.<br>
-              <strong>Kandungan:</strong> Kajian teras mengenai sistem kalendar pra-Islam, sisipan nasi', gerhana matahari Madinah 632 M, dan penentuan hari lahir Nabi Muhammad ﷺ pada hari Isnin 20 April 571 M (9 Rabiulawal).
-            </p>
-          </div>
-          <div class="ref-actions">
-            <a href="https://gallica.bnf.fr/ark:/12148/bpt6k93167w/f109.item" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
-              📖 Baca di Gallica (BnF) &rarr;
-            </a>
-            <a href="https://archive.org/details/mmoiresurlecale00beygoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              🏛️ Internet Archive &rarr;
-            </a>
-          </div>
+      <!-- English Version -->
+      <div data-lang-block="en">
+        <div class="section-header">
+          <h3 class="section-title">Authoritative References & Direct Digital Links</h3>
+          <span class="section-tag">Manuscripts, Archives & Classical Texts</span>
         </div>
 
-        <!-- Ref Card 2 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-manuscript">Terjemahan Arab Rasmi</span>
-              <span class="chip chip-gold">1305 H / 1887 M</span>
+        <p class="prose-text">
+          All astronomical determinations, chronology alignments, and texts cited across the <em>Prophetic Timeline</em> initiative are directly verified against original publications and national archive manuscripts. Click any button below to read or download official digitized facsimiles:
+        </p>
+
+        <div class="ref-grid">
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">Original French Treatise</span>
+                <span class="chip chip-gold">1858 CE</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad</h4>
+              <p class="ref-meta">
+                <strong>Author:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
+                <strong>Publisher:</strong> Paris: Imprimerie impériale / <em>Journal Asiatique</em>, 5th series, vol. XI, pp. 109–192.<br>
+                <strong>Contents:</strong> Seminal monograph on pre-Islamic intercalation (nasi'), the 632 CE Medina solar eclipse, and calculation of Monday, 20 April 571 CE (9 Rabi' al-Awwal) as the Mawlid.
+              </p>
             </div>
-            <h4 class="ref-title-ar" dir="rtl">نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام</h4>
-            <p class="ref-meta">
-              <strong>Pengarang:</strong> Mahmoud Pasha al-Falaki<br>
-              <strong>Penterjemah & Muhaqqiq:</strong> Ahmad Zaki Pasha (Syeikh al-'Urubah)<br>
-              <strong>Penerbit:</strong> Al-Matba'ah al-Kubra al-Amiriyyah bi-Bulaq, Misr (1305 H).<br>
-              <strong>Kandungan:</strong> Naskhah Arab lengkap dengan nota tahqiq dan perbahasan dalil-dalil sirah serta hisab falak.
-            </p>
+            <div class="ref-actions">
+              <a href="https://gallica.bnf.fr/ark:/12148/bpt6k93167w/f109.item" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 Read on Gallica (BnF) &rarr;
+              </a>
+              <a href="https://archive.org/details/mmoiresurlecale00beygoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Internet Archive &rarr;
+              </a>
+            </div>
           </div>
-          <div class="ref-actions">
-            <a href="https://archive.org/download/NataegAlAfham/NataegAlAfham.pdf" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
-              📥 Muat Turun PDF Rasmi (Archive.org) &rarr;
-            </a>
-            <a href="https://archive.org/details/NataegAlAfham" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              🏛️ Butiran Arkib &rarr;
-            </a>
-            <a href="https://ar.wikisource.org/wiki/%D9%86%D8%AA%D8%A7%D8%A6%D8%AC_%D8%A7%D9%84%D8%A3%D9%81%D9%87%D8%A7%D9%85_%D9%81%D9%8a_%D8%AA%D9%82%D9%88%D9%8a%D9%85_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8_%D9%82%D8%A8%D9%84_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              📄 Teks di Wikisource &rarr;
-            </a>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-manuscript">Official Arabic Translation</span>
+                <span class="chip chip-gold">1305 AH / 1887 CE</span>
+              </div>
+              <h4 class="ref-title-ar" dir="rtl">نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام</h4>
+              <p class="ref-meta">
+                <strong>Author:</strong> Mahmoud Pasha al-Falaki<br>
+                <strong>Translator & Editor:</strong> Ahmad Zaki Pasha (Shaykh al-'Urubah)<br>
+                <strong>Publisher:</strong> Al-Matba'ah al-Kubra al-Amiriyyah, Bulaq, Cairo (1305 AH).<br>
+                <strong>Contents:</strong> Complete Arabic text with comprehensive critical footnotes, astronomical appendices, and historical proofs.
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/download/NataegAlAfham/NataegAlAfham.pdf" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📥 Download Official PDF (Archive.org) &rarr;
+              </a>
+              <a href="https://archive.org/details/NataegAlAfham" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Archive Overview &rarr;
+              </a>
+              <a href="https://ar.wikisource.org/wiki/%D9%86%D8%AA%D8%A7%D8%A6%D8%AC_%D8%A7%D9%84%D8%A3%D9%81%D9%87%D8%A7%D9%85_%D9%81%D9%8a_%D8%AA%D9%82%D9%88%D9%8a%D9%85_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8_%D9%82%D8%A8%D9%84_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📄 View on Wikisource &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">Archeology & Cartography</span>
+                <span class="chip chip-blue">1872 CE</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur l'antique Alexandrie, ses faubourgs et ses fortifications</h4>
+              <p class="ref-meta">
+                <strong>Author:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
+                <strong>Publisher:</strong> Copenhagen: Bianco Luno (1872).<br>
+                <strong>Contents:</strong> Comprehensive archeological survey, excavation soundings, and street grid reconstruction of Ptolemaic and Roman Alexandria.
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/mmoiresurlantiq00pashgoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🏛️ Read on Internet Archive &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">Canonical Hadith Collections</span>
+                <span class="chip chip-green">Sahih Corpus</span>
+              </div>
+              <h4 class="ref-title">Sahih al-Bukhari & Sahih Muslim</h4>
+              <p class="ref-meta">
+                <strong>Primary References:</strong><br>
+                • <em>Sahih Muslim</em>, Book of Fasting, No. 1162 (The Prophet's birth on Monday).<br>
+                • <em>Sahih al-Bukhari</em>, Book of Eclipses, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1040</a>–<a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1044" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">1044</a> & <em>Sahih Muslim</em> No. 901–915 (Solar eclipse upon Ibrahim's passing).<br>
+                • <em>Sahih al-Bukhari</em>, Book of Hajj, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1741</a> (Farewell Pilgrimage sermon on time rotation).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://sunnah.com/muslim:1162b" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 Monday Hadith (Sunnah.com) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 Eclipse Hadith (#1040) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 Farewell Sermon Hadith (#1741) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">Classical Islamic Chronology</span>
+                <span class="chip chip-green">4th–9th Century AH</span>
+              </div>
+              <h4 class="ref-title-ar" dir="rtl">الآثار الباقية عن القرون الخالية & مروج الذهب</h4>
+              <p class="ref-meta">
+                • <strong>Abu Rayhan al-Biruni:</strong> <em>The Chronology of Ancient Nations</em> (ed. C.E. Sachau, Leipzig, 1878).<br>
+                • <strong>Al-Mas'udi:</strong> <em>Muruj al-Dhahab wa-Ma'adin al-Jawhar</em> (ed. Barbier de Meynard, Paris, 1861).<br>
+                • <strong>Ibn Hisham:</strong> <em>Al-Sirah al-Nabawiyyah</em> (ed. Mustafa al-Saqqa, Cairo).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/alatharoalbakeya00berouoft" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ Al-Biruni's Chronology (Archive.org) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-archive">Biographical Dictionaries</span>
+                <span class="chip chip-gold">Encyclopedias</span>
+              </div>
+              <h4 class="ref-title">Al-A'lam & Wikimedia Commons Archive</h4>
+              <p class="ref-meta">
+                • <strong>Khayr al-Din al-Zirikli:</strong> <em>Al-A'lam</em>, Vol. 7, p. 165 (Dar al-'Ilm lil-Malayin).<br>
+                • <strong>Umar Rida Kahhalah:</strong> <em>Mu'jam al-Mu'allifin</em>, Vol. 12, p. 154.<br>
+                • <strong>Wikimedia Commons:</strong> Mahmud Ahmad Hamdi al-Falaki Media Category (official portraits & historical maps).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://commons.wikimedia.org/wiki/Category:Mahmud_Ahmad_Hamdi_al-Falaki" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🖼️ Wikimedia Commons Media Archive &rarr;
+              </a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Ref Card 3 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-treatise">Arkeologi & Kartografi</span>
-              <span class="chip chip-blue">1872 M</span>
-            </div>
-            <h4 class="ref-title">Mémoire sur l'antique Alexandrie, ses faubourgs et ses fortifications</h4>
-            <p class="ref-meta">
-              <strong>Pengarang:</strong> Mahmoud-Bey (Mahmoud Pasha al-Falaki)<br>
-              <strong>Penerbit:</strong> Copenhague: Imprimerie de Bianco Luno (1872).<br>
-              <strong>Kandungan:</strong> Tinjauan penggalian arkeologi dan pembinaan semula pelan jalan grid bandar Iskandariah zaman Ptolemy dan Rom Purba atas titah Khedive Ismail.
-            </p>
-          </div>
-          <div class="ref-actions">
-            <a href="https://archive.org/details/mmoiresurlantiq00pashgoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
-              🏛️ Baca di Internet Archive &rarr;
-            </a>
-          </div>
+      <!-- Arabic Version -->
+      <div data-lang-block="ar" dir="rtl">
+        <div class="section-header">
+          <h3 class="section-title">المراجع المعتمدة والروابط الرقمية المباشرة</h3>
+          <span class="section-tag">المخطوطات والأرشيف والمصادر الكلاسيكية</span>
         </div>
 
-        <!-- Ref Card 4 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-source">Sumber Hadis Sahih</span>
-              <span class="chip chip-green">Koleksi Sahih</span>
-            </div>
-            <h4 class="ref-title">Sahih al-Bukhari & Sahih Muslim</h4>
-            <p class="ref-meta">
-              <strong>Rujukan Utama:</strong><br>
-              • <em>Sahih Muslim</em>, Kitab al-Siyam, No. 1162 (Kelahiran Nabi pada hari Isnin).<br>
-              • <em>Sahih al-Bukhari</em>, Kitab al-Kusuf, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1040</a>–<a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1044" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">1044</a> & <em>Sahih Muslim</em> No. 901–915 (Gerhana matahari semasa wafatnya Ibrahim).<br>
-              • <em>Sahih al-Bukhari</em>, Kitab al-Hajj, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">No. 1741</a> (Khutbah Haji Wada' mengenai peredaran masa).
-            </p>
-          </div>
-          <div class="ref-actions">
-            <a href="https://sunnah.com/muslim:1162b" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
-              📖 Hadis Isnin (Sunnah.com) &rarr;
-            </a>
-            <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              📖 Hadis Gerhana (Sahih al-Bukhari #1040) &rarr;
-            </a>
-            <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              📖 Hadis Haji Wada' (Sahih al-Bukhari #1741) &rarr;
-            </a>
-          </div>
-        </div>
+        <p class="prose-text">
+          جميع البيانات الفلكية والتواريخ الزمنية المعتمدة في مشروع <em>الخط الزمني للسيرة النبوية</em> محققة وموثقة بالرجوع المباشر إلى الطبعات والمخطوطات الأصلية المحفوظة في دور الكتب الوطنية والأرشيفات العالمية. انقر على أي زر لتصفح أو تحميل النسخة الرقمية:
+        </p>
 
-        <!-- Ref Card 5 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-source">Sejarah & Falak Klasik</span>
-              <span class="chip chip-green">Abad 4–9 H</span>
+        <div class="ref-grid">
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">المصنف الأصلي بالفرنسية</span>
+                <span class="chip chip-gold">١٨٥٨ م</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur le calendrier arabe avant l'islamisme, et sur la naissance et l'âge du prophète Mohammad</h4>
+              <p class="ref-meta">
+                <strong>المؤلف:</strong> محمود بك الفلكي (محمود باشا الفلكي)<br>
+                <strong>الناشر:</strong> باريس: المطبعة الإمبراطورية / المجلة الآسيوية (Journal Asiatique)، السلسلة ٥، المجلد ١١، ص ١٠٩–١٩٢.<br>
+                <strong>المحتوى:</strong> الدراسة التأسيسية الشاملة في حساب تقويم العرب قبل الإسلام، والنسيء، وكسوف المدينة عام ٦٣٢ م، وتحقيق المولد الشريف في الاثنين ٩ ربيع الأول ٥٧١ م.
+              </p>
             </div>
-            <h4 class="ref-title-ar" dir="rtl">الآثار الباقية عن القرون الخالية & مروج الذهب</h4>
-            <p class="ref-meta">
-              • <strong>Abu Rayhan al-Biruni:</strong> <em>Al-Athar al-Baqiyah 'an al-Qurun al-Khaliyah</em> (ed. C.E. Sachau, Leipzig, 1878).<br>
-              • <strong>Al-Mas'udi:</strong> <em>Muruj al-Dhahab wa-Ma'adin al-Jawhar</em> (ed. Barbier de Meynard, Paris, 1861).<br>
-              • <strong>Ibn Hisham:</strong> <em>Al-Sirah al-Nabawiyyah</em> (ed. Mustafa al-Saqqa, Kaherah).
-            </p>
+            <div class="ref-actions">
+              <a href="https://gallica.bnf.fr/ark:/12148/bpt6k93167w/f109.item" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 تصفح في المكتبة الوطنية الفرنسية (Gallica) &rarr;
+              </a>
+              <a href="https://archive.org/details/mmoiresurlecale00beygoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ أرشيف الإنترنت &rarr;
+              </a>
+            </div>
           </div>
-          <div class="ref-actions">
-            <a href="https://archive.org/details/alatharoalbakeya00berouoft" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
-              🏛️ Kitab Al-Biruni (Archive.org) &rarr;
-            </a>
-          </div>
-        </div>
 
-        <!-- Ref Card 6 -->
-        <div class="ref-card">
-          <div>
-            <div class="ref-header">
-              <span class="ref-category-badge badge-archive">Bibliografi & Arkib Moden</span>
-              <span class="chip chip-gold">Biografi</span>
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-manuscript">الترجمة والتحقيق العربي المعتمد</span>
+                <span class="chip chip-gold">١٣٠٥ هـ / ١٨٨٧ م</span>
+              </div>
+              <h4 class="ref-title-ar">نتائج الأفهام في تقويم العرب قبل الإسلام وفي تحقيق مولد النبي وعمره عليه الصلاة والسلام</h4>
+              <p class="ref-meta">
+                <strong>المؤلف:</strong> محمود باشا الفلكي<br>
+                <strong>المترجم والمحقق:</strong> أحمد زكي باشا (شيخ العروبة)<br>
+                <strong>الناشر:</strong> المطبعة الكبرى الأميرية ببولاق مصر (١٣٠٥ هـ).<br>
+                <strong>المحتوى:</strong> النص العربي الكامل المذيل بالحواشي النقدية والتحقيقات الحديثية والفلكية الوافية.
+              </p>
             </div>
-            <h4 class="ref-title">Kitab al-A'lam & Wikimedia Commons</h4>
-            <p class="ref-meta">
-              • <strong>Khayr al-Din al-Zirikli:</strong> <em>Al-A'lam</em>, Jilid 7, hlm. 165 (Dar al-'Ilm lil-Malayin).<br>
-              • <strong>Umar Rida Kahhalah:</strong> <em>Mu'jam al-Mu'allifin</em>, Jilid 12, hlm. 154.<br>
-              • <strong>Wikimedia Commons:</strong> Kategori Arkib Media Mahmud Ahmad Hamdi al-Falaki (Gambar potret rasmi Alexandre Quinet 1882 & peta-peta asal).
-            </p>
+            <div class="ref-actions">
+              <a href="https://archive.org/download/NataegAlAfham/NataegAlAfham.pdf" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📥 تحميل النسخة الأصلية PDF (أرشيف الإنترنت) &rarr;
+              </a>
+              <a href="https://archive.org/details/NataegAlAfham" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ بيانات النسخة بالأرشيف &rarr;
+              </a>
+              <a href="https://ar.wikisource.org/wiki/%D9%86%D8%AA%D8%A7%D8%A6%D8%AC_%D8%A7%D9%84%D8%A3%D9%81%D9%87%D8%A7%D9%85_%D9%81%D9%8a_%D8%AA%D9%82%D9%88%D9%8a%D9%85_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8_%D9%82%D8%A8%D9%84_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📄 قراءة النص في ويكي مصدر &rarr;
+              </a>
+            </div>
           </div>
-          <div class="ref-actions">
-            <a href="https://commons.wikimedia.org/wiki/Category:Mahmud_Ahmad_Hamdi_al-Falaki" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
-              🖼️ Arkib Media Wikimedia Commons &rarr;
-            </a>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-treatise">الآثار والخرائط التاريخية</span>
+                <span class="chip chip-blue">١٨٧٢ م</span>
+              </div>
+              <h4 class="ref-title">Mémoire sur l'antique Alexandrie, ses faubourgs et ses fortifications</h4>
+              <p class="ref-meta">
+                <strong>المؤلف:</strong> محمود باشا الفلكي<br>
+                <strong>الناشر:</strong> كوبنهاغن: مطبعة بيانكو لونو (١٨٧٢ م).<br>
+                <strong>المحتوى:</strong> أطلس وحفريات الإسكندرية القديمة ورسم شبكة شوارعها البطلمية والرومانية بتكليف من الخديوي إسماعيل ونابليون الثالث.
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/mmoiresurlantiq00pashgoog" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🏛️ تصفح في أرشيف الإنترنت &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">كتب السنة الصحيحة</span>
+                <span class="chip chip-green">أصول الحديث</span>
+              </div>
+              <h4 class="ref-title">صحيح البخاري وصحيح مسلم</h4>
+              <p class="ref-meta">
+                <strong>الأحاديث العمدة:</strong><br>
+                • <em>صحيح مسلم</em>، كتاب الصيام، حديث رقم ١١٦٢ (ولادته ﷺ يوم الاثنين).<br>
+                • <em>صحيح البخاري</em>، كتاب الكسوف، <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">حديث ١٠٤٠</a>–<a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1044" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">١٠٤٤</a> و<em>صحيح مسلم</em> حديث ٩٠١–٩١٥ (كسوف الشمس صبيحة وفاة إبراهيم).<br>
+                • <em>صحيح البخاري</em>، كتاب الحج، <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">حديث ١٧٤١</a> (خطبة حجة الوداع واستدارة الزمان).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://sunnah.com/muslim:1162b" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                📖 حديث الاثنين (Sunnah.com) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 حديث الكسوف (#١٠٤٠) &rarr;
+              </a>
+              <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1741" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                📖 حديث حجة الوداع (#١٧٤١) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-source">أمهات كتب التاريخ والفلك</span>
+                <span class="chip chip-green">القرون ٤–٩ هـ</span>
+              </div>
+              <h4 class="ref-title">الآثار الباقية ومروج الذهب</h4>
+              <p class="ref-meta">
+                • <strong>أبو الريحان البيروني:</strong> <em>الآثار الباقية عن القرون الخالية</em> (تحقيق سخاو، لايبزغ، ١٨٧٨ م).<br>
+                • <strong>المسعودي:</strong> <em>مروج الذهب ومعادن الجوهر</em> (باريس، ١٨٦١ م).<br>
+                • <strong>ابن هشام:</strong> <em>السيرة النبوية</em> (تحقيق مصطفى السقا، القاهرة).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://archive.org/details/alatharoalbakeya00berouoft" target="_blank" rel="noopener noreferrer" class="ref-link-btn">
+                🏛️ كتاب البيروني في الأرشيف &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <div class="ref-header">
+                <span class="ref-category-badge badge-archive">معاجم التراجم والأرشيف</span>
+                <span class="chip chip-gold">موسوعات التراجم</span>
+              </div>
+              <h4 class="ref-title">الأعلام للزركلي وويكيميديا كومنز</h4>
+              <p class="ref-meta">
+                • <strong>خير الدين الزركلي:</strong> <em>الأعلام</em>، المجلد ٧، ص ١٦٥ (دار العلم للملايين).<br>
+                • <strong>عمر رضا كحالة:</strong> <em>معجم المؤلفين</em>، المجلد ١٢، ص ١٥٤.<br>
+                • <strong>ويكيميديا كومنز:</strong> قسم وسائط محمود أحمد حمدي الفلكي (الصور الفوتوغرافية الأصلية والخرائط).
+              </p>
+            </div>
+            <div class="ref-actions">
+              <a href="https://commons.wikimedia.org/wiki/Category:Mahmud_Ahmad_Hamdi_al-Falaki" target="_blank" rel="noopener noreferrer" class="ref-link-btn primary">
+                🖼️ أرشيف ويكيميديا كومنز &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -629,9 +1579,26 @@
 
   <!-- App Footer -->
   <footer class="app-footer">
-    <p>Sebahagian daripada inisiatif khazanah warisan digital <a href="https://github.com/maktabah-maftoohah" target="_blank" rel="noopener"><strong>Maktabah Maftoohah (المكتبة المفتوحة)</strong></a>.</p>
-    <p>Halaman ini didedikasikan untuk mendokumentasikan profil saintifik dan karya agung <strong>Mahmoud Pasha al-Falaki (1815–1885 M / 1302 H)</strong>.</p>
-    <p><a href="./index.html"><strong>&larr; Kembali ke Aplikasi Utama: Garis Masa & Kalendar Kenabian</strong></a></p>
+    <!-- Malay Footer -->
+    <div data-lang-block="ms">
+      <p>Sebahagian daripada inisiatif khazanah warisan digital <a href="https://github.com/maktabah-maftoohah" target="_blank" rel="noopener"><strong>Maktabah Maftoohah (المكتبة المفتوحة)</strong></a>.</p>
+      <p>Halaman ini didedikasikan untuk mendokumentasikan profil saintifik dan karya agung <strong>Mahmoud Pasha al-Falaki (1815–1885 M / 1302 H)</strong>.</p>
+      <p><a href="./index.html"><strong>&larr; Kembali ke Aplikasi Utama: Garis Masa & Kalendar Kenabian</strong></a></p>
+    </div>
+
+    <!-- English Footer -->
+    <div data-lang-block="en">
+      <p>Part of the digital Islamic heritage initiative by <a href="https://github.com/maktabah-maftoohah" target="_blank" rel="noopener"><strong>Maktabah Maftoohah (المكتبة المفتوحة)</strong></a>.</p>
+      <p>This page is dedicated to documenting the scientific profile and masterwork of <strong>Mahmoud Pasha al-Falaki (1815–1885 CE / 1302 AH)</strong>.</p>
+      <p><a href="./index.html"><strong>&larr; Return to Main App: Prophetic Timeline & Calendar</strong></a></p>
+    </div>
+
+    <!-- Arabic Footer -->
+    <div data-lang-block="ar" dir="rtl">
+      <p>ضمن مشاريع رقمنة التراث العلمي الإسلامي لـ <a href="https://github.com/maktabah-maftoohah" target="_blank" rel="noopener"><strong>المكتبة المفتوحة (Maktabah Maftoohah)</strong></a>.</p>
+      <p>هذه الصفحة مخصصة لتوثيق السيرة العلمية والتحقيق الفلكي للعالم الجليل <strong>محمود باشا الفلكي (١٨١٥–١٨٨٥ م / ١٣٠٢ هـ)</strong>.</p>
+      <p><a href="./index.html"><strong>العودة إلى التطبيق الرئيسي: الخط الزمني للسيرة النبوية &rarr;</strong></a></p>
+    </div>
   </footer>
 
   <!-- Application Bootstrap (Zero-Build Vanilla ES6 Module) -->

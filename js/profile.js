@@ -1,6 +1,7 @@
 /**
  * Prophetic Timeline - Mahmoud Pasha al-Falaki Profile Module
- * Vanilla ES6 module handling theme toggle, language switching, and smooth navigation.
+ * Vanilla ES6 module handling theme toggle, comprehensive trilingual language switching (MS/EN/AR),
+ * and smooth jump navigation with scroll spy.
  */
 
 class ProfileApp {
@@ -20,16 +21,26 @@ class ProfileApp {
     this.currentTheme = theme;
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("prophetic_theme", theme);
-
-    const themeToggleBtn = document.getElementById("theme-toggle-btn");
-    if (themeToggleBtn) {
-      themeToggleBtn.textContent = theme === "dark" ? "☀️ Cerah" : "🌙 Gelap";
-    }
+    this.updateThemeButtonLabel();
   }
 
   toggleTheme() {
     const nextTheme = this.currentTheme === "dark" ? "light" : "dark";
     this.applyTheme(nextTheme);
+  }
+
+  updateThemeButtonLabel() {
+    const themeToggleBtn = document.getElementById("theme-toggle-btn");
+    if (!themeToggleBtn) return;
+
+    const isDark = this.currentTheme === "dark";
+    if (this.currentLang === "en") {
+      themeToggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+    } else if (this.currentLang === "ar") {
+      themeToggleBtn.textContent = isDark ? "☀️ مضيء" : "🌙 داكن";
+    } else {
+      themeToggleBtn.textContent = isDark ? "☀️ Cerah" : "🌙 Gelap";
+    }
   }
 
   applyLanguage(lang) {
@@ -39,6 +50,7 @@ class ProfileApp {
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("data-lang", lang);
 
     // Update active class on language buttons
     const langBtns = document.querySelectorAll(".lang-btn");
@@ -50,25 +62,28 @@ class ProfileApp {
       }
     });
 
-    // Toggle multi-language content blocks
+    // Update elements with data-lang-text
     const multiLangElements = document.querySelectorAll("[data-lang-text]");
     multiLangElements.forEach((el) => {
       const text = el.getAttribute(`data-lang-${lang}`);
       if (text) {
-        el.textContent = text;
+        el.innerHTML = text;
       }
     });
 
-    // Toggle sections with data-lang-block
+    // Toggle blocks with data-lang-block
     const langBlocks = document.querySelectorAll("[data-lang-block]");
     langBlocks.forEach((block) => {
       const blockLang = block.getAttribute("data-lang-block");
       if (blockLang === lang) {
-        block.style.display = "block";
+        block.style.display = "";
       } else {
         block.style.display = "none";
       }
     });
+
+    // Update theme button text according to new language
+    this.updateThemeButtonLabel();
   }
 
   setupEventListeners() {
@@ -78,7 +93,7 @@ class ProfileApp {
       themeBtn.addEventListener("click", () => this.toggleTheme());
     }
 
-    // Language buttons
+    // Language switcher buttons
     const langBtns = document.querySelectorAll(".lang-btn");
     langBtns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
