@@ -189,10 +189,22 @@ export class CalendarMonthView {
     for (let i = 0; i < firstWeekday; i++) {
       const prevPadJdn = firstDayJdn - (firstWeekday - i);
       const prevPadSnap = getMultiCalendarSnapshot(prevPadJdn, lang);
+      let padPrimary = prevPadSnap.julian.day;
+      let padSub = `${prevPadSnap.hijri.day} ${prevPadSnap.hijri.monthName.slice(0, 3)}`;
+
+      if (this.primarySystem === "hijri") {
+        padPrimary = prevPadSnap.hijri.day;
+        padSub = `${prevPadSnap.julian.day} ${getMonthName(prevPadSnap.julian.month, lang, "julian").slice(0, 3)}`;
+      } else if (this.primarySystem === "elephant_era") {
+        padPrimary = prevPadSnap.hijri.day;
+        padSub = `Thn ${prevPadSnap.elephantEra.year}`;
+      }
+
       cellsHtml += `
         <div class="calendar-day-cell pad-cell" data-jdn="${prevPadJdn}">
           <div class="day-number-bar">
-            <span class="day-num">${prevPadSnap.julian.day}</span>
+            <span class="day-num">${padPrimary}</span>
+            <span class="day-sub">${padSub}</span>
           </div>
         </div>
       `;
@@ -234,6 +246,33 @@ export class CalendarMonthView {
                 ${ev.title[lang] || ev.title.ms}
               </div>
             `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    // Trailing pad cells to complete the last week row
+    const totalRendered = firstWeekday + daysInMonth;
+    const trailingPads = (7 - (totalRendered % 7)) % 7;
+    for (let j = 1; j <= trailingPads; j++) {
+      const nextPadJdn = julianToJDN(this.currentYear, this.currentMonth, daysInMonth) + j;
+      const nextPadSnap = getMultiCalendarSnapshot(nextPadJdn, lang);
+      let padPrimary = nextPadSnap.julian.day;
+      let padSub = `${nextPadSnap.hijri.day} ${nextPadSnap.hijri.monthName.slice(0, 3)}`;
+
+      if (this.primarySystem === "hijri") {
+        padPrimary = nextPadSnap.hijri.day;
+        padSub = `${nextPadSnap.julian.day} ${getMonthName(nextPadSnap.julian.month, lang, "julian").slice(0, 3)}`;
+      } else if (this.primarySystem === "elephant_era") {
+        padPrimary = nextPadSnap.hijri.day;
+        padSub = `Thn ${nextPadSnap.elephantEra.year}`;
+      }
+
+      cellsHtml += `
+        <div class="calendar-day-cell pad-cell" data-jdn="${nextPadJdn}">
+          <div class="day-number-bar">
+            <span class="day-num">${padPrimary}</span>
+            <span class="day-sub">${padSub}</span>
           </div>
         </div>
       `;
