@@ -9,7 +9,17 @@ const translations = { ms, en, ar };
 
 class I18nManager {
   constructor() {
-    this.currentLang = localStorage.getItem("prophetic_timeline_lang") || "ms";
+    const urlParam = typeof window !== "undefined" && window.location
+      ? new URLSearchParams(window.location.search).get("lang")
+      : null;
+    const validLangs = ["ms", "en", "ar"];
+    const initial = (urlParam && validLangs.includes(urlParam))
+      ? urlParam
+      : (localStorage.getItem("prophetic_timeline_lang") || "ms");
+    this.currentLang = initial;
+    if (urlParam && validLangs.includes(urlParam)) {
+      localStorage.setItem("prophetic_timeline_lang", urlParam);
+    }
     this.listeners = [];
   }
 

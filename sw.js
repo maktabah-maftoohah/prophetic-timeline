@@ -2,15 +2,19 @@
  * Prophetic Timeline - Service Worker (Offline Cache)
  */
 
-const CACHE_NAME = "prophetic-timeline-v5";
+const CACHE_NAME = "prophetic-timeline-v6";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./mahmoud-pasha.html",
   "./manifest.webmanifest",
+  "./favicon.ico",
   "./assets/logo-icon.svg",
+  "./assets/favicon-32x32.png",
+  "./assets/favicon-16x16.png",
   "./assets/mahmoud-pasha.jpg",
   "./data/icon.png",
+  "./data/icon-512.png",
   "./css/main.css",
   "./css/profile.css",
   "./css/timeline.css",

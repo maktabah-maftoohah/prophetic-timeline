@@ -6,7 +6,13 @@
 
 class ProfileApp {
   constructor() {
-    this.currentLang = localStorage.getItem("prophetic_timeline_lang") || "ms";
+    const urlParam = typeof window !== "undefined" && window.location
+      ? new URLSearchParams(window.location.search).get("lang")
+      : null;
+    const validLangs = ["ms", "en", "ar"];
+    this.currentLang = (urlParam && validLangs.includes(urlParam))
+      ? urlParam
+      : (localStorage.getItem("prophetic_timeline_lang") || "ms");
     this.currentTheme = localStorage.getItem("prophetic_theme") || "dark";
   }
 

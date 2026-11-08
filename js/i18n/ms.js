@@ -24,7 +24,30 @@ export default {
     selectedDayDetails: "Perincian Tarikh Terpilih",
     noEventsDay: "Tiada peristiwa bersejarah khusus yang direkodkan pada hari ini.",
     multiCalendarHeader: "Penyelarasan Sistem Kalendar",
-    eventsOnDay: "Peristiwa pada Hari Ini:"
+    eventsOnDay: "Peristiwa pada Hari Ini:",
+    quickJump: "Lompat Pantas:",
+    presets: {
+      elephant: "Tahun Gajah (Feb 571)",
+      mawlid: "Mawlid (Apr 571)",
+      bithah: "Bi'thah (Feb 610)",
+      hijrah: "Hijrah (Sep 622)",
+      lunarEclipse: "Gerhana Bulan 4 H (Nov 625)",
+      solarEclipse: "Gerhana Suria 10 H (Jan 632)",
+      wada: "Haji Wada' (Mac 632)",
+      wafat: "Kewafatan Nabi (Jun 632)"
+    },
+    yearPrev: "◀ Tahun Sebelum",
+    yearNext: "Tahun Selepas ▶",
+    yearPresets: {
+      y571: "571 M (Tahun Gajah & Mawlid)",
+      y573: "573 M (Belah Dada di Banu Sa'd)",
+      y579: "579 M (Wafat Anushirvan)",
+      y610: "610 M (Permulaan Kerasulan)",
+      y622: "622 M (Tahun 1 Hijrah)",
+      y625: "625 M (Tahun 4 Hijrah / Gerhana Bulan)",
+      y630: "630 M (Fath Makkah & Lahir Ibrahim)",
+      y632: "632 M (Wafat Ibrahim, Haji Wada' & Wafat Nabi)"
+    }
   },
   timeline: {
     filterCategory: "Kategori:",
@@ -80,7 +103,17 @@ export default {
     resultInterval: "Hasil Pengiraan Jarak:",
     totalDays: "Jumlah Hari Mutlak:",
     lunarEquiv: "Tahun Qamari (Hijri):",
-    solarEquiv: "Tahun Syamsi (Solar):"
+    solarEquiv: "Tahun Syamsi (Solar):",
+    presetLifespan: "Kelahiran ➔ Kewafatan (63 Thn)",
+    presetMission: "Kelahiran ➔ Kerasulan (40 Thn)",
+    presetHijrah: "Kelahiran ➔ Hijrah (53 Thn)",
+    presetEclipse: "Kelahiran ➔ Gerhana (Wafat Ibrahim)",
+    presetElephant: "Tahun Gajah ➔ Kelahiran (56 Hari)",
+    hadithLifespan: "Mengesahkan Riwayat Sahih al-Bukhari (No. 4464) & Muslim: Hayat Rasulullah ﷺ genap 63 tahun qamari + 9 hari",
+    hadithHijrah: "Mengesahkan Riwayat Sahih: Usia baginda ketika Hijrah genap 53 tahun qamari",
+    hadithMission: "Mengesahkan Riwayat Sahih: Usia baginda ketika menerima wahyu genap 40 tahun qamari",
+    hadithElephant: "Mengesahkan Riwayat Sejarah Klasik: Kelahiran baginda berlaku sekitar 50–56 hari selepas ekspedisi Abrahah",
+    errorSelectJDN: "Sila pilih dua peristiwa yang mempunyai nilai Julian Day Number (JDN)."
   },
   modal: {
     close: "Tutup",

@@ -245,9 +245,21 @@ export function getMultiCalendarSnapshot(jdn, lang = "ms") {
   let persianRegnal = null;
   if (julian.year >= 531 && julian.year <= 579) {
     const regnal = julian.year - 531 + 1;
-    persianRegnal = lang === "ar" ? `سنة ${regnal} لملك أنوشروان` : `Tahun ke-${regnal} Khusrow I Anushirvan`;
+    if (lang === "ar") {
+      persianRegnal = `سنة ${regnal} لملك أنوشروان`;
+    } else if (lang === "en") {
+      persianRegnal = `Year ${regnal} of Khusrow I Anushirvan`;
+    } else {
+      persianRegnal = `Tahun ke-${regnal} Khusrow I Anushirvan`;
+    }
   } else if (julian.year >= 632) {
-    persianRegnal = lang === "ar" ? "عهد يزدجرد الثالث" : "Zaman Yazdegerd III";
+    if (lang === "ar") {
+      persianRegnal = "عهد يزدجرد الثالث";
+    } else if (lang === "en") {
+      persianRegnal = "Era of Yazdegerd III";
+    } else {
+      persianRegnal = "Zaman Yazdegerd III";
+    }
   }
 
   // Days from Mawlid

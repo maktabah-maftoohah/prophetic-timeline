@@ -46,7 +46,7 @@ export class EclipseSimulator {
           </div>
           <div class="translation-text">
             "Sesungguhnya matahari dan bulan adalah dua tanda daripada tanda-tanda kebesaran Allah; kedua-duanya tidak gerhana kerana kematian seseorang ataupun kelahirannya. Maka apabila kamu melihatnya, berdoalah kepada Allah dan solatlah sehingga ia kembali terang."
-            <span class="source-tag">— <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1043" target="_blank" rel="noopener noreferrer" class="hadith-link">Sahih al-Bukhari (Kitab al-Kusuf, No. 1043) ↗</a></span>
+            <span class="source-tag">— <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1040" target="_blank" rel="noopener noreferrer" class="hadith-link">Sahih al-Bukhari #1040</a>, <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/1043" target="_blank" rel="noopener noreferrer" class="hadith-link">#1043</a> & <a href="https://maktabah-maftoohah.github.io/sahih-muslim/915" target="_blank" rel="noopener noreferrer" class="hadith-link">Sahih Muslim #915 ↗</a></span>
           </div>
         </div>
       </div>

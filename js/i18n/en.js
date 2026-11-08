@@ -24,7 +24,30 @@ export default {
     selectedDayDetails: "Selected Day Details",
     noEventsDay: "No specific historical events recorded on this day.",
     multiCalendarHeader: "Multi-Calendar Concordance",
-    eventsOnDay: "Events on this Day:"
+    eventsOnDay: "Events on this Day:",
+    quickJump: "Quick Jump:",
+    presets: {
+      elephant: "Year of Elephant (Feb 571)",
+      mawlid: "Mawlid (Apr 571)",
+      bithah: "Bi'thah (Feb 610)",
+      hijrah: "Hijrah (Sep 622)",
+      lunarEclipse: "Lunar Eclipse 4 AH (Nov 625)",
+      solarEclipse: "Solar Eclipse 10 AH (Jan 632)",
+      wada: "Farewell Hajj (Mar 632)",
+      wafat: "Prophet's Passing (Jun 632)"
+    },
+    yearPrev: "◀ Previous Year",
+    yearNext: "Next Year ▶",
+    yearPresets: {
+      y571: "571 CE (Year of Elephant & Mawlid)",
+      y573: "573 CE (Opening of the Breast)",
+      y579: "579 CE (Passing of Anushirvan)",
+      y610: "610 CE (Beginning of Revelation)",
+      y622: "622 CE (Year 1 AH / Hijrah)",
+      y625: "625 CE (Year 4 AH / Lunar Eclipse)",
+      y630: "630 CE (Conquest of Mecca & Ibrahim's Birth)",
+      y632: "632 CE (Eclipse, Farewell Hajj & Passing)"
+    }
   },
   timeline: {
     filterCategory: "Category:",
@@ -80,7 +103,17 @@ export default {
     resultInterval: "Distance Calculation Result:",
     totalDays: "Total Absolute Days:",
     lunarEquiv: "Lunar Years (Hijri):",
-    solarEquiv: "Solar Years (Tropical):"
+    solarEquiv: "Solar Years (Tropical):",
+    presetLifespan: "Mawlid ➔ Passing (63 Yrs)",
+    presetMission: "Mawlid ➔ Revelation (40 Yrs)",
+    presetHijrah: "Mawlid ➔ Hijrah (53 Yrs)",
+    presetEclipse: "Mawlid ➔ Eclipse (Ibrahim's Passing)",
+    presetElephant: "Year of Elephant ➔ Mawlid (56 Days)",
+    hadithLifespan: "Validates Sahih al-Bukhari (No. 4464) & Muslim: The Prophet's lifespan was exactly 63 lunar years + 9 days",
+    hadithHijrah: "Validates Sahih Narrations: Age at the Hijrah was exactly 53 lunar years",
+    hadithMission: "Validates Sahih Narrations: Age at first revelation was exactly 40 lunar years",
+    hadithElephant: "Validates Classical Chronology: The Prophet's birth occurred approx. 50–56 days following the Abrahah expedition",
+    errorSelectJDN: "Please select two events that have a valid Julian Day Number (JDN)."
   },
   modal: {
     close: "Close",

@@ -108,7 +108,7 @@ export class DayCalculator {
     const lang = i18n.getLang();
 
     if (!res) {
-      resultsArea.innerHTML = `<div class="error-msg">Sila pilih dua peristiwa yang mempunyai nilai Julian Day Number (JDN).</div>`;
+      resultsArea.innerHTML = `<div class="error-msg">${i18n.t("visualizers.errorSelectJDN")}</div>`;
       return;
     }
 
