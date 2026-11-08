@@ -25,7 +25,7 @@ Penyelidikan al-Falaki bersandarkan empat peristiwa astronomi yang tidak boleh d
 
 ### Tunjang 2: Kelahiran Nabi ﷺ pada Isnin, 9 Rabiulawal (20 April 571 M)
 * **Hadis Sahih**: Nabi ﷺ bersabda mengenai puasa hari Isnin:
-  > «ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ بُعِثْتُ فِيهِ...» (*Sahih Muslim*, No. 1162).
+  > «ذَاكَ يَوْمٌ وُلِدْتُ فِيهِ، وَيَوْمٌ بُعِثْتُ فِيهِ...» (*Sahih Muslim*, No. 2750).
 * **Percanggahan Tarikh Popular (12 Rabiulawal)**:
   * Kiraan astronomi al-Falaki membuktikan bahawa 12 Rabiulawal pada tahun 571 M jatuh pada hari **Khamis** (23 April 571 M).
   * Hari **Isnin** pada bulan Rabiulawal 571 M hanya jatuh pada **9 Rabiulawal** (bersamaan **20 April 571 M** / Julian Day Number 1,929,725).
@@ -73,4 +73,4 @@ $$\Delta\text{JDN} = \text{JDN}_{\text{Wafat}} (1,952,055) - \text{JDN}_{\text{M
 * **Tahun Solar Tropika (Purata $365.2422\text{ hari}$)**:
   $$\frac{22,330}{365.2422} = 61.138\text{ tahun} \implies \mathbf{61\text{ tahun solar dan } 48\text{ hari}}$$
 
-Ini mengesahkan secara matematik konsensus riwayat Sayyidatina Aisyah, Ibnu Abbas, dan Anas bin Malik رضي الله عنهم dalam *Sahih al-Bukhari* (No. 4464) dan *Sahih Muslim* bahawa baginda wafat tepat pada usia 63 tahun.
+Ini mengesahkan secara matematik konsensus riwayat Sayyidatina Aisyah, Ibnu Abbas, dan Anas bin Malik رضي الله عنهم dalam *Sahih al-Bukhari* (No. 4464) dan *Sahih Muslim* (No. 6092) bahawa baginda wafat tepat pada usia 63 tahun.

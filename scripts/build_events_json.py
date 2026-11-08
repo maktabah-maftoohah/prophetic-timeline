@@ -555,7 +555,7 @@ EVENTS_JSON = r'''[
       "classical_source": "Sahih Muslim (Hadith of Qatada); Ibn Dihyah; al-Khallal; al-Mas'udi; Mahmoud-Bey (1858, p. 147); Nata'ij al-Afham (p. 28)",
       "quran_refs": [],
       "hadith_refs": [
-        "Sahih Muslim (Hadith 1162)"
+        "Sahih Muslim (Hadith 2750)"
       ]
     },
     "astronomical_meta": {
@@ -602,7 +602,7 @@ EVENTS_JSON = r'''[
         "94:1"
       ],
       "hadith_refs": [
-        "Sahih Muslim (Hadith 162)"
+        "Sahih Muslim (Hadith 413)"
       ]
     },
     "astronomical_meta": null
@@ -686,7 +686,7 @@ EVENTS_JSON = r'''[
       ],
       "hadith_refs": [
         "Sahih al-Bukhari (Hadith 3)",
-        "Sahih Muslim (Hadith 1162)"
+        "Sahih Muslim (Hadith 2750)"
       ]
     },
     "astronomical_meta": {
@@ -734,7 +734,7 @@ EVENTS_JSON = r'''[
       ],
       "hadith_refs": [
         "Sahih al-Bukhari (Hadith 2004)",
-        "Sahih Muslim (Hadith 1130)"
+        "Sahih Muslim (Hadith 2656)"
       ]
     },
     "astronomical_meta": {
@@ -907,7 +907,7 @@ EVENTS_JSON = r'''[
       "hadith_refs": [
         "Sahih al-Bukhari (Hadith 1040)",
         "Sahih al-Bukhari (Hadith 1043)",
-        "Sahih Muslim (Hadith 915)"
+        "Sahih Muslim (Hadith 2102)"
       ]
     },
     "astronomical_meta": {
@@ -959,7 +959,7 @@ EVENTS_JSON = r'''[
       ],
       "hadith_refs": [
         "Sahih al-Bukhari (Hadith 3197)",
-        "Sahih Muslim (Hadith 1679)"
+        "Sahih Muslim (Hadith 4383)"
       ]
     },
     "astronomical_meta": {
@@ -1007,7 +1007,7 @@ EVENTS_JSON = r'''[
       ],
       "hadith_refs": [
         "Sahih al-Bukhari (Hadith 4464)",
-        "Sahih Muslim (Hadith 2347)"
+        "Sahih Muslim (Hadith 6092)"
       ]
     },
     "astronomical_meta": {

@@ -117,7 +117,7 @@ export class DayCalculator {
     // Check if matches key hadith milestones
     let hadithBadge = "";
     if (diffDays === 22330 || diffDays === 22329) {
-      hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/4464" target="_blank" rel="noopener noreferrer" class="hadith-link">Sahih al-Bukhari (No. 4464) ↗</a> & Muslim: Hayat Rasulullah ﷺ genap 63 tahun qamari + 9 hari</div>`;
+      hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat <a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/4464" target="_blank" rel="noopener noreferrer" class="hadith-link">Sahih al-Bukhari (No. 4464) ↗</a> & Sahih Muslim (No. 6092): Hayat Rasulullah ﷺ genap 63 tahun qamari + 9 hari</div>`;
     } else if (diffDays === 18781 || diffDays === 18780) {
       hadithBadge = `<div class="hadith-badge">★ Mengesahkan Riwayat Sahih: Usia baginda ketika Hijrah genap 53 tahun qamari</div>`;
     } else if (diffDays === 14175 || diffDays === 14174) {

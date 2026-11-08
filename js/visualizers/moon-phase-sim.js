@@ -125,7 +125,7 @@ export class MoonPhaseSimulator {
           <div class="translation-text">
             ${i18n.t("visualizers.hilalHadithTranslation")}
             <span class="source-tag">
-              — ${formatHadithLink("Sahih al-Bukhari (No. 1909)")} • ${formatHadithLink("Sahih Muslim (Hadith 1081)")}
+              — ${formatHadithLink("Sahih al-Bukhari (No. 1909)")} • ${formatHadithLink("Sahih Muslim (Hadith 2515)")}
             </span>
           </div>
         </div>
