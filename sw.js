@@ -2,7 +2,7 @@
  * Prophetic Timeline - Service Worker (Offline Cache)
  */
 
-const CACHE_NAME = "prophetic-timeline-v6";
+const CACHE_NAME = "prophetic-timeline-v7";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -24,6 +24,7 @@ const ASSETS_TO_CACHE = [
   "./js/profile.js",
   "./js/core/calendar-engine.js",
   "./js/core/event-store.js",
+  "./js/core/hadith-linker.js",
   "./js/core/i18n.js",
   "./js/i18n/ms.js",
   "./js/i18n/en.js",
@@ -31,6 +32,7 @@ const ASSETS_TO_CACHE = [
   "./js/views/timeline-view.js",
   "./js/views/calendar-month-view.js",
   "./js/views/calendar-year-view.js",
+  "./js/visualizers/moon-phase-sim.js",
   "./js/visualizers/eclipse-sim.js",
   "./js/visualizers/conjunction-sim.js",
   "./js/visualizers/day-calculator.js",

@@ -54,17 +54,21 @@ Aplikasi ini dibina berasaskan kajian bersejarah ahli falak dan matematik Mesir 
    - Penunjuk titik kepadatan peristiwa. Klik mana-mana bulan untuk terus melompat ke paparan bulanan.
 
 4. **🪐 Visualisasi Falak Interaktif (Astro Simulator)**:
+   - **Simulator Fasa Bulan & Rukyah Hilal (Kriteria MABIMS & Odeh)**: Simulasi dinamik kedudukan hilal di ufuk barat waktu maghrib, mengira ketinggian ($0^\circ-15^\circ$), jarak lengkok/elongasi dari matahari ($0^\circ-25^\circ$), umur bulan ($1-48\text{ jam}$), dan peratusan cahaya sabit. Menguji kebolehnampakan secara langsung berasaskan Kriteria MABIMS Baharu (2021+: Ketinggian $\ge 3^\circ$, Elongasi $\ge 6.4^\circ$), MABIMS Tradisional, Kriteria Astronomi Antarabangsa Dr. Mohammad Odeh (Zon A/B/C/D), dan Had Fizikal Danjon ($7^\circ$). Dilengkapi 5 mercu tanda hilal agung era kenabian (Zulhijjah 10 H, Syawal 10 H, Mawlid 53 BH, Bi'thah 13 BH, Hijrah 1 H) dan hadis rukyah hilal Sahih al-Bukhari & Muslim.
    - **Simulator Gerhana Matahari di Madinah (27 Januari 632 M / 29 Syawal 10 H)**: Simulasi kanvas gerhana anulus (litupan 87% / 10.5 jari) pada pagi kewafatan putera Nabi ﷺ, Ibrahim, lengkap dengan hadis [Sahih al-Bukhari (No. 1043)](https://maktabah-maftoohah.github.io/sahih-al-bukhari/1043).
    - **Rajah Buruj Qiran Zuhal & Musytari (1 April 571 M)**: Paparan SVG buruj Scorpio (*al-Aqrab*) menunjukkan kedudukan Zuhal ($215^\circ 17'$) dan Musytari ($215^\circ 02'$) sebelum kelahiran Nabi ﷺ.
 
-5. **🔢 Kalkulator Jarak Hari Interaktif (Day-Count Calculator)**:
+5. **📚 Pautan Hadis Kanonikal Bersepadu (Maktabah Maftoohah Corpus)**:
+   - Modul `hadith-linker.js` menghubungkan secara automatik semua teks rujukan hadis ke pangkalan korpus digital Maktabah Maftoohah: *Sahih al-Bukhari*, *Sahih Muslim*, *Sunan Abi Dawud*, *Jami' at-Tirmidhi*, *Sunan an-Nasa'i*, *Sunan Ibn Majah*, *Musnad Ahmad*, dan *Muwatta Malik*.
+
+6. **🔢 Kalkulator Jarak Hari Interaktif (Day-Count Calculator)**:
    - Pengguna boleh memilih mana-mana dua peristiwa sejarah untuk mengira jarak hari sebenar, kesetaraan tahun qamari ($354.367\text{ hari}$), dan tahun syamsi ($365.2422\text{ hari}$).
 
-6. **🌐 Antara Muka Tiga Bahasa (BM / EN / AR)**:
+7. **🌐 Antara Muka Tiga Bahasa (BM / EN / AR)**:
    - **Bahasa Melayu** (Nomenklatur Islam Nusantara piawai) sebagai bahasa lalai.
    - **Bahasa Inggeris** (English) & **Bahasa Arab** (العربية) dengan tipografi khat Amiri dan sokongan RTL penuh.
 
-7. **👤 Halaman Khas Profil Lengkap Mahmoud Pasha al-Falaki (`mahmoud-pasha.html`)**:
+8. **👤 Halaman Khas Profil Lengkap Mahmoud Pasha al-Falaki (`mahmoud-pasha.html`)**:
    - Biografi ilmiah lengkap pelopor falak moden dunia Arab (1815–1885 M).
    - Penjelasan 4 tunjang falak mutlak (Gerhana Madinah 632 M, Mawlid Isnin 9 Rabiulawal 571 M, Pemansuhan Sistem Nasi' 10 H, Qiran Zuhal & Musytari 571 M).
    - Jadual perbandingan saintifik: 9 Rabiulawal (Isnin) vs 12 Rabiulawal (Khamis).
@@ -99,18 +103,22 @@ prophetic-timeline/
 │   ├── timeline.css              # Gaya garis masa menegak & kad
 │   ├── calendar.css              # Gaya grid kalendar bulanan & tahunan
 │   └── visualizers.css           # Gaya kanvas simulator falak & kalkulator
+├── docs/
+│   └── astronomical-methodology.md# Dokumentasi kaedah astronomi & formula penukaran
 ├── js/
 │   ├── app.js                    # Titik masuk modul JavaScript (ES6)
 │   ├── profile.js                # Modul interaktif halaman profil (tema, bahasa, navigasi)
 │   ├── core/
 │   │   ├── calendar-engine.js    # Enjin matematik penukaran 7 sistem kalendar
 │   │   ├── event-store.js        # Pengurus storan data & penapis peristiwa
+│   │   ├── hadith-linker.js      # Pengurus pautan kanonikal korpus hadis bersepadu
 │   │   └── i18n.js               # Pengurus terjemahan bahasa
 │   ├── views/
 │   │   ├── timeline-view.js      # Pengendali paparan garis masa
 │   │   ├── calendar-month-view.js# Pengendali paparan kalendar bulanan
 │   │   └── calendar-year-view.js # Pengendali paparan kalendar tahunan
 │   ├── visualizers/
+│   │   ├── moon-phase-sim.js     # Simulator fasa bulan & rukyah hilal (MABIMS & Odeh)
 │   │   ├── eclipse-sim.js        # Simulator kanvas gerhana matahari 632 M
 │   │   ├── conjunction-sim.js    # Rajah SVG buruj qiran Scorpio 571 M
 │   │   └── day-calculator.js     # Kalkulator jarak hari interaktif

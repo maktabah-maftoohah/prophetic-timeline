@@ -11,6 +11,7 @@
 
 import { eventStore } from "../core/event-store.js";
 import { i18n } from "../core/i18n.js";
+import { formatHadithLink } from "../core/hadith-linker.js";
 
 // Key milestone pips for the interactive scrubber ribbon
 // Alternating 'above' and 'below' with sufficient horizontal clearance so pips NEVER overlap
@@ -801,6 +802,13 @@ export class TimelineView {
 
           <p class="timeline-narrative">${ev.narrative[`summary_${lang}`] || ev.narrative.summary_ms}</p>
 
+          ${ev.narrative.hadith_refs && ev.narrative.hadith_refs.length > 0 ? `
+            <div class="card-hadith-strip">
+              <span class="hadith-badge-label">📜 Hadis:</span>
+              ${ev.narrative.hadith_refs.map(ref => formatHadithLink(ref)).join(" • ")}
+            </div>
+          ` : ""}
+
           ${mawlidDiffBadge}
 
           <div class="card-footer-actions">
@@ -911,17 +919,7 @@ export class TimelineView {
           <div class="modal-hadith-box">
             <h4>📜 Hadis & Riwayat Berkaitan:</h4>
             <ul>
-              ${ev.narrative.hadith_refs.map(ref => {
-                const matchBukhari = ref.match(/Sahih al-Bukhari[^\d]*(\d+)/i);
-                if (matchBukhari) {
-                  return `<li><a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/${matchBukhari[1]}" target="_blank" rel="noopener noreferrer" class="hadith-link">${ref} ↗</a></li>`;
-                }
-                const matchMuslim = ref.match(/Sahih Muslim[^\d]*(\d+)/i);
-                if (matchMuslim) {
-                  return `<li><a href="https://maktabah-maftoohah.github.io/sahih-muslim/${matchMuslim[1]}" target="_blank" rel="noopener noreferrer" class="hadith-link">${ref} ↗</a></li>`;
-                }
-                return `<li>${ref}</li>`;
-              }).join("")}
+              ${ev.narrative.hadith_refs.map(ref => `<li>${formatHadithLink(ref)}</li>`).join("")}
             </ul>
           </div>
         ` : ""}

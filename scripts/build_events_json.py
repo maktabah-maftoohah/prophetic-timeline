@@ -602,7 +602,7 @@ EVENTS_JSON = r'''[
         "94:1"
       ],
       "hadith_refs": [
-        "Sahih Muslim"
+        "Sahih Muslim (Hadith 162)"
       ]
     },
     "astronomical_meta": null
@@ -905,6 +905,7 @@ EVENTS_JSON = r'''[
       "classical_source": "Sahih al-Bukhari (Kitab al-Kusuf); Sahih Muslim; Mahmoud-Bey (1858, p. 135; 1860); Nata'ij al-Afham (p. 13)",
       "quran_refs": [],
       "hadith_refs": [
+        "Sahih al-Bukhari (Hadith 1040)",
         "Sahih al-Bukhari (Hadith 1043)",
         "Sahih Muslim (Hadith 915)"
       ]

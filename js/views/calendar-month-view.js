@@ -20,6 +20,7 @@ import {
 } from "../core/calendar-engine.js";
 import { eventStore } from "../core/event-store.js";
 import { i18n } from "../core/i18n.js";
+import { formatHadithLink } from "../core/hadith-linker.js";
 
 export class CalendarMonthView {
   constructor(containerId, onDayClick = null) {
@@ -406,13 +407,7 @@ export class CalendarMonthView {
               <p>${ev.narrative[`summary_${lang}`] || ev.narrative.summary_ms}</p>
               ${ev.narrative.hadith_refs && ev.narrative.hadith_refs.length > 0 ? `
                 <div class="event-hadith-refs" style="margin-top: 0.35rem; font-size: 0.85rem;">
-                  <strong>Hadis:</strong> ${ev.narrative.hadith_refs.map(ref => {
-                    const match = ref.match(/Sahih al-Bukhari[^\d]*(\d+)/i);
-                    if (match) {
-                      return `<a href="https://maktabah-maftoohah.github.io/sahih-al-bukhari/${match[1]}" target="_blank" rel="noopener noreferrer" class="hadith-link">${ref} ↗</a>`;
-                    }
-                    return ref;
-                  }).join(", ")}
+                  <strong>Hadis:</strong> ${ev.narrative.hadith_refs.map(ref => formatHadithLink(ref)).join(", ")}
                 </div>
               ` : ""}
               <div class="event-source"><em>Sumber:</em> ${ev.narrative.classical_source || "-"}</div>

@@ -8,6 +8,7 @@ import { i18n } from "./core/i18n.js";
 import { TimelineView } from "./views/timeline-view.js";
 import { CalendarMonthView } from "./views/calendar-month-view.js";
 import { CalendarYearView } from "./views/calendar-year-view.js";
+import { MoonPhaseSimulator } from "./visualizers/moon-phase-sim.js";
 import { EclipseSimulator } from "./visualizers/eclipse-sim.js";
 import { ConjunctionSimulator } from "./visualizers/conjunction-sim.js";
 import { DayCalculator } from "./visualizers/day-calculator.js";
@@ -18,6 +19,7 @@ class App {
     this.timelineView = null;
     this.monthView = null;
     this.yearView = null;
+    this.moonPhaseSim = null;
     this.eclipseSim = null;
     this.conjunctionSim = null;
     this.dayCalc = null;
@@ -55,6 +57,7 @@ class App {
       this.switchTab("calendarMonth");
     });
 
+    this.moonPhaseSim = new MoonPhaseSimulator("moon-phase-sim-container");
     this.eclipseSim = new EclipseSimulator("eclipse-sim-container");
     this.conjunctionSim = new ConjunctionSimulator("conjunction-sim-container");
     this.dayCalc = new DayCalculator("day-calculator-container");
@@ -165,6 +168,7 @@ class App {
     } else if (this.activeTab === "calendarYear") {
       this.yearView.render();
     } else if (this.activeTab === "visualizer") {
+      if (this.moonPhaseSim) this.moonPhaseSim.render();
       this.eclipseSim.render();
       this.conjunctionSim.render();
     } else if (this.activeTab === "calculator") {
