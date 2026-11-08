@@ -62,6 +62,14 @@ Aplikasi ini dibina berasaskan kajian bersejarah ahli falak dan matematik Mesir 
    - **Bahasa Melayu** (Nomenklatur Islam Nusantara piawai) sebagai bahasa lalai.
    - **Bahasa Inggeris** (English) & **Bahasa Arab** (العربية) dengan tipografi khat Amiri dan sokongan RTL penuh.
 
+7. **👤 Halaman Khas Profil Lengkap Mahmoud Pasha al-Falaki (`mahmoud-pasha.html`)**:
+   - Biografi ilmiah lengkap pelopor falak moden dunia Arab (1815–1885 M).
+   - Penjelasan 4 tunjang falak mutlak (Gerhana Madinah 632 M, Mawlid Isnin 9 Rabiulawal 571 M, Pemansuhan Sistem Nasi' 10 H, Qiran Zuhal & Musytari 571 M).
+   - Jadual perbandingan saintifik: 9 Rabiulawal (Isnin) vs 12 Rabiulawal (Khamis).
+   - Arkeoastronomi & sumbangan lain: Pemetaan Iskandariah Purba (1872), Ekspedisi Gerhana Dongola (1860), Kitab Kalkulus pertama bahasa Arab (1842), dan hidrologi Sungai Nil.
+   - Garis masa hayat interaktif (1815–1885 M).
+   - Senarai rujukan berwibawa & pautan terus ke manuskrip digital di Gallica (BnF), Internet Archive (PDF rasmi), Wikisource Arab, dan Wikimedia Commons.
+
 ---
 
 ## 3. Seni Bina & Invarian Organisasi
@@ -79,16 +87,19 @@ Sesuai dengan garis panduan `AGENTS.md` pertubuhan Maktabah Maftoohah:
 ```
 prophetic-timeline/
 ├── index.html                    # Kerangka utama aplikasi web
+├── mahmoud-pasha.html            # Halaman profil lengkap & rujukan Mahmoud Pasha al-Falaki
 ├── manifest.webmanifest          # PWA Web App Manifest
 ├── sw.js                         # Service Worker (Cache luar talian)
 ├── README.md                     # Dokumentasi projek
 ├── css/
 │   ├── main.css                  # Gaya asas, tema cerah/gelap, modal
+│   ├── profile.css               # Gaya khas halaman profil Mahmoud Pasha
 │   ├── timeline.css              # Gaya garis masa menegak & kad
 │   ├── calendar.css              # Gaya grid kalendar bulanan & tahunan
 │   └── visualizers.css           # Gaya kanvas simulator falak & kalkulator
 ├── js/
 │   ├── app.js                    # Titik masuk modul JavaScript (ES6)
+│   ├── profile.js                # Modul interaktif halaman profil (tema, bahasa, navigasi)
 │   ├── core/
 │   │   ├── calendar-engine.js    # Enjin matematik penukaran 7 sistem kalendar
 │   │   ├── event-store.js        # Pengurus storan data & penapis peristiwa

@@ -9,7 +9,8 @@ export default {
     calendarMonth: "Month Calendar",
     calendarYear: "Year Calendar",
     visualizer: "Astro Visualizer",
-    calculator: "Day Calculator"
+    calculator: "Day Calculator",
+    profile: "Mahmoud Pasha Profile"
   },
   calendar: {
     primaryCalendar: "Primary Grid Driver:",

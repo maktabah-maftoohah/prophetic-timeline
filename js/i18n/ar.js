@@ -9,7 +9,8 @@ export default {
     calendarMonth: "التقويم الشهري",
     calendarYear: "التقويم السنوي",
     visualizer: "المحاكاة الفلكية",
-    calculator: "حاسبة الأيام"
+    calculator: "حاسبة الأيام",
+    profile: "سيرة محمود باشا الفلكي"
   },
   calendar: {
     primaryCalendar: "نظام التقويم الأساسي:",

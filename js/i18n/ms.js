@@ -9,7 +9,8 @@ export default {
     calendarMonth: "Kalendar Bulanan",
     calendarYear: "Kalendar Tahunan",
     visualizer: "Visualisasi Falak",
-    calculator: "Kalkulator Hari"
+    calculator: "Kalkulator Hari",
+    profile: "Profil Mahmoud Pasha"
   },
   calendar: {
     primaryCalendar: "Sistem Grid Utama:",

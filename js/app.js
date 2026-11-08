@@ -100,6 +100,7 @@ class App {
     const tabYear = document.getElementById("tab-btn-year");
     const tabVisualizer = document.getElementById("tab-btn-visualizer");
     const tabCalculator = document.getElementById("tab-btn-calculator");
+    const tabProfile = document.getElementById("tab-btn-profile");
 
     if (titleEl) titleEl.textContent = i18n.t("appTitle");
     if (subEl) subEl.textContent = i18n.t("appSubtitle");
@@ -108,6 +109,7 @@ class App {
     if (tabYear) tabYear.textContent = `🗓️ ${i18n.t("tabs.calendarYear")}`;
     if (tabVisualizer) tabVisualizer.textContent = `🪐 ${i18n.t("tabs.visualizer")}`;
     if (tabCalculator) tabCalculator.textContent = `🔢 ${i18n.t("tabs.calculator")}`;
+    if (tabProfile) tabProfile.textContent = `👤 ${i18n.t("tabs.profile")}`;
   }
 
   setupTabNavigation() {
