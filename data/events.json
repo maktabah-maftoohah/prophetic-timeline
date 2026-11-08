@@ -1,0 +1,1074 @@
+{
+  "metadata": {
+    "title": "Prophetic Timeline & Chronological Concordance",
+    "author": "Mahmoud Pasha al-Falaki (1815-1885 CE) & Maktabah Maftoohah",
+    "description": "Comprehensive historical chronology, astronomical anchors, and multi-calendar concordance spanning antiquity, the Year of the Elephant, and the prophetic lifespan (571-632 CE).",
+    "version": "1.0.0",
+    "primary_calendar": "hijri",
+    "supported_calendars": [
+      "hijri",
+      "elephant_era",
+      "julian",
+      "gregorian",
+      "seleucid_alexander",
+      "nabonassar",
+      "jewish_am",
+      "persian_regnal"
+    ],
+    "total_events": 25
+  },
+  "events": [
+    {
+      "id": "creation-anno-mundi",
+      "category": "ancient_epoch",
+      "granularity": "epoch_span",
+      "date": {
+        "julian_year": -3761,
+        "display_date": {
+          "ms": "3761 SM",
+          "en": "3761 BCE",
+          "ar": "٣٧٦١ ق.م"
+        },
+        "jewish_am": "Tahun 1 AM (Anno Mundi)",
+        "seleucid_alexander": "Pra-Iskandar",
+        "nabonassar": "Pra-Nabonassar",
+        "persian_regnal": "Zaman Purba",
+        "arab_epoch": "Pra-Arab",
+        "hijri_display": "Zaman Purba",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Permulaan Taqwim Penciptaan Dunia (Anno Mundi)",
+        "en": "Epoch of Creation (Jewish Anno Mundi)",
+        "ar": "مبدأ تاريخ الخليقة عند اليهود (سنة العالم)"
+      },
+      "narrative": {
+        "summary_ms": "Mahmoud Pasha al-Falaki menggunakan titik tolak 3761 SM berdasarkan kajian kronologi C.L. Ideler (Handbuch der mathematischen und technischen Chronologie) bagi mengesahkan kalendar Yahudi rabani untuk tahun 4331 AM (kelahiran Nabi) dan 4383 AM (ketibaan Hijrah di Madinah pada Hari Asyura / Yom Kippur).",
+        "summary_en": "Mahmoud Pasha al-Falaki used the 3761 BCE baseline based on C.L. Ideler's chronological research to verify Rabbinic calendar synchronizations for Year 4331 AM (Prophet's birth) and Year 4383 AM (Hijrah arrival in Medina on Yom Kippur / 'Ashura).",
+        "summary_ar": "استند محمود باشا الفلكي إلى مبدأ تاريخ الخليقة العبراني (٣٧٦١ ق.م) المستفاد من أبحاث أيدلر الفلكية والكرونولوجية لمطابقة حسابات السنين العبرانية مع السنين الشمسية والقمرية عند الهجرة والمولد.",
+        "classical_source": "C. L. Ideler; Mahmoud-Bey (1858, p. 116); Nata'ij al-Afham (p. 23)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "construction-kabah-abraham",
+      "category": "ancient_epoch",
+      "granularity": "epoch_span",
+      "date": {
+        "julian_year": null,
+        "display_date": {
+          "ms": "Zaman Purba Kenabian Ibrahim & Ismail",
+          "en": "Patriarchal Antiquity (Abraham & Ishmael)",
+          "ar": "عصر الخليل إبراهيم وإسماعيل عليهما السلام"
+        },
+        "jewish_am": "Zaman Kenabian Ibrahim",
+        "seleucid_alexander": "Pra-Iskandar",
+        "nabonassar": "Pra-Nabonassar",
+        "persian_regnal": "Zaman Purba",
+        "arab_epoch": "Zaman Pertama Bangsa Arab (Bina Kaabah)",
+        "hijri_display": "Taqwim Qamari Asal",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Pembinaan Kaabah oleh Nabi Ibrahim & Nabi Ismail a.s. (Penetapan Taqwim Qamari Asal)",
+        "en": "Construction of the Ka'bah by Abraham & Ishmael (Original Pure Lunar Calendar)",
+        "ar": "بناء إبراهيم وإسماعيل عليهما السلام للبيت العتيق بمكة"
+      },
+      "narrative": {
+        "summary_ms": "Menurut catatan Abu Ma'shar al-Balkhi dan al-Biruni, bangsa Arab mewarisi taqwim qamari tulen tanpa sebarang sisipan (nasi') daripada Nabi Ibrahim dan Nabi Ismail a.s. Haji beredar merentasi empat musim secara semula jadi selama berabad-abad.",
+        "summary_en": "According to Abu Ma'shar al-Balkhi and al-Biruni, the ancient Arabs inherited a purely lunar calendar without any intercalation from Prophets Abraham and Ishmael. The annual pilgrimage naturally rotated through all four seasons.",
+        "summary_ar": "توارث العرب الأقدمون من الخليل إبراهيم وإسماعيل عليهما السلام بعد بناء الكعبة التقويم القمري المحض، فكانت سنينهم قمرية صرفة وحجهم يدور في الفصول الأربعة.",
+        "classical_source": "Abu Ma'shar al-Balkhi (Kitab al-Uluf); al-Biruni (al-Athar al-Baqiya); Mahmoud-Bey (1858, p. 110)",
+        "quran_refs": [
+          "2:127",
+          "22:26-27"
+        ],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "epoch-nabonassar",
+      "category": "ancient_epoch",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": -747,
+        "display_date": {
+          "ms": "26 Februari 747 SM",
+          "en": "26 February 747 BCE",
+          "ar": "٢٦ فبراير ٧٤٧ ق.م"
+        },
+        "jewish_am": "~3014 AM",
+        "seleucid_alexander": "Pra-Iskandar",
+        "nabonassar": "1 Thoth, Tahun 1 Nabonassar",
+        "persian_regnal": "Kerajaan Babilonia Purba",
+        "arab_epoch": "Pra-Quraisy",
+        "hijri_display": "Zaman Purba",
+        "elephant_era": null,
+        "weekday": "Rabu",
+        "jdn": 1448638
+      },
+      "title": {
+        "ms": "Permulaan Taqwim Nabonassar / Nebukadnezar (Babilonia)",
+        "en": "Epoch of Nabonassar (Nebuchadnezzar of Babylon)",
+        "ar": "مبدأ تاريخ بختنصر (نبوناصر البابلي)"
+      },
+      "narrative": {
+        "summary_ms": "Zaman astronomi Babilonia berasaskan tahun samar 365 hari tanpa tahun lompat. Mahmoud Pasha membuktikan kesilapan sejarawan Abu al-Fida yang menyatakan kelahiran Nabi berlaku pada tahun 1316 Nabonassar, dan membetulkannya kepada tahun 1318 Nabonassar.",
+        "summary_en": "Babylonian astronomical era with 365-day vague solar years. Mahmoud Pasha demonstrated that chronicler Abu al-Fida erred in assigning the Prophet's birth to Year 1316 Nabonassar, proving the correct alignment was Year 1318 Nabonassar.",
+        "summary_ar": "مبدأ تقويم فلكي بابلي حسابه بالسنين المبهمة (٣٦٥ يوماً دون كبس). بيّن الفلكي خطأ أبي الفداء في مطابقة سنة ١٣١٦ لبختنصر مع مولد النبي، وأثبت بالحساب أنها سنة ١٣١٨ لبختنصر.",
+        "classical_source": "Ptolemy's Canon; Abu al-Fida; Mahmoud-Bey (1858, p. 145)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "epoch-seleucid-alexander",
+      "category": "ancient_epoch",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": -312,
+        "display_date": {
+          "ms": "1 Oktober 312 SM",
+          "en": "1 October 312 BCE",
+          "ar": "١ أكتوبر ٣١٢ ق.م"
+        },
+        "jewish_am": "3449 AM",
+        "seleucid_alexander": "1 Tishri, Tahun 1 Iskandar",
+        "nabonassar": "Tahun 436 Nabonassar",
+        "persian_regnal": "Zaman Seleukus",
+        "arab_epoch": "Zaman Purba",
+        "hijri_display": "Zaman Purba",
+        "elephant_era": null,
+        "weekday": "Isnin",
+        "jdn": 1607739
+      },
+      "title": {
+        "ms": "Permulaan Taqwim Iskandar Zulkarnain / Seleukus",
+        "en": "Epoch of Alexander the Great (Seleucid Era)",
+        "ar": "مبدأ تاريخ الإسكندر ذي القرنين (التاريخ السلوقي)"
+      },
+      "narrative": {
+        "summary_ms": "Taqwim suria Syria-Macedonia yang digunapakai secara meluas oleh sejarawan Timur Tengah dan ahli falak Islam (al-Mas'udi, al-Biruni, Ibn al-Amid). Para sejarawan sepakat bahawa kelahiran Nabi berlaku pada Tahun 882 Iskandar.",
+        "summary_en": "Syrian-Macedonian solar calendar widely used by Near Eastern and classical Muslim astronomers. Chroniclers universally agreed that the Prophet was born in Year 882 of Alexander.",
+        "summary_ar": "تاريخ شمسي سرياني معتمد لدى مؤرخي الشرق وفلكيي المسلمين. أجمع المؤرخون كالمسعودي وابن العميد على وقوع المولد النبوي الشريف في سنة ٨٨٢ للإسكندر.",
+        "classical_source": "Al-Mas'udi (Muruj al-Dhahab); Ibn al-Amid; Silvestre de Sacy; Mahmoud-Bey (1858, p. 142)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "sayl-al-arim-dispersal",
+      "category": "ancient_epoch",
+      "granularity": "epoch_span",
+      "date": {
+        "julian_year": null,
+        "display_date": {
+          "ms": "Zaman Purba Klasik",
+          "en": "Classical Antiquity",
+          "ar": "العصر الجاهلي القديم"
+        },
+        "jewish_am": "Zaman Purba",
+        "seleucid_alexander": "Zaman Hellenistik",
+        "nabonassar": "Pertengahan Nabonassar",
+        "persian_regnal": "Zaman Parthia / Arsak",
+        "arab_epoch": "Zaman Kedua Bangsa Arab (Tafarruq Walad Saba')",
+        "hijri_display": "Pra-Hijrah",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Banjir Arim, Runtuhnya Empangan Ma'rib & Perpecahan Kabilah Saba'",
+        "en": "The Great Flood of the Dam & Dispersal of Saba (Sayl al-'Arim)",
+        "ar": "سيل العرم وتفرق ولد سبأ وانهيار سد مأرب"
+      },
+      "narrative": {
+        "summary_ms": "Peristiwa bersejarah keruntuhan empangan Ma'rib di Yaman yang menyebabkan kabilah-kabilah Azd dan Qahtan berhijrah ke utara Semenanjung Arab. Menjadi penanda tarikh utama bangsa Arab sebelum zaman Ka'b ibn Lu'ayy.",
+        "summary_en": "Catastrophic collapse of the Marib Dam in Yemen, causing the migration of Azdite and Qahtanite tribes to the Hijaz. Served as the Arabs' primary chronological epoch prior to Ka'b ibn Lu'ayy.",
+        "summary_ar": "حادثة تاريخية عظمى بانهيار سد مأرب باليمن وتفرق قبائل قحطان والأزد في أرجاء الجزيرة العربية، فاتخذها العرب مبدأ تاريخ يؤرخون به أحداثهم.",
+        "classical_source": "Abu Ma'shar; al-Biruni; al-Maqrizi; Mahmoud-Bey (1858, p. 111)",
+        "quran_refs": [
+          "34:15-16"
+        ],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "institution-of-nasi",
+      "category": "ancient_epoch",
+      "granularity": "year_approx",
+      "date": {
+        "julian_year": 412,
+        "display_date": {
+          "ms": "Sekitar 412 Masihi",
+          "en": "c. 412 CE (~200 years pre-Islam)",
+          "ar": "نحو سنة ٤١٢ م (حوالي ٢٠٠ سنة قبل الإسلام)"
+        },
+        "jewish_am": "~4172 AM",
+        "seleucid_alexander": "~723 Iskandar",
+        "nabonassar": "~1159 Nabonassar",
+        "persian_regnal": "Pemerintahan Yazdegerd I",
+        "arab_epoch": "Zaman Ketiga Bangsa Arab (Permulaan al-Nasi')",
+        "hijri_display": "~210 SH (Sebelum Hijrah)",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Permulaan Amalan Sisipan Bulan (an-Nasī') oleh Bangsa Arab Jahiliyyah",
+        "en": "Institution of Intercalation (an-Nasī') in Pre-Islamic Arabia",
+        "ar": "ابتداء النسيء والكبس عند العرب في الجاهلية"
+      },
+      "narrative": {
+        "summary_ms": "Kira-kira 200 tahun sebelum Islam, Hudhayfah ibn Fuqaym al-Kinani (al-Qalammas) memulakan amalan menambah bulan lompat (nasi') meniru kaum Yahudi agar musim haji dan pasar perdagangan kekal pada musim luruh/buah-buahan. Pegawai al-Qalammas mengisytiharkan sisipan 9 bulan setiap 24 tahun di Mina.",
+        "summary_en": "Approximately 200 years before Islam, Hudhayfa ibn Fuqaym al-Kinani (al-Qalammas) instituted lunar-solar intercalation to anchor the pilgrimage to fertile trading seasons, adding 9 intercalary months every 24 years.",
+        "summary_ar": "أول من نسأ الشهور على العرب حذيفة بن فقيم الكناني الملقب بالقلمس، نقله عن مجاوريه من يهود يثرب، فكانوا يكبسون تسعة أشهر في كل أربع وعشرين سنة قمرية لتوافق مواسم التجارة.",
+        "classical_source": "Abu Ma'shar; al-Biruni; Caussin de Perceval; Ibn Hisham; Mahmoud-Bey (1858, p. 112)",
+        "quran_refs": [
+          "9:37"
+        ],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "death-of-kab-ibn-luayy",
+      "category": "ancient_epoch",
+      "granularity": "year_approx",
+      "date": {
+        "julian_year": 460,
+        "display_date": {
+          "ms": "Sekitar 460–464 Masihi",
+          "en": "c. 460–464 CE (~110 yrs pre-Elephant)",
+          "ar": "نحو ٤٦٠–٤٦٤ م (نحو ١١٠ سنين قبل الفيل)"
+        },
+        "jewish_am": "~4220 AM",
+        "seleucid_alexander": "~772–775 Iskandar",
+        "nabonassar": "~1207–1211 Nabonassar",
+        "persian_regnal": "Pemerintahan Peroz I",
+        "arab_epoch": "Zaman Keempat Bangsa Arab (Wafat Ka'b ibn Lu'ayy)",
+        "hijri_display": "~110 Tahun Sebelum Tahun Gajah",
+        "elephant_era": null,
+        "weekday": "Jumaat (Yawm al-'Arubah)",
+        "jdn": null
+      },
+      "title": {
+        "ms": "Kewafatan Ka'b ibn Lu'ayy (Datuk ke-7 Rasulullah ﷺ)",
+        "en": "Death of Ka'b ibn Lu'ayy (7th Ancestor of the Prophet ﷺ)",
+        "ar": "وفاة كعب بن لؤي (الجد السابع للنبي ﷺ)"
+      },
+      "narrative": {
+        "summary_ms": "Ka'b ibn Lu'ayy adalah pemimpin Quraisy pertama yang menghimpunkan kaumnya pada hari Jumaat (yang dahulunya dipanggil Yawm al-'Arubah) untuk menyampaikan khutbah tentang kedatangan Nabi akhir zaman daripada keturunannya. Bangsa Quraisy menjadikan tahun kewafatannya sebagai taqwim rasmi selama kira-kira 110 tahun sehingga Tahun Gajah.",
+        "summary_en": "Ka'b ibn Lu'ayy was the first to gather Quraysh on Friday (Yawm al-'Arubah), preaching of the coming final Prophet. Quraysh used his death year as their primary calendar epoch down to the Year of the Elephant (~110 years).",
+        "summary_ar": "كعب بن لؤي هو أول من جمع قريشاً يوم العروبة وسماه يوم الجمعة وبشرهم بمبعث النبي الخاتم من نسله. أرخت قريش بموته إلى عام الفيل نحواً من مائة وعشر سنين.",
+        "classical_source": "Al-Biruni; al-Mas'udi; Ibn al-Athir; Mahmoud-Bey (1858, p. 113)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "accession-anushirvan",
+      "category": "ancient_epoch",
+      "granularity": "year_approx",
+      "date": {
+        "julian_year": 531,
+        "display_date": {
+          "ms": "531 Masihi",
+          "en": "531 CE",
+          "ar": "٥٣١ م"
+        },
+        "jewish_am": "4291 AM",
+        "seleucid_alexander": "842 Iskandar",
+        "nabonassar": "Tahun 1278 Nabonassar",
+        "persian_regnal": "Tahun 1 Pemerintahan Khusrow I Anushirvan",
+        "arab_epoch": "Era Ka'b ibn Lu'ayy",
+        "hijri_display": "40 Tahun Sebelum Kelahiran Nabi",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Penaikan Takhta Raja Khusrow I Anushirvan (Kisra Parsi)",
+        "en": "Accession of King Khusrow I Anushirvan (Chosroes I)",
+        "ar": "جلوس كسرى أنوشروان على عرش الفرس الساسانيين"
+      },
+      "narrative": {
+        "summary_ms": "Pemerintah Parsi Sasanian yang terkenal dengan keadilan. Beliau memerintah selama 47 tahun dan 8 bulan. Tahun ke-40 pemerintahannya bertepatan tepat dengan tahun 571 Masihi (Tahun Gajah & Kelahiran Nabi ﷺ).",
+        "summary_en": "Famed Sasanian monarch whose 47-year, 8-month reign provides an imperial baseline. His 40th regnal year coincided precisely with 571 CE (Year of the Elephant & the Prophet's birth).",
+        "summary_ar": "ملك الفرس الساساني العادل الذي دام ملكه ٤٧ سنة و٨ أشهر، وافقت السنة الأربعون من حكمه تماماً سنة ٥٧١ م (عام الفيل ومولد النبي ﷺ).",
+        "classical_source": "L'Art de vérifier les dates (p. 408); Ibn al-Athir; Mahmoud-Bey (1858, p. 143)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "solstice-lunar-eclipse-541",
+      "category": "astronomical_anchor",
+      "granularity": "month_approx",
+      "date": {
+        "julian_year": 541,
+        "display_date": {
+          "ms": "Jun 541 Masihi (Solstis Musim Panas)",
+          "en": "June 541 CE (Summer Solstice)",
+          "ar": "يونيو ٥٤١ م (الانقلاب الصيفي وخسوف القمر)"
+        },
+        "jewish_am": "4301 AM",
+        "seleucid_alexander": "852 Iskandar",
+        "nabonassar": "Tahun 1288 Nabonassar",
+        "persian_regnal": "Tahun ke-10 Khusrow I Anushirvan",
+        "arab_epoch": "Era Ka'b ibn Lu'ayy",
+        "hijri_display": "Bulan Haram (Rajab 30 Tahun Pra-Mawlid)",
+        "elephant_era": null,
+        "weekday": null,
+        "jdn": null
+      },
+      "title": {
+        "ms": "Paksi Falak 1: Solstis Musim Panas & Gencatan Senjata Bangsa Arab (Catatan Procopius)",
+        "en": "Astronomical Pillar 1: Solstice & Lunar Eclipse (Procopius Truce Anchor)",
+        "ar": "الانقلاب الصيفي وخسوف القمر سنة ٥٤١ م (هدنة العرب عند بروكوبيوس)"
+      },
+      "narrative": {
+        "summary_ms": "Sejarawan Byzantine Procopius mencatatkan bahawa pada perang musim panas 541 M antara Rom dan Parsi, tentera sekutu Arab enggan berperang semasa solstis kerana menghormati bulan haram ibadat tanpa senjata selama 2 bulan. Pengiraan falak Mahmoud Pasha membuktikan bulan Rajab pada tahun 541 M jatuh tepat pada solstis musim panas dan bertepatan dengan gerhana bulan, mengesahkan kadar anjakan taqwim Arab 30 tahun sebelum kelahiran Nabi.",
+        "summary_en": "Byzantine chronicler Procopius recorded Arab auxiliary troops halting battles at the summer solstice for their sacred armistice. Al-Falaki proved Rajab in 541 CE coincided with the solstice and a lunar eclipse.",
+        "summary_ar": "ذكر المؤرخ الرومي بروكوبيوس توقف حلفاء العرب عن القتال عند الانقلاب الصيفي لحرمة شهرين مقدسين، وأثبت الفلكي أن رجب سنة ٥٤١ م وافق الانقلاب الصيفي وخسوف القمر قبل المولد بثلاثين سنة شمسية.",
+        "classical_source": "Procopius (De Bellis); Alexis Bouvard tables; Mahmoud-Bey (1858, p. 153)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "solstice_and_lunar_eclipse",
+        "details": "Summer Solstice & Lunar Eclipse verifying pre-Islamic Arab sacred month alignment 30 solar years before Mawlid."
+      }
+    },
+    {
+      "id": "elephant-expedition-571",
+      "category": "pre_mawlid_seerah",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 571,
+        "display_date": {
+          "ms": "Isnin, 23 Februari 571 M (atau 1–2 Mac 571 M)",
+          "en": "Monday, 23 February 571 CE (or 1–2 March 571 CE)",
+          "ar": "الاثنين، ١٧ المحرم (أو ١٣ منه) / أواخر فبراير – أوائل مارس ٥٧١ م"
+        },
+        "jewish_am": "Adar 4331 AM",
+        "seleucid_alexander": "Adar 882 Iskandar",
+        "nabonassar": "Tahun 1318 Nabonassar",
+        "persian_regnal": "Tahun ke-40 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun 216 Taqwim Hijjat al-Ghadr",
+        "hijri_display": "Isnin, 17 (atau 13) Muharram 53 SH (al-Mu'tamir)",
+        "elephant_era": {
+          "year": 1,
+          "label": "Tahun 1 Gajah (Awal Tahun Gajah)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1929669
+      },
+      "title": {
+        "ms": "Serangan Tentera Bergajah Abraha al-Ashram ke atas Makkah (Tahun Gajah)",
+        "en": "The Expedition of the Elephant (Abraha at Mecca, Year of the Elephant)",
+        "ar": "حملة أصحاب الفيل (قدوم أبرهة الأشرم الحبشي مكة المكرمة)"
+      },
+      "narrative": {
+        "summary_ms": "Raja Yaman beragama Kristian, Abraha al-Ashram mara dengan angkatan tentera dan gajah perang (diketuai gajah utama bernama Mahmud) untuk meruntuhkan Kaabah setelah gereja al-Qulays di Sana'a dicemari. Di al-Mughammas, Abraha merampas 200 ekor unta milik Abd al-Muttalib (datuk Nabi ﷺ). Abd al-Muttalib menuntut untanya sambil berkata: 'Aku pemilik unta, dan Rumah ini ada Tuan yang akan melindunginya.' Apabila gajah diarahkan ke Kaabah, ia melutut enggan bergerak, lalu Allah menghantar burung Ababil merejam tentera itu dengan batu sijjil (Surah al-Fil). Al-Mas'udi mencatatkan ketibaan Abraha berlaku pada hari Isnin 17 (atau 13) Muharram Tahun 882 Iskandar, tepat 49 hingga 55 hari sebelum kelahiran Rasulullah ﷺ.",
+        "summary_en": "Abraha al-Ashram marched on Mecca with war elephants to destroy the Ka'bah. Abd al-Muttalib demanded his camels back, stating Allah would protect His House. The lead elephant Mahmud refused to advance, and flocks of Ababil birds decimated the army with stones of baked clay (Surah al-Fil 105:1-5). Al-Mas'udi recorded Abraha reached Mecca on Monday 17 Muharram, exactly 49 to 55 days before the Prophet's birth.",
+        "summary_ar": "قدم أبرهة الحبشي بجيش عظيم تتقدمه الفيلة لهدم الكعبة، فحبس الله الفيل محموداً، وأرسل عليهم طيراً أبابيل ترميهم بحجارة من سجيل فجعلهم كعصف مأكول. ثبت عند المسعودي وصولهم مكة يوم الاثنين لثلاث عشرة ليلة بقيت من المحرم سنة ٨٨٢ للإسكندر، وكان مولد النبي ﷺ بعدها بـ ٥٠ يوماً في ٩ ربيع الأول.",
+        "classical_source": "Al-Mas'udi (Muruj al-Dhahab, MS BNF 714, fol. 279); Ibn Hisham; Mahmoud-Bey (1858, p. 139); Nata'ij al-Afham (p. 19)",
+        "quran_refs": [
+          "105:1-5"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "historical_anchor",
+        "days_to_mawlid": 49,
+        "notes": "Exact 7-week interval (49 days = 7x7) from Monday 17 Muharram to Monday 9 Rabi' I."
+      }
+    },
+    {
+      "id": "vernal-equinox-571",
+      "category": "astronomical_anchor",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 571,
+        "display_date": {
+          "ms": "Selasa, 19 Mac 571 M (15:11 waktu Madinah)",
+          "en": "Tuesday, 19 March 571 CE (15:11 Medina mean time)",
+          "ar": "الثلاثاء، ١٩ مارس ٥٧١ م (الساعة ١٥:١١ بالتوقيت المحلي)"
+        },
+        "jewish_am": "Nisan 4331 AM",
+        "seleucid_alexander": "Adar 882 Iskandar",
+        "nabonassar": "Tahun 1318 Nabonassar",
+        "persian_regnal": "Tahun ke-40 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun 1 Gajah",
+        "hijri_display": "19 Safar 53 SH",
+        "elephant_era": {
+          "year": 1,
+          "label": "Tahun 1 Gajah"
+        },
+        "weekday": "Selasa",
+        "jdn": 1929693
+      },
+      "title": {
+        "ms": "Ekuinoks Musim Bunga 571 M (Paksi Falak Musim Kelahiran)",
+        "en": "Vernal Equinox of 571 CE (Astronomical Spring Station)",
+        "ar": "الاعتدال الربيعي الفلكي لسنة ٥٧١ م"
+      },
+      "narrative": {
+        "summary_ms": "Dihitung secara terperinci oleh Mahmoud Pasha al-Falaki menggunakan jadual moden Alexis Bouvard bagi membuktikan bahawa bulan Rabiulawal pada tahun kelahiran Rasulullah ﷺ jatuh tepat pada musim bunga astronomi sebenar ('Rabi' fī Rabi').",
+        "summary_en": "Computed with mathematical precision by al-Falaki using Alexis Bouvard's planetary tables to confirm that the birth month (Rabi' al-Awwal) coincided with literal astronomical spring.",
+        "summary_ar": "حسبه الفلكي بجداول بوفار الفلكية بدقة بالغة (الساعة الثالثة بعد الظهر و١١ دقيقة بتوقيت المدينة)، مثبتاً أن شهر ربيع الأول وافق فصل الربيع الطبيعي الحقيقي.",
+        "classical_source": "Alexis Bouvard Tables; Mahmoud-Bey (1858, p. 146)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "vernal_equinox",
+        "time": "15:11 local mean time",
+        "sun_longitude": "0° Aries"
+      }
+    },
+    {
+      "id": "conjunction-saturn-jupiter-571",
+      "category": "astronomical_anchor",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 571,
+        "display_date": {
+          "ms": "29–30 Mac 571 M (Kedudukan 1 April 571 M)",
+          "en": "29–30 March 571 CE (1 April 571 alignment)",
+          "ar": "٢٩–٣٠ مارس ٥٧١ م (أول أبريل ٥٧١ م)"
+        },
+        "jewish_am": "Nisan 4331 AM",
+        "seleucid_alexander": "Adar/Nisan 882 Iskandar",
+        "nabonassar": "Tahun 1318 Nabonassar",
+        "persian_regnal": "Tahun ke-40 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun 1 Gajah",
+        "hijri_display": "29/30 Safar 53 SH",
+        "elephant_era": {
+          "year": 1,
+          "label": "Tahun 1 Gajah"
+        },
+        "weekday": "Ahad / Isnin",
+        "jdn": 1929704
+      },
+      "title": {
+        "ms": "Qiran Falak Zuhal & Musytari di Buruj Scorpio (Qirān al-Millah)",
+        "en": "Great Conjunction of Saturn & Jupiter in Scorpio (Qiran al-Millah)",
+        "ar": "قران زحل والمشتري في برج العقرب (قران الملة الإسلامية)"
+      },
+      "narrative": {
+        "summary_ms": "Ahli falak silam seperti Yahya ibn Abi Shukr al-Maghribi, Abu Ma'shar, dan al-Sijzi mencatatkan bahawa kelahiran Rasulullah ﷺ didahului oleh pertemuan agung (qiran) antara planet Zuhal dan Musytari di buruj Scorpio. Al-Falaki mengira kedudukan planet pada 1 April 571 M: Musytari pada 215° 2' dan Zuhal pada 215° 17' di buruj Scorpio.",
+        "summary_en": "Classical astronomers recorded that the Prophet's birth was heralded by the conjunction of Saturn and Jupiter in Scorpio. Al-Falaki verified using Bouvard tables that on 1 April 571 CE, Jupiter was at 215° 2' and Saturn at 215° 17' in Scorpio.",
+        "summary_ar": "نقل أصحاب الزيجات الفلكية القديمة وقوع قران فلكي بين زحل والمشتري في برج العقرب قبيل المولد النبوي، وحسبه الفلكي بدقة: المشتري في ٢١٥° ٢ وزحل في ٢١٥° ١٧ من برج العقرب.",
+        "classical_source": "MS BNF No. 1115 (Muntaha al-Idrak); MS BNF No. 1131 (al-Sijzi); Mahmoud-Bey (1858, p. 144)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "planetary_conjunction",
+        "saturn_longitude": "215° 17' (Scorpio)",
+        "jupiter_longitude": "215° 02' (Scorpio)",
+        "constellation": "Scorpio (برج العقرب)"
+      }
+    },
+    {
+      "id": "new-moon-rabi-1-571",
+      "category": "astronomical_anchor",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 571,
+        "display_date": {
+          "ms": "Jumaat, 11 April 571 M (9:41 malam waktu Makkah)",
+          "en": "Friday, 11 April 571 CE (9:41 PM mean Mecca time)",
+          "ar": "الجمعة، ١١ أبريل ٥٧١ م (الساعة ٩:٤١ مساء بتوقيت مكة)"
+        },
+        "jewish_am": "Nisan 4331 AM",
+        "seleucid_alexander": "Nisan 882 Iskandar",
+        "nabonassar": "Tahun 1318 Nabonassar",
+        "persian_regnal": "Tahun ke-40 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun 1 Gajah",
+        "hijri_display": "Ijtimak Anak Bulan Rabiulawal 53 SH",
+        "elephant_era": {
+          "year": 1,
+          "label": "Tahun 1 Gajah"
+        },
+        "weekday": "Jumaat (malam)",
+        "jdn": 1929716
+      },
+      "title": {
+        "ms": "Ijtimak Hakiki Anak Bulan & Kenampakan Hilal Rabiulawal 571 M",
+        "en": "Astronomical New Moon (Conjunction) of Rabi' al-Awwal 571 CE",
+        "ar": "الاجتماع الحقيقي للقمر وهلال ربيع الأول سنة ٥٧١ م"
+      },
+      "narrative": {
+        "summary_ms": "Pengiraan falak Mahmoud Pasha membuktikan konjungsi qamari berlaku pada malam Jumaat 11 April jam 9:41 malam. Hilal mustahil kelihatan pada malam tersebut, tetapi kelihatan jelas pada petang Sabtu 12 April. Maka Ahad 12 April = 1 Rabiulawal, dan Isnin 20 April = 9 Rabiulawal.",
+        "summary_en": "Al-Falaki computed the lunar conjunction occurred Friday, 11 April at 9:41 PM. Crescent was sighted Saturday evening 12 April, fixing Sunday, 12 April = 1 Rabi' I, and Monday, 20 April = 9 Rabi' I.",
+        "summary_ar": "أثبت الفلكي أن الاجتماع القمري وقع ليلة الجمعة ١١ أبريل في الساعة ٩:٤١ م بتوقيت مكة، فتعذرت رؤية الهلال ليلتئذ ورئي مساء السبت ١٢ أبريل، فكان الأحد غرة ربيع الأول والاثنين تاسعه.",
+        "classical_source": "Alexis Bouvard Lunar Tables; Mahmoud-Bey (1858, p. 147)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "lunar_conjunction",
+        "conjunction_time": "11 April 571 at 21:41 Mecca time",
+        "hilal_sighting": "12 April 571 evening",
+        "first_day_of_month": "Sunday, 12 April 571 CE"
+      }
+    },
+    {
+      "id": "prophet-birth-mawlid",
+      "category": "mawlid",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 571,
+        "display_date": {
+          "ms": "Isnin, 20 April 571 Masihi (Julian) [22 April 571 M (Gregorian)]",
+          "en": "Monday, 20 April 571 CE (Julian) [22 April 571 CE (Gregorian)]",
+          "ar": "الاثنين، ٩ ربيع الأول ٥٣ ق.هـ / ٢٠ أبريل ٥٧١ م"
+        },
+        "jewish_am": "Nisan 4331 AM",
+        "seleucid_alexander": "20 / 22 Nisan 882 Iskandar",
+        "nabonassar": "Tahun 1318 Nabonassar",
+        "persian_regnal": "Tahun ke-40 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun 1 Gajah (~50–55 hari selepas Abraha)",
+        "hijri_display": "Isnin, 9 Rabiulawal 53 SH (Khuwwān)",
+        "elephant_era": {
+          "year": 1,
+          "label": "Tahun 1 Gajah (Hari Kelahiran)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1929725
+      },
+      "title": {
+        "ms": "Kelahiran Junjungan Mulia Nabi Muhammad ﷺ di Makkah al-Mukarramah (Mawlid)",
+        "en": "THE BIRTH OF PROPHET MUHAMMAD (ﷺ) IN MECCA (THE MAWLID)",
+        "ar": "مولد سيد المرسلين وخاتم النبيين محمد ﷺ بمكة المكرمة"
+      },
+      "narrative": {
+        "summary_ms": "Kelahiran junjungan besar Nabi Muhammad ﷺ pada waktu fajar/pagi hari Isnin, 9 Rabiulawal Tahun Gajah (bersamaan 20 April 571 M). Penentuan tarikh oleh Mahmoud Pasha al-Falaki ini membatalkan dakwaan tarikh 8, 10, dan 12 Rabiulawal kerana hari-hari tersebut jatuh pada hari Ahad, Selasa, dan Khamis mengikut kiraan falak dan takwim, sedangkan hadis sahih (Sahih Muslim) menetapkan kelahiran baginda berlaku pada hari Isnin.",
+        "summary_en": "The birth of Prophet Muhammad (ﷺ) at dawn on Monday, 9 Rabi' al-Awwal in the Year of the Elephant (20 April 571 CE). Al-Falaki mathematically eliminated the 8th, 10th, and 12th of Rabi' I because they fell on Sunday, Tuesday, and Thursday respectively, whereas authentic hadith in Sahih Muslim firmly establishes he was born on a Monday.",
+        "summary_ar": "ولد نبي الهدى ورسول الرحمة ﷺ صبيحة يوم الاثنين ٩ ربيع الأول عام الفيل الموافق ٢٠ أبريل ٥٧١ م. وبحساب الفلك القطعي أبطل الفلكي الأقوال القائلة بيوم ٨ أو ١٠ أو ١٢ ربيع الأول لأنها وافقت الأحد والثلاثاء والخميس، والحديث الصحيح في مسلم نص على أنه ولد يوم الاثنين.",
+        "classical_source": "Sahih Muslim (Hadith of Qatada); Ibn Dihyah; al-Khallal; al-Mas'udi; Mahmoud-Bey (1858, p. 147); Nata'ij al-Afham (p. 28)",
+        "quran_refs": [],
+        "hadith_refs": [
+          "Sahih Muslim (Hadith 1162)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "master_anchor",
+        "day_count_from_mawlid": 0,
+        "weekday_verified": "Monday (JDN 1929725 % 7 == 1)"
+      }
+    },
+    {
+      "id": "nursing-shaqq-as-sadr",
+      "category": "prophetic_childhood",
+      "granularity": "month_approx",
+      "date": {
+        "julian_year": 573,
+        "display_date": {
+          "ms": "Musim Panas 573 M (~Julai / Ogos 573 M)",
+          "en": "Summer 573 CE (~July / August 573 CE)",
+          "ar": "صيف سنة ٥٧٣ م (حوالي يوليو/أغسطس ٥٧٣ م)"
+        },
+        "jewish_am": "Ab 4333 AM",
+        "seleucid_alexander": "~884 Iskandar (Tammuz/Ab)",
+        "nabonassar": "Tahun 1320 Nabonassar",
+        "persian_regnal": "Tahun ke-42 Khusrow I Anushirvan",
+        "arab_epoch": "Tahun ke-3 Gajah",
+        "hijri_display": "~Rabi' II / Jumada 51 SH",
+        "elephant_era": {
+          "year": 3,
+          "label": "Tahun 3 Gajah (Umur 2 tahun 2–3 bulan)"
+        },
+        "weekday": "Tengah hari",
+        "jdn": 1930560
+      },
+      "title": {
+        "ms": "Penyusuan di Perkampungan Banu Sa'd & Peristiwa Pembelahan Dada (Shaqq al-Sadr)",
+        "en": "Nursing in Banu Sa'd & Opening of the Chest (Shaqq al-Sadr)",
+        "ar": "الرضاع في بني سعد وحادثة شق الصدر الشريف"
+      },
+      "narrative": {
+        "summary_ms": "Peristiwa pembelahan dada Nabi ﷺ oleh malaikat ketika baginda berumur 2 tahun 2 hingga 3 bulan di perkampungan Halimah al-Sa'diyyah. Catatan sirah menyebut saudara susuan baginda al-Shayma membawanya keluar pada waktu panas terik tengah hari musim panas. Menghitung ke belakang 2 tahun 2 bulan dari musim panas (Julai/Ogos 573 M) mendarat tepat pada musim bunga awal (April 571 M), mengesahkan kelahiran berlaku pada musim bunga.",
+        "summary_en": "The miraculous opening of the Prophet's chest at age 2 years and 2-3 months in the desert of Banu Sa'd. Halima's daughter carried him outside during the blistering midday heat. Counting back 2 years and 2 months from midsummer lands squarely in April 571 CE.",
+        "summary_ar": "حادثة شق الصدر الشريف في بادية بني سعد عند حليمة السعدية وعمره سنتان وبضعة أشهر. دل ذكر شدة الحر وظهيرة الصيف في الروايات على أن المولد قبله بسنتين وشهرين كان في فصل الربيع (أبريل).",
+        "classical_source": "Al-Sirah al-Halabiyyah; Ibn al-Athir; Mahmoud-Bey (1858, p. 138); Nata'ij al-Afham (p. 18)",
+        "quran_refs": [
+          "94:1"
+        ],
+        "hadith_refs": [
+          "Sahih Muslim"
+        ]
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "death-of-anushirvan",
+      "category": "prophetic_childhood",
+      "granularity": "month_approx",
+      "date": {
+        "julian_year": 579,
+        "display_date": {
+          "ms": "Mac 579 Masihi",
+          "en": "March 579 CE",
+          "ar": "مارس ٥٧٩ م"
+        },
+        "jewish_am": "Adar/Nisan 4339 AM",
+        "seleucid_alexander": "890 Iskandar (Adar 890)",
+        "nabonassar": "Tahun 1326 Nabonassar",
+        "persian_regnal": "Tahun ke-48 Khusrow I Anushirvan (Tahun Terakhir)",
+        "arab_epoch": "Tahun ke-9 Gajah",
+        "hijri_display": "45 SH (Umur 8 Tahun)",
+        "elephant_era": {
+          "year": 9,
+          "label": "Tahun 9 Gajah (Baginda berumur 8 tahun)"
+        },
+        "weekday": null,
+        "jdn": 1932600
+      },
+      "title": {
+        "ms": "Kewafatan Raja Khusrow I Anushirvan di Ctesiphon (al-Mada'in)",
+        "en": "Death of King Khusrow I Anushirvan at Ctesiphon",
+        "ar": "وفاة كسرى أنوشروان بكتيسيفون (المدائن)"
+      },
+      "narrative": {
+        "summary_ms": "Kewafatan Kisra Anushirvan pada bulan Mac 579 Masihi direkodkan dalam sejarah Rom dan Parsi (L'Art de vérifier les dates, ms 408). Sejarawan Arab dan Ibnu al-Amid mencatatkan Nabi ﷺ berumur genap 8 tahun ketika Anushirvan wafat. 579 tolak 8 tahun menghasilkan tahun 571 Masihi.",
+        "summary_en": "Khusrow Anushirvan passed away in March 579 CE at Ctesiphon. Arabic chroniclers recorded the Prophet was 8 years old at his death. Subtracting 8 years from 579 CE yields 571 CE.",
+        "summary_ar": "مات كسرى أنوشروان بكتيسيفون في حدود شهر مارس سنة ٥٧٩ م كما في كتب التواريخ الأوروبية، وذكر ابن العميد أن النبي ﷺ بلغ الثامنة من عمره وقت وفاته، مما يثبت ولادته سنة ٥٧١ م.",
+        "classical_source": "L'Art de vérifier les dates (p. 408); Ibn al-Amid; Ibn al-Athir; Mahmoud-Bey (1858, p. 143)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "al-bithah-first-revelation",
+      "category": "prophetic_mission",
+      "granularity": "month_approx",
+      "date": {
+        "julian_year": 610,
+        "display_date": {
+          "ms": "Awal Februari 610 Masihi",
+          "en": "Early February 610 CE",
+          "ar": "أوائل فبراير ٦١٠ م / رمضان ١٣ ق.هـ"
+        },
+        "jewish_am": "Shebat 4370 AM",
+        "seleucid_alexander": "921–922 Iskandar (Shebat)",
+        "nabonassar": "Tahun 1357 Nabonassar",
+        "persian_regnal": "Pemerintahan Khusrow II Parvez",
+        "arab_epoch": "Tahun ke-40 Gajah",
+        "hijri_display": "Isnin, Ramadan 13 SH (Tahun Kerasulan)",
+        "elephant_era": {
+          "year": 40,
+          "label": "Tahun 40 Gajah (Tahun Kerasulan / Bi'thah)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1943900
+      },
+      "title": {
+        "ms": "Permulaan Kerasulan & Nuzul Wahyu Pertama di Gua Hira' (al-Bi'thah)",
+        "en": "First Divine Revelation & Prophetic Mission (al-Bi'thah)",
+        "ar": "المبعث النبوي الشريف ونزول الوحي بغار حراء"
+      },
+      "narrative": {
+        "summary_ms": "Nabi Muhammad ﷺ dilantik menjadi Rasul pada usia genap 40 tahun qamari (bersamaan tepat 14,174 hari dari hari kelahiran). Mengira 14,174 hari dari 20 April 571 M mendarat tepat pada awal Februari 610 M (hari Isnin). Suasana dingin musim sejuk Hijaz pada bulan Februari digambarkan dalam wahyu awal 'Wahai orang yang berselimut!' (Surah al-Muddaththir).",
+        "summary_en": "Prophet Muhammad (ﷺ) received his first revelation at age 40 lunar years (exactly 14,174 days from Mawlid), landing in early February 610 CE on a Monday. The winter cold of February is reflected in the early Meccan command: 'O you wrapped up in garments!' (Surah al-Muddaththir 74:1).",
+        "summary_ar": "بعث النبي ﷺ على رأس أربعين سنة قمرية من مولده الشريف، وهي تعادل بالحساب الفلكي الدقيق ١٤١٧٤ يوماً، تنتهي في أوائل فبراير ٦١٠ م في يوم الاثنين مصداقاً لحديث مسلم: (ذاك يوم ولدت فيه ويوم بعثت فيه). وتدل آيات المدثر على شدة برد الشتاء في مكة وقتئذ.",
+        "classical_source": "Sahih Muslim; Surah al-Muddaththir; Mahmoud-Bey (1858, p. 148); Nata'ij al-Afham (p. 31)",
+        "quran_refs": [
+          "96:1-5",
+          "74:1-2"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari (Hadith 3)",
+          "Sahih Muslim (Hadith 1162)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "lifespan_interval",
+        "day_count_from_mawlid": 14174,
+        "equivalent_years": "40 lunar years (40 x 354.367 days)"
+      }
+    },
+    {
+      "id": "hijrah-entry-quba-medina",
+      "category": "madinan_era",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 622,
+        "display_date": {
+          "ms": "Isnin, 20 September 622 Masihi (Julian) [23 September 622 M (Gregorian)]",
+          "en": "Monday, 20 September 622 CE (Julian) [23 September 622 CE (Gregorian)]",
+          "ar": "الاثنين، ٨ ربيع الأول ١ هـ / ٢٠ سبتمبر ٦٢٢ م"
+        },
+        "jewish_am": "10 Tishrei 4383 AM (Hari Yom Kippur / Asyura)",
+        "seleucid_alexander": "933 Iskandar (Elul 933)",
+        "nabonassar": "Tahun 1369 Nabonassar",
+        "persian_regnal": "Pemerintahan Khusrow II Parvez",
+        "arab_epoch": "Permulaan Taqwim Hijrah (Tahun 1 Hijrah)",
+        "hijri_display": "Isnin, 8 Rabiulawal 1 H",
+        "elephant_era": {
+          "year": 53,
+          "label": "Tahun 53 Gajah (Tahun 1 Hijrah)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1948506
+      },
+      "title": {
+        "ms": "Peristiwa Hijrah & Ketibaan di Quba / Madinah (Penyelarasan Hari Asyura / Yom Kippur)",
+        "en": "The Hijrah & Arrival at Quba / Medina (Yom Kippur / 'Ashura Synchronization)",
+        "ar": "الهجرة النبوية الشريفة ودخول قباء والمدينة المنورة"
+      },
+      "narrative": {
+        "summary_ms": "Ketibaan Rasulullah ﷺ di Quba di pinggir Madinah pada hari Isnin 8 Rabiulawal 1 H (20 September 622 M), genap 18,780 hari dari hari kelahiran (53 tahun qamari). Hadis Sahih al-Bukhari & Muslim merekodkan bahawa orang Yahudi Madinah sedang berpuasa pada hari ketibaan baginda kerana merayakan pembebasan Nabi Musa daripada Firaun. Pengiraan kalendar Yahudi rabani membuktikan 10 Tishrei 4383 AM (Yom Kippur / Hari Penebusan Dosa) bertepatan tepat dengan hari Isnin 20 September 622 M, memberikan bukti astronomi saling-mengabsahkan yang kukuh.",
+        "summary_en": "The Prophet's arrival at Quba on Monday, 8 Rabi' al-Awwal 1 AH (20 September 622 CE), exactly 18,780 days from Mawlid (53 lunar years). Sahih hadiths record Medina Jews were fasting on that day in commemoration of Moses. Rabbinic calendar calculation proves 10 Tishrei 4383 AM (Yom Kippur) coincided precisely with Monday, 20 September 622 CE.",
+        "summary_ar": "دخل النبي ﷺ قباء والمدينة المنورة يوم الاثنين ٨ ربيع الأول سنة ١ هـ الموافق ٢٠ سبتمبر ٦٢٢ م، بعد ١٨٧٨٠ يوماً من مولده. وافق هذا اليوم بالدقة الفلكية صوم يوم كيبور (عاشوراء اليهود: ١٠ تشرى ٤٣٨٣ للخليقة) الذي وجد النبي ﷺ يهود يثرب يصومونه شكراً لنجاة موسى عليه السلام.",
+        "classical_source": "Sahih al-Bukhari; Sahih Muslim; C.L. Ideler; Mahmoud-Bey (1858, p. 116); Nata'ij al-Afham (p. 23)",
+        "quran_refs": [
+          "9:40"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari (Hadith 2004)",
+          "Sahih Muslim (Hadith 1130)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "master_anchor",
+        "day_count_from_mawlid": 18780,
+        "equivalent_years": "53 lunar years (53 x 354.367 days)",
+        "interfaith_synchronization": "8 Rabi' I 1 AH == 10 Tishrei 4383 AM (Yom Kippur) == Monday 20 September 622 CE"
+      }
+    },
+    {
+      "id": "medina-lunar-eclipse-4ah",
+      "category": "astronomical_anchor",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 625,
+        "display_date": {
+          "ms": "Rabu, 20 November 625 Masihi",
+          "en": "Wednesday, 20 November 625 CE",
+          "ar": "الأربعاء، ١٤ جمادى الآخرة ٤ هـ / ٢٠ نوفمبر ٦٢٥ م"
+        },
+        "jewish_am": "Kislev 4386 AM",
+        "seleucid_alexander": "937 Iskandar (Tishri II)",
+        "nabonassar": "Tahun 1372 Nabonassar",
+        "persian_regnal": "Pemerintahan Khusrow II Parvez",
+        "arab_epoch": "Tahun ke-4 Hijrah",
+        "hijri_display": "Rabu, 14 Jumada al-Akhirah 4 H",
+        "elephant_era": {
+          "year": 56,
+          "label": "Tahun 56 Gajah (Tahun 4 Hijrah)"
+        },
+        "weekday": "Rabu",
+        "jdn": 1949663
+      },
+      "title": {
+        "ms": "Paksi Falak 4: Gerhana Bulan di Madinah pada 14 Jamadilakhir 4 H",
+        "en": "Astronomical Pillar 4: Lunar Eclipse in Medina (14 Jumada II 4 AH)",
+        "ar": "خسوف القمر بالمدينة المنورة في ١٤ جمادى الآخرة سنة ٤ هـ"
+      },
+      "narrative": {
+        "summary_ms": "Dicatatkan dalam manuskrip 'Jam' al-'Uddah' bahawa gerhana bulan berlaku pada bulan Jamadilakhir tahun ke-4 Hijrah tanpa diadakan solat gerhana berjemaah. Kiraan falak al-Falaki mengesahkan gerhana berlaku pada 20 November 625 M. Jarak hari antara gerhana ini dan gerhana matahari tahun 10 H membuktikan secara matematik bahawa umat Islam di Madinah telah menggunakan taqwim qamari tulen.",
+        "summary_en": "Recorded in manuscript 'Jam' al-'Uddah' (BNF MS No. 213) that a lunar eclipse occurred in Jumada II of 4 AH. Al-Falaki computed the date as 20 November 625 CE, proving that the pure lunar calendar was operational in early Medina.",
+        "summary_ar": "جاء في كتاب (جمع العدة) وقوع خسوف قمري في جمادى الآخرة سنة ٤ هـ، وأثبت الفلكي وقوعه في ٢٠ نوفمبر ٦٢٥ م، وبرهن أن المسافة الفلكية بينه وبين كسوف سنة ١٠ هـ لا تتفق إلا مع التقويم القمري الصرف.",
+        "classical_source": "MS BNF No. 213 (Jam' al-'Uddah); Mahmoud-Bey (1858, p. 151); Nata'ij al-Afham (p. 34)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "lunar_eclipse",
+        "day_count_from_mawlid": 19938
+      }
+    },
+    {
+      "id": "conquest-of-mecca-8ah",
+      "category": "madinan_era",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 630,
+        "display_date": {
+          "ms": "Januari 630 Masihi (13 atau 17 Ramadan 8 H)",
+          "en": "January 630 CE (13 or 17 Ramadan 8 AH)",
+          "ar": "١٣ أو ١٧ رمضان ٨ هـ / يناير ٦٣٠ م"
+        },
+        "jewish_am": "Shebat 4390 AM",
+        "seleucid_alexander": "941 Iskandar (Kanun II)",
+        "nabonassar": "Tahun 1376 Nabonassar",
+        "persian_regnal": "Pemerintahan Ardashir III / Maharani Boran",
+        "arab_epoch": "Tahun ke-8 Hijrah",
+        "hijri_display": "13 atau 17 Ramadan 8 H",
+        "elephant_era": {
+          "year": 60,
+          "label": "Tahun 60 Gajah (Tahun 8 Hijrah)"
+        },
+        "weekday": null,
+        "jdn": 1951175
+      },
+      "title": {
+        "ms": "Pembukaan Kota Makkah (Fath Makkah) & Ekspedisi Hunayn",
+        "en": "Conquest of Mecca & Expedition to Hunayn",
+        "ar": "فتح مكة المكرمة وغزوة حنين الطائف"
+      },
+      "narrative": {
+        "summary_ms": "Pembukaan Kota Makkah berlaku pada 13 atau 17 Ramadan 8 H. Al-Biruni menganalisis kitaran nasi' ke-23 bangsa Arab jahiliyyah yang menyebabkan haji pada tahun itu beralih ke Zulkaedah, sebelum ibadat haji Rasulullah ﷺ pada tahun 10 H memulihkan pusingan masa kepada asal.",
+        "summary_en": "The Conquest of Mecca took place on 13 or 17 Ramadan 8 AH. Al-Biruni analyzed the 23rd intercalary cycle of pagan Arabia where pilgrimage had temporarily shifted to Dhu al-Qi'dah.",
+        "summary_ar": "فتح النبي ﷺ مكة المكرمة في رمضان سنة ٨ هـ، وحلل البيروني في الآثار الباقية وقوع هذا الفتح في السنة الثالثة والعشرين من دور النسيء الجاهلي.",
+        "classical_source": "Al-Biruni (al-Athar al-Baqiya); Abu Ma'shar; Mahmoud-Bey (1858, p. 119); Nata'ij al-Afham (p. 21)",
+        "quran_refs": [
+          "48:1",
+          "110:1-3"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari"
+        ]
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "birth-of-ibrahim",
+      "category": "madinan_era",
+      "granularity": "month_approx",
+      "date": {
+        "julian_year": 630,
+        "display_date": {
+          "ms": "Akhir Mac 630 Masihi",
+          "en": "Late March 630 CE",
+          "ar": "أواخر مارس ٦٣٠ م / ذو الحجة ٨ هـ"
+        },
+        "jewish_am": "Nisan 4390 AM",
+        "seleucid_alexander": "941 Iskandar (Adar)",
+        "nabonassar": "Tahun 1377 Nabonassar",
+        "persian_regnal": "Pemerintahan Maharani Boran",
+        "arab_epoch": "Tahun ke-8 Hijrah",
+        "hijri_display": "Awal Zulhijjah 8 H",
+        "elephant_era": {
+          "year": 60,
+          "label": "Tahun 60 Gajah (Baginda berumur 61 tahun qamari)"
+        },
+        "weekday": null,
+        "jdn": 1951250
+      },
+      "title": {
+        "ms": "Kelahiran Ibrahim (Putera Rasulullah ﷺ daripada Mariyah al-Qibtiyyah)",
+        "en": "Birth of Ibrahim (Son of the Prophet ﷺ)",
+        "ar": "ولادة إبراهيم ابن النبي ﷺ من مارية القبطية"
+      },
+      "narrative": {
+        "summary_ms": "Dilahirkan oleh Sayyidatina Mariyah al-Qibtiyyah pada awal bulan Zulhijjah tahun ke-8 Hijrah (akhir Mac 630 M) sekembalinya Nabi ﷺ daripada ekspedisi Fath Makkah dan Hunayn.",
+        "summary_en": "Born to Maria the Copt in early Dhu al-Hijjah 8 AH (late March 630 CE) following the Prophet's return from the Conquest of Mecca and Hunayn.",
+        "summary_ar": "ولد إبراهيم ابن رسول الله ﷺ من أم المؤمنين مارية القبطية في ذي الحجة من السنة الثامنة للهجرة بعد عودته ﷺ من حنين.",
+        "classical_source": "Al-Waqidi; Ibn Sa'd (al-Tabaqat); al-Sirah al-Halabiyyah; Mahmoud-Bey (1858, p. 136)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": null
+    },
+    {
+      "id": "death-of-ibrahim-solar-eclipse",
+      "category": "astronomical_anchor",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 632,
+        "display_date": {
+          "ms": "Isnin, 27 Januari 632 Masihi (Julian) [30 Januari 632 M (Gregorian)]",
+          "en": "Monday, 27 January 632 CE (Julian) [30 January 632 CE (Gregorian)]",
+          "ar": "الاثنين، ٢٩ شوال ١٠ هـ / ٢٧ يناير ٦٣٢ م"
+        },
+        "jewish_am": "29 Shebat 4392 AM",
+        "seleucid_alexander": "943 Iskandar (Kanun II)",
+        "nabonassar": "Tahun 1378/1379 Nabonassar",
+        "persian_regnal": "Pemerintahan Maharani Azarmidokht",
+        "arab_epoch": "Tahun ke-10 Hijrah",
+        "hijri_display": "Isnin, 29 Syawal 10 H",
+        "elephant_era": {
+          "year": 62,
+          "label": "Tahun 62 Gajah (Tahun 10 Hijrah)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1951922
+      },
+      "title": {
+        "ms": "Paksi Falak Utama: Kewafatan Ibrahim & Gerhana Matahari di Madinah",
+        "en": "Astronomical Pillar 5: Passing of Ibrahim & Annular Solar Eclipse in Medina",
+        "ar": "وفاة إبراهيم بن النبي ﷺ وكسوف الشمس بالمدينة المنورة"
+      },
+      "narrative": {
+        "summary_ms": "Kewafatan putera Nabi ﷺ, Ibrahim (berusia ~16-18 bulan) pada hari Isnin 29 Syawal 10 H (27 Januari 632 M). Pada pagi itu berlaku gerhana matahari anulus di Madinah dengan kemuncak pada jam 8:30 pagi (litupan 10.5 jari daripada 12, atau 87% litupan cakera matahari). Apabila orang ramai menyangka gerhana berlaku kerana kematian Ibrahim, Rasulullah ﷺ bersabda: 'Sesungguhnya matahari dan bulan adalah dua tanda daripada tanda-tanda kebesaran Allah, kedua-duanya tidak gerhana kerana kematian seseorang ataupun kelahirannya...' (Sahih al-Bukhari). Jarak hari dari hari kelahiran Nabi ﷺ ialah tepat 22,197 hari.",
+        "summary_en": "The passing of the Prophet's infant son Ibrahim on Monday, 29 Shawwal 10 AH (27 January 632 CE), coinciding with an annular solar eclipse over Medina peaking at 8:30 AM (magnitude 0.87 / 10.5 digits). When people attributed the eclipse to Ibrahim's death, the Prophet (ﷺ) declared: 'The sun and the moon do not eclipse because of the death or life of anyone...' (Sahih al-Bukhari). Exactly 22,197 days from Mawlid.",
+        "summary_ar": "مات إبراهيم ابن النبي ﷺ صبيحة يوم الاثنين ٢٩ شوال سنة ١٠ هـ الموافق ٢٧ يناير ٦٣٢ م، وكسفت الشمس بالمدينة في الساعة ٨:٣٠ صباحاً بنسبة ١٠.٥ أصابع من ١٢ (٨٧٪ من قرص الشمس)، فقال الناس: كسفت لموت إبراهيم، فقال ﷺ: (إن الشمس والقمر آيتان من آيات الله لا ينكسفان لموت أحد ولا لحياته). وكان ذلك بعد ٢٢١٩٧ يوماً من مولده ﷺ.",
+        "classical_source": "Sahih al-Bukhari (Kitab al-Kusuf); Sahih Muslim; Mahmoud-Bey (1858, p. 135; 1860); Nata'ij al-Afham (p. 13)",
+        "quran_refs": [],
+        "hadith_refs": [
+          "Sahih al-Bukhari (Hadith 1043)",
+          "Sahih Muslim (Hadith 915)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "solar_eclipse",
+        "eclipse_type": "Annular / Central",
+        "peak_time": "08:30 Medina local mean time",
+        "magnitude": "10.5 digits out of 12 (87% solar obscuration)",
+        "coordinates": "24° 28' 50\" N, 39° 54' 45\" E (Medina)",
+        "day_count_from_mawlid": 22197
+      }
+    },
+    {
+      "id": "farewell-pilgrimage-arafah",
+      "category": "madinan_era",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 632,
+        "display_date": {
+          "ms": "Jumaat, 6 Mac 632 Masihi (Julian) [9 Mac 632 M (Gregorian)]",
+          "en": "Friday, 6 March 632 CE (Julian) [9 March 632 CE (Gregorian)]",
+          "ar": "الجمعة، ٩ ذو الحجة ١٠ هـ / ٦ مارس ٦٣٢ م"
+        },
+        "jewish_am": "9 Adar II 4392 AM",
+        "seleucid_alexander": "943 Iskandar (Adar)",
+        "nabonassar": "Tahun 1379 Nabonassar",
+        "persian_regnal": "Zaman Pergolakan / Hormizd VI",
+        "arab_epoch": "Tahun ke-10 Hijrah",
+        "hijri_display": "Jumaat, 9 Zulhijjah 10 H (Hari Arafah)",
+        "elephant_era": {
+          "year": 62,
+          "label": "Tahun 62 Gajah (Haji Wada')"
+        },
+        "weekday": "Jumaat",
+        "jdn": 1951961
+      },
+      "title": {
+        "ms": "Haji Wada' (Hari Arafah), Khutbah Perpisahan & Pemansuhan Mutlak an-Nasī'",
+        "en": "The Farewell Pilgrimage (Day of Arafah) & Permanent Abolition of an-Nasī'",
+        "ar": "حجة الوداع وخطبة عرفة وإبطال النسيء ورجوع الزمان كهيئته"
+      },
+      "narrative": {
+        "summary_ms": "Hari Arafah jatuh pada hari Jumaat, 9 Zulhijjah 10 H (6 Mac 632 M). Dalam khutbah bersejarah baginda, Rasulullah ﷺ mengisytiharkan pemansuhan amalan sisipan bulan (nasi') buat selama-lamanya: 'Sesungguhnya masa telah berputar kembali seperti keadaannya pada hari Allah menciptakan langit dan bumi; setahun ada dua belas bulan, empat daripadanya adalah bulan haram...' (Sahih al-Bukhari & Muslim). Mahmoud Pasha membuktikan bahawa setelah lebih dua abad berlaku anjakan sisipan, kitaran tersebut genap berpusing 360 darjah pada tahun 10 H, mengembalikan Zulhijjah ke kedudukan asalnya.",
+        "summary_en": "The Day of Arafah fell on Friday, 9 Dhu al-Hijjah 10 AH (6 March 632 CE). The Prophet (ﷺ) proclaimed the eternal abolition of intercalation: 'Time has completed its cycle as it was on the day Allah created the heavens and the earth...' Al-Falaki proved mathematically that cumulative calendar drift over two centuries had completed a full 360-degree cycle.",
+        "summary_ar": "وقفة عرفة يوم الجمعة ٩ ذي الحجة ١٠ هـ الموافق ٦ مارس ٦٣٢ م، وفيها خطب النبي ﷺ خطبة الوداع وأعلن إبطال النسيء: (إن الزمان قد استدار كهيئته يوم خلق الله السموات والأرض). وبرهن الفلكي رياضياً أن دورة النسيء عبر قرنين أتمت دورة كاملة ٣٦٠ درجة وعادت لموضعها الأصلي.",
+        "classical_source": "Sahih al-Bukhari; Sahih Muslim (Hadith of Jabir); Surah at-Tawbah 9:37; Mahmoud-Bey (1858, p. 119)",
+        "quran_refs": [
+          "5:3",
+          "9:36-37"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari (Hadith 3197)",
+          "Sahih Muslim (Hadith 1679)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "calendar_restitution",
+        "day_count_from_mawlid": 22236
+      }
+    },
+    {
+      "id": "prophet-passing-wafat",
+      "category": "wafat_and_after",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 632,
+        "display_date": {
+          "ms": "Isnin, 7 / 8 Jun 632 Masihi (Julian) [10 / 11 Jun 632 M (Gregorian)]",
+          "en": "Monday, 7 / 8 June 632 CE (Julian) [10 / 11 June 632 CE (Gregorian)]",
+          "ar": "الاثنين، ١٢ ربيع الأول ١١ هـ / ٧–٨ يونيو ٦٣٢ م"
+        },
+        "jewish_am": "13/14 Sivan 4392 AM",
+        "seleucid_alexander": "943 Iskandar (Haziran)",
+        "nabonassar": "Tahun 1379 Nabonassar",
+        "persian_regnal": "Ambang Kemahkotaan Yazdegerd III",
+        "arab_epoch": "Tahun ke-11 Hijrah",
+        "hijri_display": "Isnin, 12 Rabiulawal 11 H",
+        "elephant_era": {
+          "year": 63,
+          "label": "Tahun 63 Gajah (Kewafatan Rasulullah ﷺ)"
+        },
+        "weekday": "Isnin",
+        "jdn": 1952055
+      },
+      "title": {
+        "ms": "Kewafatan Junjungan Besar Nabi Muhammad ﷺ di Madinah al-Munawwarah",
+        "en": "THE PASSING OF PROPHET MUHAMMAD (ﷺ) IN MEDINA",
+        "ar": "وفاة خاتم الأنبياء والمرسلين نبينا محمد ﷺ بالمدينة المنورة"
+      },
+      "narrative": {
+        "summary_ms": "Kewafatan Rasulullah ﷺ pada waktu dhuha hari Isnin, 12 Rabiulawal 11 H. Jumlah tempoh hayat baginda dari hari kelahiran (20 April 571 M) hingga kewafatan (7/8 Jun 632 M) adalah tepat 22,329 hari. Kiraan matematik membuktikan: 22,329 / 354.367 = 63 tahun qamari dan 9 hari, atau 22,329 / 365.2422 = 61 tahun solar dan 48 hari. Ini mengabsahkan riwayat majoriti dalam Sahih al-Bukhari & Muslim (Sayyidatina Aisyah, Ibn Abbas, dan Anas) bahawa baginda wafat pada usia 63 tahun.",
+        "summary_en": "The passing of Prophet Muhammad (ﷺ) on Monday mid-morning, 12 Rabi' al-Awwal 11 AH. Total lifespan from Mawlid (20 April 571 CE) was exactly 22,329 days, which precisely equals 63 lunar years + 9 days (or 61 solar years + 48 days), fully validating the dominant consensus in Sahih al-Bukhari and Muslim that he lived 63 years.",
+        "summary_ar": "انتقل النبي ﷺ إلى الرفيق الأعلى ضحى يوم الاثنين ١٢ ربيع الأول سنة ١١ هـ. وبلغ مجموع أيام عمره الشريف من ولادته (٢٠ أبريل ٥٧١ م) إلى وفاته (٧–٨ يونيو ٦٣٢ م) تمام ٢٢٣٢٩ يوماً. وبالحساب: ٢٢٣٢٩ / ٣٥٤.٣٦٧ = ٦٣ سنة قمرية و٩ أيام، وهو مطابق تمام المطابقة لما في الصحيحين من إجماع الصحابة (عائشة وابن عباس وأنس) أنه ﷺ عاش ٦٣ سنة.",
+        "classical_source": "Sahih al-Bukhari; Sahih Muslim; Ibn Ishaq; al-Biruni; Mahmoud-Bey (1858, p. 150); Nata'ij al-Afham (p. 33)",
+        "quran_refs": [
+          "3:144",
+          "39:30"
+        ],
+        "hadith_refs": [
+          "Sahih al-Bukhari (Hadith 4464)",
+          "Sahih Muslim (Hadith 2347)"
+        ]
+      },
+      "astronomical_meta": {
+        "type": "master_anchor",
+        "day_count_from_mawlid": 22329,
+        "lunar_lifespan": "63 lunar years and 9 days (22,329 / 354.367)",
+        "solar_lifespan": "61 solar years and 48 days (22,329 / 365.2422)"
+      }
+    },
+    {
+      "id": "epoch-yazdegerd-iii",
+      "category": "wafat_and_after",
+      "granularity": "exact_day",
+      "date": {
+        "julian_year": 632,
+        "display_date": {
+          "ms": "Selasa, 16 Jun 632 Masihi (Julian) [19 Jun 632 M (Gregorian)]",
+          "en": "Tuesday, 16 June 632 CE (Julian) [19 June 632 CE (Gregorian)]",
+          "ar": "الثلاثاء، ٢٠ ربيع الأول ١١ هـ / ١٦ يونيو ٦٣٢ م"
+        },
+        "jewish_am": "22 Sivan 4392 AM",
+        "seleucid_alexander": "943 Iskandar (Haziran)",
+        "nabonassar": "Tahun 1379 Nabonassar",
+        "persian_regnal": "1 Farwardin, Tahun 1 Era Yazdegerd",
+        "arab_epoch": "Tahun ke-11 Hijrah (8 hari selepas kewafatan Nabi)",
+        "hijri_display": "Selasa, 20 Rabiulawal 11 H",
+        "elephant_era": {
+          "year": 63,
+          "label": "Tahun 63 Gajah (8 hari pasca-kewafatan)"
+        },
+        "weekday": "Selasa",
+        "jdn": 1952063
+      },
+      "title": {
+        "ms": "Permulaan Taqwim Yazdegerd III (Paksi Falak Parsi)",
+        "en": "Epoch of Yazdegerd III (Persian Astronomical Era)",
+        "ar": "مبدأ تاريخ يزدجرد بن شهريار (التقويم الفارسي)"
+      },
+      "narrative": {
+        "summary_ms": "Kemahkotaan maharaja Sasanian terakhir, Yazdegerd III pada hari Selasa 16 Jun 632 M (8 hari selepas kewafatan Nabi ﷺ). Digunakan oleh ahli falak agung seperti al-Biruni dan al-Battani sebagai paksi kiraan matematik tepat 3,557 hari ke belakang hingga tarikh Hijrah.",
+        "summary_en": "Coronation of the last Sasanian emperor Yazdegerd III on Tuesday, 16 June 632 CE (8 days post-Wafat). Used by al-Biruni and al-Battani as a mathematical baseline measuring exactly 3,557 days back to the Hijrah.",
+        "summary_ar": "مبدأ تاريخ يزدجرد بن شهريار آخر ملوك الفرس الساسانيين في يوم الثلاثاء ١٦ يونيو ٦٣٢ م (بعد وفاة النبي ﷺ بثمانية أيام)، اعتمده البيروني والبتاني لحساب ٣٥٥٧ يوماً بالتمام قهقرى إلى الهجرة النبوية.",
+        "classical_source": "Al-Biruni (al-Athar al-Baqiya); al-Battani; Mahmoud-Bey (1858, p. 144)",
+        "quran_refs": [],
+        "hadith_refs": []
+      },
+      "astronomical_meta": {
+        "type": "astronomical_baseline",
+        "days_from_hijrah": 3557,
+        "days_from_mawlid": 22338
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+/**
+ * English Translations
+ */
+export default {
+  appTitle: "Prophetic Timeline & Calendar",
+  appSubtitle: "Historical Visualization, Astronomical Anchors & Multi-Calendar Concordance Based on Mahmoud Pasha al-Falaki's Research",
+  tabs: {
+    timeline: "Timeline",
+    calendarMonth: "Month Calendar",
+    calendarYear: "Year Calendar",
+    visualizer: "Astro Visualizer",
+    calculator: "Day Calculator"
+  },
+  calendar: {
+    primaryCalendar: "Primary Grid Driver:",
+    hijri: "Hijri Calendar (AH / BH)",
+    elephantEra: "Elephant Era (1–63)",
+    julian: "Julian Calendar",
+    gregorian: "Gregorian Calendar",
+    prevMonth: "Previous Month",
+    nextMonth: "Next Month",
+    today: "Today",
+    selectedDayDetails: "Selected Day Details",
+    noEventsDay: "No specific historical events recorded on this day.",
+    multiCalendarHeader: "Multi-Calendar Concordance",
+    eventsOnDay: "Events on this Day:"
+  },
+  timeline: {
+    filterCategory: "Category:",
+    searchPlaceholder: "Search events or text...",
+    daysFromMawlid: "Distance from Mawlid:",
+    days: "days",
+    lunarYears: "lunar years",
+    solarYears: "solar years",
+    readNarrative: "Read Full Narrative",
+    viewInCalendar: "View in Calendar",
+    prologueTitle: "Ancient Epochs Zone (Before Year of the Elephant)",
+    prologueNotice: "Ancient epoch-scale events are displayed in this section before transitioning into the day-precision timeline spanning from the Year of the Elephant to the Prophet's passing.",
+    expandAll: "Expand All",
+    collapseAll: "Collapse All"
+  },
+  visualizers: {
+    eclipseTitle: "Medina Solar Eclipse Simulator (27 January 632 CE / 29 Shawwal 10 AH)",
+    eclipseDesc: "Simulation of the sun and moon over Medina on the morning of Ibrahim's passing (peak at 8:30 AM). Obscuration reached 87% (10.5 digits out of 12) forming an annular eclipse.",
+    eclipsePlay: "Play Simulation",
+    eclipsePause: "Pause",
+    eclipseReset: "Reset",
+    conjunctionTitle: "Great Conjunction of Saturn & Jupiter in Scorpio (1 April 571 CE)",
+    conjunctionDesc: "Positions of the two gas giants observed in the sky weeks before the birth of Prophet Muhammad (ﷺ). Jupiter at 215° 02' and Saturn at 215° 17' in Scorpio.",
+    calculatorTitle: "Interactive Day-Count Calculator",
+    calculatorDesc: "Select any two historical events to calculate the absolute elapsed days, lunar year equivalency (354.367 days), and solar year equivalency (365.2422 days).",
+    selectEventA: "Starting Event (A):",
+    selectEventB: "Ending Event (B):",
+    calculateBtn: "Calculate Distance",
+    resultInterval: "Distance Calculation Result:",
+    totalDays: "Total Absolute Days:",
+    lunarEquiv: "Lunar Years (Hijri):",
+    solarEquiv: "Solar Years (Tropical):"
+  },
+  modal: {
+    close: "Close",
+    classicalSources: "References & Classical Sources:",
+    astronomicalData: "Astronomical Data & Coordinates:",
+    quranVerses: "Related Quranic Verses:",
+    hadithVerses: "Related Hadiths:"
+  },
+  footer: {
+    partOf: "Part of the digital Islamic heritage initiative",
+    orgName: "Maktabah Maftoohah (المكتبة المفتوحة)",
+    publicDomain: "Data based on public domain research of Mahmoud Pasha al-Falaki (1858 / 1887)."
+  }
+};

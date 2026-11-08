@@ -1,0 +1,17 @@
+{
+  "name": "Prophetic Timeline & Calendar",
+  "short_name": "PropheticTimeline",
+  "description": "Historical timeline visualizer and multi-calendar browser based on Mahmoud Pasha al-Falaki's calculations.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "./data/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,40 +1,104 @@
 <!DOCTYPE html>
-<html lang="ms" dir="ltr">
+<html lang="ms" dir="ltr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prophetic Timeline & Calendar</title>
-  <link rel="stylesheet" href="./css/main.css">
+  <meta name="description" content="Garis Masa & Kalendar Kenabian (Prophetic Timeline & Calendar) - Visualisasi interaktif sejarah dan penyelaras pelbagai sistem kalendar mengikut kajian astronomi Mahmoud Pasha al-Falaki.">
+  <title>Garis Masa & Kalendar Kenabian | Prophetic Timeline</title>
+  
+  <!-- PWA Manifest & Icons -->
   <link rel="manifest" href="./manifest.webmanifest">
-  <meta name="theme-color" content="#064e3b">
+  <meta name="theme-color" content="#10b981">
+
+  <!-- Stylesheets (All Relative Paths for GitHub Pages Subpath Compatibility) -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/calendar.css">
+  <link rel="stylesheet" href="./css/visualizers.css">
 </head>
 <body>
+
+  <!-- App Header -->
   <header class="app-header">
-    <div class="header-container">
-      <div class="brand-group">
-        <h1 class="app-title">Prophetic Timeline & Calendar</h1>
-        <p class="app-title-ar" dir="rtl">الخط الزمني للسيرة النبوية والتقويم</p>
+    <div class="header-top">
+      <div class="brand-section">
+        <span class="brand-icon">🌙</span>
+        <div>
+          <h1 class="brand-title" id="header-title">Garis Masa & Kalendar Kenabian</h1>
+          <p class="brand-subtitle" id="header-subtitle">Penyelarasan Falak & Sejarah Menurut Penyelidikan Mahmoud Pasha al-Falaki</p>
+        </div>
       </div>
-      <div class="header-actions">
-        <button id="themeToggle" class="btn-icon" title="Tukar Tema">🌙</button>
-        <button id="langToggle" class="btn-pill" title="Tukar Bahasa">MY / EN</button>
+
+      <div class="header-controls">
+        <select id="lang-select" class="form-control form-control-sm" aria-label="Pilih Bahasa / Select Language">
+          <option value="ms">Bahasa Melayu</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+        <button id="theme-toggle-btn" class="btn btn-sm btn-outline">☀️ Cerah</button>
       </div>
     </div>
+
+    <!-- Navigation Tabs Bar -->
+    <nav class="nav-tabs-bar" aria-label="Navigasi Paparan">
+      <button class="tab-btn active" data-tab="timeline" id="tab-btn-timeline">📜 Garis Masa</button>
+      <button class="tab-btn" data-tab="calendarMonth" id="tab-btn-month">📅 Kalendar Bulanan</button>
+      <button class="tab-btn" data-tab="calendarYear" id="tab-btn-year">🗓️ Kalendar Tahunan</button>
+      <button class="tab-btn" data-tab="visualizer" id="tab-btn-visualizer">🪐 Visualisasi Falak</button>
+      <button class="tab-btn" data-tab="calculator" id="tab-btn-calculator">🔢 Kalkulator Hari</button>
+    </nav>
   </header>
 
-  <main class="app-main">
-    <section class="hero-section">
-      <p class="hero-desc">Maktabah Maftoohah — Perpustakaan Digital Terbuka</p>
+  <!-- Main Views Container -->
+  <main class="main-content">
+    <!-- View 1: Timeline -->
+    <section id="view-timeline" class="view-panel active" data-view="timeline" aria-label="Paparan Garis Masa">
+      <!-- Injected by TimelineView -->
     </section>
-    <section id="contentView" class="content-container">
-      <p class="loading-state">Memuatkan kandungan...</p>
+
+    <!-- View 2: Calendar Month -->
+    <section id="view-calendar-month" class="view-panel" data-view="calendarMonth" aria-label="Paparan Kalendar Bulanan">
+      <!-- Injected by CalendarMonthView -->
+    </section>
+
+    <!-- View 3: Calendar Year -->
+    <section id="view-calendar-year" class="view-panel" data-view="calendarYear" aria-label="Paparan Kalendar Tahunan">
+      <!-- Injected by CalendarYearView -->
+    </section>
+
+    <!-- View 4: Astro Visualizers -->
+    <section id="view-visualizer" class="view-panel" data-view="visualizer" aria-label="Paparan Visualisasi Falak">
+      <div id="eclipse-sim-container"></div>
+      <div id="conjunction-sim-container"></div>
+    </section>
+
+    <!-- View 5: Day Calculator -->
+    <section id="view-calculator" class="view-panel" data-view="calculator" aria-label="Kalkulator Hari Interaktif">
+      <div id="day-calculator-container"></div>
     </section>
   </main>
 
+  <!-- Universal Event & Day Detail Modal -->
+  <div id="event-detail-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="chip chip-gold">Maktabah Maftoohah</span>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Tutup Dialog">&times;</button>
+      </div>
+      <div class="modal-body" id="event-modal-body">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- App Footer -->
   <footer class="app-footer">
-    <p>Maktabah Maftoohah — Zero-Build Open Islamic Heritage</p>
+    <p>Sebahagian daripada inisiatif khazanah warisan digital <a href="https://github.com/maktabah-maftoohah" target="_blank" rel="noopener"><strong>Maktabah Maftoohah (المكتبة المفتوحة)</strong></a>.</p>
+    <p>Data astronomi & sejarah berasaskan penyelidikan Mahmoud Pasha al-Falaki (1815–1885 M / 1305 H).</p>
   </footer>
 
+  <!-- Application Bootstrap (Zero-Build Vanilla ES6 Module) -->
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>

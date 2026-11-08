@@ -1,25 +1,42 @@
-/* Maktabah Maftoohah Zero-Build Design System */
-:root {
-  --bg-primary: #f8fafc;
-  --bg-card: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --primary: #047857;
-  --primary-hover: #065f46;
-  --accent: #d97706;
-  --border: #e2e8f0;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-arabic: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
-}
+/**
+ * Prophetic Timeline - Main Stylesheet
+ * Responsive, dark/light theme support, Islamic aesthetic, Amiri typography.
+ */
 
-[data-theme="dark"] {
-  --bg-primary: #090d16;
-  --bg-card: #111827;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
   --primary: #10b981;
   --primary-hover: #059669;
-  --border: #1f2937;
+  --accent-gold: #f59e0b;
+  --accent-gold-hover: #d97706;
+  --bg-main: #0b0f17;
+  --bg-surface: #111827;
+  --bg-card: #1f2937;
+  --bg-card-hover: #374151;
+  --text-main: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --border-color: #374151;
+  --border-light: #4b5563;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+}
+
+[data-theme="light"] {
+  --bg-main: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f9fafb;
+  --text-main: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --border-light: #d1d5db;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -30,69 +47,332 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg-main);
+  color: var(--text-main);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header & Nav */
 .app-header {
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 50;
+  box-shadow: var(--shadow);
 }
 
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.app-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.app-title-ar {
-  font-family: var(--font-arabic);
-  font-size: 1.4rem;
-  color: var(--text-secondary);
-}
-
-.header-actions {
+.brand-section {
   display: flex;
+  align-items: center;
   gap: 0.75rem;
 }
 
-.btn-icon, .btn-pill {
+.brand-icon {
+  font-size: 2rem;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Tab Navigation Bar */
+.nav-tabs-bar {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 1400px;
+  margin: 0.75rem auto 0 auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.tab-btn {
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.view-panel {
+  display: none;
+}
+
+.view-panel.active {
+  display: block;
+}
+
+/* Common Buttons & Inputs */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-card);
+  border-color: var(--border-light);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.form-control {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-family: inherit;
   font-size: 0.9rem;
 }
 
-.app-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 
-.content-container {
-  margin-top: 1.5rem;
+.form-control-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
 }
 
-.app-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
+/* Chips & Badges */
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.chip-gold {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.chip-blue {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.chip-green {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+/* Modal Dialog */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.modal-overlay.is-active {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.modal-container {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  margin: 3rem auto;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Arabic Typography in Modals */
+.modal-title-ar {
+  font-family: var(--font-arabic);
+  font-size: 1.6rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.modal-concordance-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal-concordance-box ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.modal-quran-box, .modal-hadith-box {
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--primary);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.quran-badge {
+  display: inline-block;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.app-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-tabs-bar {
+    padding-bottom: 0.25rem;
+  }
 }

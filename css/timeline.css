@@ -1,0 +1,312 @@
+/**
+ * Prophetic Timeline - Timeline Styles
+ * Layout for vertical scrolling timeline, connectors, and cards.
+ */
+
+.timeline-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-surface);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.timeline-controls-bar .search-box {
+  flex: 1;
+}
+
+.timeline-controls-bar .search-box input {
+  width: 100%;
+}
+
+.timeline-controls-bar .category-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.timeline-section-heading {
+  margin-bottom: 1.25rem;
+}
+
+.timeline-section-heading h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+
+.timeline-section-heading .section-notice {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.mt-6 {
+  margin-top: 2.5rem;
+}
+
+/* Ancient Epochs Prologue Grid */
+.ancient-epochs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ancient-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ancient-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+}
+
+.ancient-card .card-badge {
+  display: inline-block;
+  background-color: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.ancient-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.ancient-card .card-title-ar {
+  font-family: var(--font-arabic);
+  color: var(--accent-gold);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.ancient-card .card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.ancient-card .card-source {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Vertical Timeline Structure */
+.vertical-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 9px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 1.25rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 3px solid var(--primary);
+  z-index: 2;
+}
+
+.timeline-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.timeline-card:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Special milestone styling */
+.card-mawlid .timeline-marker {
+  border-color: #f59e0b;
+  background-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+}
+
+.card-mawlid .timeline-card {
+  border: 2px solid #f59e0b;
+  background: linear-gradient(to right, rgba(245, 158, 11, 0.05), var(--bg-surface));
+}
+
+.card-wafat .timeline-marker {
+  border-color: #10b981;
+  background-color: #10b981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
+}
+
+.card-wafat .timeline-card {
+  border: 2px solid #10b981;
+  background: linear-gradient(to right, rgba(16, 185, 129, 0.05), var(--bg-surface));
+}
+
+.card-elephant .timeline-card {
+  border-left: 4px solid #60a5fa;
+}
+
+.card-eclipse .timeline-card {
+  border-left: 4px solid #f59e0b;
+}
+
+.card-hijrah .timeline-card {
+  border-left: 4px solid #34d399;
+}
+
+/* Card internal elements */
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.date-chip {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.elephant-chip {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.weekday-chip {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title-ar {
+  font-family: var(--font-arabic);
+  color: var(--accent-gold);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.concordance-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  background-color: var(--bg-card);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.concordance-strip strong {
+  color: var(--text-main);
+}
+
+.timeline-narrative {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.mawlid-distance-badge {
+  display: inline-block;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-footer-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Timeline Connectors */
+.timeline-connector {
+  position: relative;
+  margin: 0.75rem 0 0.75rem 0;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.connector-line {
+  flex: 1;
+  height: 1px;
+  background: dashed 1px var(--border-color);
+}
+
+.connector-pill {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.connector-pill .pill-days {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
