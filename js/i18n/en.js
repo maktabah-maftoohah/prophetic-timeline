@@ -44,6 +44,7 @@ export default {
     modeChrono: "Proportional Chrono Scale",
     proportionalNotice: "In this mode, vertical spacing visually reflects the actual astronomical elapsed days and years between historical events.",
     scrubberTitle: "Prophetic Era Navigator",
+    scrollHint: "↔ Drag / Scroll track to navigate",
     eraAncient: "Ancient Epochs",
     eraElephant: "Year of Elephant & Mawlid",
     eraMakkah: "Makkan Era",

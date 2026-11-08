@@ -13,15 +13,16 @@ import { eventStore } from "../core/event-store.js";
 import { i18n } from "../core/i18n.js";
 
 // Key milestone pips for the interactive scrubber ribbon
+// Alternating 'above' and 'below' with sufficient horizontal clearance so pips NEVER overlap
 const SCRUBBER_MILESTONES = [
-  { id: "ancient-epochs-section", label: { ms: "Purba", en: "Ancient", ar: "القديمة" }, year: "3761 SM", era: "ancient", icon: "🏺", posPercent: 0 },
-  { id: "event-node-elephant-expedition-571", label: { ms: "Tahun Gajah", en: "Elephant", ar: "الفيل" }, year: "571 M", era: "elephant", icon: "🐘", posPercent: 12 },
-  { id: "event-node-prophet-birth-mawlid", label: { ms: "Mawlid", en: "Mawlid", ar: "المولد" }, year: "571 M", era: "mawlid", icon: "🌟", posPercent: 18 },
-  { id: "event-node-al-bithah-first-revelation", label: { ms: "Bi'thah (Wahyu)", en: "Bi'thah", ar: "المبعث" }, year: "610 M", era: "makkah", icon: "📖", posPercent: 48 },
-  { id: "event-node-hijrah-entry-quba-medina", label: { ms: "Hijrah", en: "Hijrah", ar: "الهجرة" }, year: "622 M", era: "madinah", icon: "🌴", posPercent: 70 },
-  { id: "event-node-conquest-of-mecca-8ah", label: { ms: "Fath Makkah", en: "Conquest", ar: "فتح مكة" }, year: "630 M", era: "madinah", icon: "🕋", posPercent: 84 },
-  { id: "event-node-death-of-ibrahim-solar-eclipse", label: { ms: "Gerhana Madinah", en: "Eclipse", ar: "الكسوف" }, year: "632 M", era: "madinah", icon: "🌑", posPercent: 91 },
-  { id: "event-node-prophet-passing-wafat", label: { ms: "Wafat", en: "Passing", ar: "الوفاة" }, year: "632 M", era: "wafat", icon: "🕊️", posPercent: 98 }
+  { id: "ancient-epochs-section", label: { ms: "Purba", en: "Ancient", ar: "القديمة" }, year: "3761 SM", era: "ancient", icon: "🏺", posPercent: 3.5, side: "above" },
+  { id: "event-node-elephant-expedition-571", label: { ms: "Tahun Gajah", en: "Elephant", ar: "الفيل" }, year: "571 M", era: "elephant", icon: "🐘", posPercent: 14.5, side: "below" },
+  { id: "event-node-prophet-birth-mawlid", label: { ms: "Mawlid", en: "Mawlid", ar: "المولد" }, year: "571 M", era: "mawlid", icon: "🌟", posPercent: 23.5, side: "above" },
+  { id: "event-node-al-bithah-first-revelation", label: { ms: "Bi'thah (Wahyu)", en: "Bi'thah", ar: "المبعث" }, year: "610 M", era: "makkah", icon: "📖", posPercent: 44.0, side: "below" },
+  { id: "event-node-hijrah-entry-quba-medina", label: { ms: "Hijrah", en: "Hijrah", ar: "الهجرة" }, year: "622 M", era: "madinah", icon: "🌴", posPercent: 63.5, side: "above" },
+  { id: "event-node-conquest-of-mecca-8ah", label: { ms: "Fath Makkah", en: "Conquest", ar: "فتح مكة" }, year: "630 M", era: "madinah", icon: "🕋", posPercent: 77.5, side: "below" },
+  { id: "event-node-death-of-ibrahim-solar-eclipse", label: { ms: "Gerhana Madinah", en: "Eclipse", ar: "الكسوف" }, year: "632 M", era: "madinah", icon: "🌑", posPercent: 87.5, side: "above" },
+  { id: "event-node-prophet-passing-wafat", label: { ms: "Wafat", en: "Passing", ar: "الوفاة" }, year: "632 M", era: "wafat", icon: "🕊️", posPercent: 96.5, side: "below" }
 ];
 
 export class TimelineView {
@@ -87,48 +88,78 @@ export class TimelineView {
     return `
       <div class="timeline-scrubber-wrapper">
         <div class="scrubber-header">
-          <div class="scrubber-title">
+          <div class="scrubber-title-group">
             <span class="scrubber-icon">🧭</span>
             <strong>${i18n.t("timeline.scrubberTitle")}</strong>
+            <span class="scrubber-scroll-hint">${i18n.t("timeline.scrollHint")}</span>
           </div>
-          <div class="scrubber-legend">
-            <span class="legend-dot dot-ancient"></span> ${i18n.t("timeline.eraAncient")}
-            <span class="legend-dot dot-elephant"></span> ${i18n.t("timeline.eraElephant")}
-            <span class="legend-dot dot-makkah"></span> ${i18n.t("timeline.eraMakkah")}
-            <span class="legend-dot dot-madinah"></span> ${i18n.t("timeline.eraMadinah")}
-            <span class="legend-dot dot-wafat"></span> ${i18n.t("timeline.eraPassing")}
+          <div class="scrubber-header-actions">
+            <div class="scrubber-legend">
+              <span class="legend-dot dot-ancient"></span> ${i18n.t("timeline.eraAncient")}
+              <span class="legend-dot dot-elephant"></span> ${i18n.t("timeline.eraElephant")}
+              <span class="legend-dot dot-makkah"></span> ${i18n.t("timeline.eraMakkah")}
+              <span class="legend-dot dot-madinah"></span> ${i18n.t("timeline.eraMadinah")}
+              <span class="legend-dot dot-wafat"></span> ${i18n.t("timeline.eraPassing")}
+            </div>
+            <div class="scrubber-nav-arrows">
+              <button class="scrubber-nav-btn" id="scrubber-scroll-left" title="Skrol ke kiri" aria-label="Skrol ke kiri">&lsaquo;</button>
+              <button class="scrubber-nav-btn" id="scrubber-scroll-right" title="Skrol ke kanan" aria-label="Skrol ke kanan">&rsaquo;</button>
+            </div>
           </div>
         </div>
 
-        <div class="scrubber-track-container" id="scrubber-track-container">
-          <!-- Colored Era Segments -->
-          <div class="scrubber-era-track">
-            <div class="era-seg seg-ancient" style="width: 12%;" title="${i18n.t("timeline.eraAncient")}"></div>
-            <div class="era-seg seg-elephant" style="width: 25%;" title="${i18n.t("timeline.eraElephant")}"></div>
-            <div class="era-seg seg-makkah" style="width: 25%;" title="${i18n.t("timeline.eraMakkah")}"></div>
-            <div class="era-seg seg-madinah" style="width: 26%;" title="${i18n.t("timeline.eraMadinah")}"></div>
-            <div class="era-seg seg-wafat" style="width: 12%;" title="${i18n.t("timeline.eraPassing")}"></div>
-          </div>
+        <div class="scrubber-viewport-container">
+          <div class="scrubber-scroll-viewport" id="scrubber-scroll-viewport">
+            <div class="scrubber-track-canvas" id="scrubber-track-canvas">
+              <!-- Center Colored Era Track -->
+              <div class="scrubber-era-track">
+                <div class="era-seg seg-ancient" style="width: 9%;" title="${i18n.t("timeline.eraAncient")}"></div>
+                <div class="era-seg seg-elephant" style="width: 23%;" title="${i18n.t("timeline.eraElephant")}"></div>
+                <div class="era-seg seg-makkah" style="width: 22%;" title="${i18n.t("timeline.eraMakkah")}"></div>
+                <div class="era-seg seg-madinah" style="width: 38%;" title="${i18n.t("timeline.eraMadinah")}"></div>
+                <div class="era-seg seg-wafat" style="width: 8%;" title="${i18n.t("timeline.eraPassing")}"></div>
+              </div>
 
-          <!-- Active Needle -->
-          <div class="scrubber-needle" id="scrubber-needle" style="left: 18%;"></div>
+              <!-- Active Needle on Track -->
+              <div class="scrubber-needle" id="scrubber-needle" style="left: 23.5%;"></div>
 
-          <!-- Milestone Pips -->
-          <div class="scrubber-pips">
-            ${SCRUBBER_MILESTONES.map(m => {
-              const labelText = m.label[lang] || m.label.ms;
-              return `
-                <button class="scrubber-pip pip-${m.era}" 
-                  data-target="${m.id}" 
-                  style="left: ${m.posPercent}%;"
-                  title="${m.icon} ${labelText} (${m.year})"
-                  aria-label="${labelText} ${m.year}">
-                  <span class="pip-icon">${m.icon}</span>
-                  <span class="pip-label">${labelText}</span>
-                  <span class="pip-year">${m.year}</span>
-                </button>
-              `;
-            }).join("")}
+              <!-- Milestone Nodes Layer (Pips above and below track with connecting stems) -->
+              <div class="scrubber-milestones-layer">
+                ${SCRUBBER_MILESTONES.map(m => {
+                  const labelText = m.label[lang] || m.label.ms;
+                  return `
+                    <div class="scrubber-milestone-node node-${m.side} node-${m.era}" 
+                      id="milestone-node-${m.id}" 
+                      style="left: ${m.posPercent}%;">
+                      
+                      ${m.side === "above" ? `
+                        <button class="scrubber-pip pip-${m.era}" 
+                          data-target="${m.id}" 
+                          title="${m.icon} ${labelText} (${m.year})"
+                          aria-label="${labelText} ${m.year}">
+                          <span class="pip-icon">${m.icon}</span>
+                          <span class="pip-label">${labelText}</span>
+                          <span class="pip-year">${m.year}</span>
+                        </button>
+                        <div class="pip-stem"></div>
+                        <div class="pip-pin-dot"></div>
+                      ` : `
+                        <div class="pip-pin-dot"></div>
+                        <div class="pip-stem"></div>
+                        <button class="scrubber-pip pip-${m.era}" 
+                          data-target="${m.id}" 
+                          title="${m.icon} ${labelText} (${m.year})"
+                          aria-label="${labelText} ${m.year}">
+                          <span class="pip-icon">${m.icon}</span>
+                          <span class="pip-label">${labelText}</span>
+                          <span class="pip-year">${m.year}</span>
+                        </button>
+                      `}
+                    </div>
+                  `;
+                }).join("")}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -374,14 +405,87 @@ export class TimelineView {
       });
     }
 
-    // 5. Scrubber Pips Navigation
+    // 5. Scrubber Pips Navigation & Auto-centering
     const pips = this.container.querySelectorAll(".scrubber-pip");
     pips.forEach(pip => {
       pip.addEventListener("click", () => {
         const targetId = pip.getAttribute("data-target");
+        const match = SCRUBBER_MILESTONES.find(m => m.id === targetId);
+        if (match) {
+          this.centerScrubberPip(match.posPercent);
+        }
         this.scrollToEvent(targetId);
       });
     });
+
+    // 6. Scrubber Horizontal Scroll Navigation (Arrows, Drag-to-Scroll & Wheel)
+    this.setupScrubberInteractions();
+  }
+
+  setupScrubberInteractions() {
+    const viewport = document.getElementById("scrubber-scroll-viewport");
+    const leftBtn = document.getElementById("scrubber-scroll-left");
+    const rightBtn = document.getElementById("scrubber-scroll-right");
+
+    if (leftBtn && viewport) {
+      leftBtn.addEventListener("click", () => {
+        viewport.scrollBy({ left: -360, behavior: "smooth" });
+      });
+    }
+
+    if (rightBtn && viewport) {
+      rightBtn.addEventListener("click", () => {
+        viewport.scrollBy({ left: 360, behavior: "smooth" });
+      });
+    }
+
+    if (viewport) {
+      // Drag-to-scroll interaction
+      let isDown = false;
+      let startX = 0;
+      let scrollLeftPos = 0;
+
+      viewport.addEventListener("mousedown", (e) => {
+        if (e.target.closest("button")) return;
+        isDown = true;
+        viewport.classList.add("is-dragging");
+        startX = e.pageX - viewport.offsetLeft;
+        scrollLeftPos = viewport.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (isDown) {
+          isDown = false;
+          viewport.classList.remove("is-dragging");
+        }
+      });
+
+      viewport.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - viewport.offsetLeft;
+        const walk = (x - startX) * 1.4;
+        viewport.scrollLeft = scrollLeftPos - walk;
+      });
+
+      // Mouse wheel horizontal panning
+      viewport.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0 && !e.shiftKey) {
+          e.preventDefault();
+          viewport.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
+  }
+
+  centerScrubberPip(posPercent) {
+    const vp = document.getElementById("scrubber-scroll-viewport");
+    const canvas = document.getElementById("scrubber-track-canvas");
+    if (!vp || !canvas) return;
+    const canvasWidth = canvas.scrollWidth;
+    const targetX = (posPercent / 100) * canvasWidth;
+    const targetScroll = targetX - (vp.clientWidth / 2);
+    vp.scrollTo({ left: Math.max(0, targetScroll), behavior: "smooth" });
   }
 
   updateComparatorOutput() {
@@ -432,7 +536,6 @@ export class TimelineView {
   scrollToEvent(targetId) {
     let targetEl = document.getElementById(targetId);
     if (!targetEl) {
-      // If ancient section header
       if (targetId === "ancient-epochs-section") {
         targetEl = document.getElementById("ancient-epochs-section");
       }
@@ -463,15 +566,16 @@ export class TimelineView {
           const match = SCRUBBER_MILESTONES.find(m => m.id === id);
           if (match) {
             needle.style.left = `${match.posPercent}%`;
-            // Highlight matching pip
-            const pips = this.container.querySelectorAll(".scrubber-pip");
-            pips.forEach(p => {
-              if (p.getAttribute("data-target") === id) {
-                p.classList.add("active");
+            // Highlight matching milestone node & pip
+            const nodes = this.container.querySelectorAll(".scrubber-milestone-node");
+            nodes.forEach(n => {
+              if (n.id === `milestone-node-${match.id}`) {
+                n.classList.add("active");
               } else {
-                p.classList.remove("active");
+                n.classList.remove("active");
               }
             });
+            this.centerScrubberPip(match.posPercent);
           }
         }
       });

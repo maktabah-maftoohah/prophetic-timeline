@@ -44,6 +44,7 @@ export default {
     modeChrono: "Skala Masa Proporsional",
     proportionalNotice: "Dalam mod ini, jarak menegak mewakili jurang hari astronomi sebenar antara peristiwa bersejarah.",
     scrubberTitle: "Pita Pengemudi Era Kenabian",
+    scrollHint: "↔ Seret / Skrol pita untuk navigasi",
     eraAncient: "Zaman Purba",
     eraElephant: "Tahun Gajah & Mawlid",
     eraMakkah: "Era Makkah",

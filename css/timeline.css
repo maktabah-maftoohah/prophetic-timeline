@@ -22,20 +22,20 @@
   position: sticky;
   top: 76px;
   z-index: 35;
-  background-color: rgba(17, 24, 39, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(17, 24, 39, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 0.85rem 1.25rem 1rem 1.25rem;
-  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.4);
+  border-radius: 14px;
+  padding: 0.85rem 1.25rem 0.65rem 1.25rem;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
   transition: all 0.25s ease;
 }
 
 [data-theme="light"] .timeline-scrubber-wrapper {
-  background-color: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
 .scrubber-header {
@@ -43,21 +43,45 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.85rem;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.scrubber-title {
+[data-theme="light"] .scrubber-header {
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+.scrubber-title-group {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  gap: 0.6rem;
+  font-size: 0.92rem;
   color: var(--text-main);
+  flex-wrap: wrap;
 }
 
 .scrubber-icon {
   font-size: 1.15rem;
   display: inline-block;
+}
+
+.scrubber-scroll-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  letter-spacing: 0.01em;
+}
+
+.scrubber-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .scrubber-legend {
@@ -83,24 +107,93 @@
 .dot-madinah { background-color: #10b981; }
 .dot-wafat { background-color: #14b8a6; }
 
-/* The Track */
-.scrubber-track-container {
-  position: relative;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  padding: 0 0.5rem;
+/* Arrow buttons */
+.scrubber-nav-arrows {
+  display: inline-flex;
+  gap: 0.35rem;
 }
 
+.scrubber-nav-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.scrubber-nav-btn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Scroll Viewport Container */
+.scrubber-viewport-container {
+  position: relative;
+  width: 100%;
+}
+
+.scrubber-scroll-viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) var(--bg-card);
+  padding: 0.25rem 0 0.5rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrubber-scroll-viewport.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-behavior: auto;
+}
+
+.scrubber-scroll-viewport::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrubber-scroll-viewport::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.scrubber-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: var(--border-light);
+  border-radius: 4px;
+}
+
+/* Scrubber Canvas (Long & Non-Overlapping) */
+.scrubber-track-canvas {
+  min-width: 1400px;
+  width: 100%;
+  position: relative;
+  height: 135px;
+  padding: 0 40px;
+}
+
+/* Center Era Track Line */
 .scrubber-era-track {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 40px;
+  right: 40px;
+  top: 63px;
   height: 8px;
   border-radius: 9999px;
   display: flex;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .era-seg {
@@ -114,62 +207,134 @@
 .seg-madinah { background: linear-gradient(90deg, #10b981, #059669); }
 .seg-wafat { background: linear-gradient(90deg, #14b8a6, #64748b); }
 
-/* Needle Indicator */
+/* Sliding Needle on Track */
 .scrubber-needle {
   position: absolute;
-  top: 50%;
+  top: 67px;
   transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background-color: #ffffff;
-  border: 3px solid var(--accent-gold);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.9);
+  border: 3.5px solid var(--accent-gold);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.95);
   pointer-events: none;
-  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 5;
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 6;
 }
 
-/* Scrubber Milestone Pips */
-.scrubber-pips {
+/* Milestones Layer */
+.scrubber-milestones-layer {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 40px;
+  right: 40px;
   top: 0;
   bottom: 0;
   pointer-events: none;
 }
 
-.scrubber-pip {
+/* Milestone Node: Alternating Above and Below */
+.scrubber-milestone-node {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Node Above Track */
+.scrubber-milestone-node.node-above {
+  top: 10px;
+  height: 57px;
+  justify-content: flex-end;
+}
+
+.node-above .pip-stem {
+  width: 2px;
+  height: 18px;
+  background: repeating-linear-gradient(180deg, var(--border-light), var(--border-light) 3px, transparent 3px, transparent 6px);
+  margin-top: 2px;
+}
+
+.node-above .pip-pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-light);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: -5px;
+  z-index: 4;
+  transition: all 0.2s ease;
+}
+
+/* Node Below Track */
+.scrubber-milestone-node.node-below {
+  top: 63px;
+  height: 66px;
+  justify-content: flex-start;
+}
+
+.node-below .pip-pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-light);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  margin-top: -5px;
+  z-index: 4;
+  transition: all 0.2s ease;
+}
+
+.node-below .pip-stem {
+  width: 2px;
+  height: 18px;
+  background: repeating-linear-gradient(180deg, var(--border-light), var(--border-light) 3px, transparent 3px, transparent 6px);
+  margin-bottom: 2px;
+}
+
+/* Milestone Pill Buttons */
+.scrubber-pip {
   pointer-events: auto;
   cursor: pointer;
   background-color: var(--bg-surface);
   border: 1.5px solid var(--border-color);
   border-radius: 20px;
-  padding: 0.15rem 0.45rem;
-  display: flex;
+  padding: 0.22rem 0.65rem;
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  gap: 0.35rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
   transition: all 0.2s ease;
-  z-index: 3;
+  white-space: nowrap;
 }
 
 .scrubber-pip:hover {
-  transform: translate(-50%, -60%) scale(1.1);
+  transform: scale(1.08);
   border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.45);
   z-index: 10;
 }
 
-.scrubber-pip.active {
+.scrubber-milestone-node.active .scrubber-pip {
   border-color: var(--accent-gold);
   background-color: var(--bg-card);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
-  z-index: 8;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.7);
+  transform: scale(1.05);
+}
+
+.scrubber-milestone-node.active .pip-pin-dot {
+  border-color: var(--accent-gold);
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.9);
+  transform: scale(1.3);
+}
+
+.scrubber-milestone-node.active .pip-stem {
+  background: var(--accent-gold);
 }
 
 .scrubber-pip .pip-icon {
@@ -177,22 +342,19 @@
 }
 
 .scrubber-pip .pip-label {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
   color: var(--text-main);
   white-space: nowrap;
 }
 
 .scrubber-pip .pip-year {
-  font-size: 0.65rem;
-  color: var(--text-secondary);
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .scrubber-pip .pip-year {
-    display: inline;
-  }
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  background-color: rgba(245, 158, 11, 0.12);
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
 }
 
 /* ==========================================================================

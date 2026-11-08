@@ -2,7 +2,7 @@
  * Prophetic Timeline - Service Worker (Offline Cache)
  */
 
-const CACHE_NAME = "prophetic-timeline-v4";
+const CACHE_NAME = "prophetic-timeline-v5";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
