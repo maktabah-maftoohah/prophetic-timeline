@@ -5,6 +5,8 @@ Thumbs.db
 .idea/
 .vscode/*
 !.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
 # Node & Python caches
 node_modules/
