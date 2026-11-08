@@ -1,8 +1,25 @@
-# Prophetic Timeline & Calendar (الخط الزمني للسيرة النبوية والتقويم)
+<div align="center">
+  <img src="./assets/banner.png" alt="Prophetic Timeline & Calendar Banner" width="100%">
 
-> **Repository:** `maktabah-maftoohah/prophetic-timeline`  
-> **Pengehosan:** [https://maktabah-maftoohah.github.io/prophetic-timeline/](https://maktabah-maftoohah.github.io/prophetic-timeline/)  
-> **Bahagian daripada:** Inisiatif Khazanah Digital [**Maktabah Maftoohah** (المكتبة المفتوحة)](https://github.com/maktabah-maftoohah)
+  <br><br>
+
+  <img src="./assets/logo-icon.svg" alt="Prophetic Timeline Icon" width="72" height="72">
+
+  # Prophetic Timeline & Calendar
+  ### (الخط الزمني للسيرة النبوية والتقويم)
+
+  <p align="center">
+    <b>Penyelarasan Falak &amp; Sejarah Menurut Penyelidikan Mahmoud Pasha al-Falaki</b><br>
+    <i>A Falaki-Grade Chronology &amp; Multi-Calendar Harmonization of the Sirah (571–632 CE)</i>
+  </p>
+
+  <p align="center">
+    <a href="https://maktabah-maftoohah.github.io/prophetic-timeline/"><img src="https://img.shields.io/badge/Demo-Live%20GitHub%20Pages-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Demo"></a>
+    <a href="https://github.com/maktabah-maftoohah"><img src="https://img.shields.io/badge/Inisiatif-Maktabah%20Maftoohah-f59e0b?style=for-the-badge" alt="Maktabah Maftoohah"></a>
+    <img src="https://img.shields.io/badge/Architecture-Vanilla%20ES6%20Zero--Build-blue?style=for-the-badge" alt="Zero Build">
+    <img src="https://img.shields.io/badge/PWA-Offline%20Ready-6366f1?style=for-the-badge" alt="PWA Ready">
+  </p>
+</div>
 
 ---
 
@@ -107,3 +124,25 @@ Buka pelayar web di:
 ```
 http://localhost:8000
 ```
+
+---
+
+## 6. Identiti Visual & Aset Jenama (Branding Assets)
+
+Aplikasi dan repositori ini dilengkapi dengan himpunan aset grafik beresolusi tinggi dan vektor (`SVG` & `PNG`) yang mengekalkan estetika warisan falak Islam moden (gabungan warna zamrud `#10b981`, emas astronomi `#f59e0b`, dan obsidian malam `#0b0f17`):
+
+| Aset | Format & Saiz | Penerangan & Kegunaan | Pratonton / Fail |
+| :--- | :--- | :--- | :--- |
+| **GitHub Social Banner** | `PNG` (1376×768) & `SVG` (1280×640) | Sepanduk utama repositori, pratonton media sosial (OpenGraph), dan pengepala README. | [`assets/banner.png`](./assets/banner.png) • [`banner.svg`](./assets/banner.svg) |
+| **GitHub Avatar** | `PNG` (1024×1024) & `SVG` (1024×1024) | Gambar profil GitHub / avatar organisasi, dilaraskan khas untuk pemotongan bulatan (*circular crop safe*). | [`assets/avatar.png`](./assets/avatar.png) • [`avatar.svg`](./assets/avatar.svg) |
+| **Master Logo / Emblem** | `PNG` (1024×1024) & `SVG` (920×240) | Lambang astrolab, hilal, dan bintang 8 penjuru berserta khat tajuk penuh. | [`assets/logo.png`](./assets/logo.png) • [`logo.svg`](./assets/logo.svg) |
+| **Logo Icon (Webapp Header & PWA)** | `SVG` & `PNG` (512×512, 192×192) | Ikon ringkas untuk bar navigasi laman web dan pemasangan Progressive Web App. | [`assets/logo-icon.svg`](./assets/logo-icon.svg) • [`data/icon.png`](./data/icon.png) |
+| **Favicon Laman Web** | `ICO` & `PNG` (32×32, 16×16) | Ikon tab pelayar web untuk pelbagai peranti dan resolusi skrin. | [`favicon.ico`](./favicon.ico) • [`assets/favicon-32x32.png`](./assets/favicon-32x32.png) |
+
+### 🛠️ Panduan Penggunaan di GitHub:
+1. **GitHub Social Preview (Banner)**:
+   - Pergi ke tetapan repositori: **Settings** > **General** > **Social preview**.
+   - Klik **Edit** > **Upload an image...** dan pilih fail [`assets/banner.png`](./assets/banner.png) atau [`assets/github-banner.png`](./assets/github-banner.png).
+2. **GitHub Avatar / Profile**:
+   - Untuk profil organisasi atau akaun projek, muat naik fail [`assets/avatar.png`](./assets/avatar.png) atau [`assets/github-avatar.png`](./assets/github-avatar.png). Komposisi direka khas supaya tiada elemen terpotong dalam bulatan avatar GitHub.
+

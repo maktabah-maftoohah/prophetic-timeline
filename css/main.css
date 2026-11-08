@@ -84,6 +84,20 @@ body {
   font-size: 2rem;
 }
 
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
 .brand-title {
   font-size: 1.35rem;
   font-weight: 700;

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="20%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#111c2e"/>
+      <stop offset="60%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </radialGradient>
+    <radialGradient id="emblemAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0b111e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#f59e0b"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+
+    <!-- Radiant Emerald Gradient -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="45%" stop-color="#10b981"/>
+      <stop offset="85%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+
+    <!-- Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="920" height="240" rx="20" fill="url(#bgGlow)"/>
+  <rect width="920" height="240" rx="20" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Left Side: Icon Emblem (Scaled 0.44 around center 120, 120) -->
+  <g transform="translate(120, 120) scale(0.42) translate(-256, -256)">
+    <!-- Base Plate Aura -->
+    <circle cx="256" cy="256" r="236" fill="url(#emblemAura)"/>
+    <circle cx="256" cy="256" r="226" fill="none" stroke="url(#ringGrad)" stroke-width="2.5" stroke-opacity="0.5"/>
+    <circle cx="256" cy="256" r="218" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.7"/>
+    <circle cx="256" cy="256" r="202" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6 8" stroke-opacity="0.6"/>
+
+    <!-- Degree Graduations -->
+    <g stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <line x1="256" y1="28" x2="256" y2="44"/>
+      <line x1="256" y1="468" x2="256" y2="484"/>
+      <line x1="28" y1="256" x2="44" y2="256"/>
+      <line x1="468" y1="256" x2="484" y2="256"/>
+      <line x1="370" y1="59" x2="363" y2="72"/>
+      <line x1="453" y1="142" x2="440" y2="149"/>
+      <line x1="453" y1="370" x2="440" y2="363"/>
+      <line x1="370" y1="453" x2="363" y2="440"/>
+      <line x1="142" y1="453" x2="149" y2="440"/>
+      <line x1="59" y1="370" x2="72" y2="363"/>
+      <line x1="59" y1="142" x2="72" y2="149"/>
+      <line x1="142" y1="59" x2="149" y2="72"/>
+    </g>
+
+    <!-- Celestial Orbits -->
+    <ellipse cx="256" cy="256" rx="180" ry="86" transform="rotate(-28 256 256)" 
+             stroke="url(#emeraldGrad)" stroke-width="2.2" stroke-dasharray="8 10" opacity="0.7"/>
+    <ellipse cx="256" cy="256" rx="170" ry="76" transform="rotate(38 256 256)" 
+             stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="160 25" opacity="0.5"/>
+
+    <!-- Crescent Hilal -->
+    <path d="M 284 102 
+             C 368 124 416 208 392 298 
+             C 370 380 286 426 204 402 
+             C 152 386 112 344 98 296 
+             C 92 276 92 260 98 244 
+             C 94 258 96 276 104 296 
+             C 126 352 186 388 248 376 
+             C 316 362 358 296 342 226 
+             C 330 174 290 128 240 110 
+             C 220 102 202 100 186 102 
+             C 222 96 256 96 284 102 Z"
+          fill="url(#goldGrad)" 
+          filter="url(#softGlow)"/>
+
+    <!-- 8-Pointed Star -->
+    <g transform="translate(228, 240)">
+      <rect x="-34" y="-34" width="68" height="68" rx="4"
+            fill="url(#emeraldGrad)" stroke="#fef08a" stroke-width="2"/>
+      <rect x="-34" y="-34" width="68" height="68" rx="4" transform="rotate(45)"
+            fill="url(#emeraldGrad)" stroke="#fef08a" stroke-width="2"/>
+      <circle cx="0" cy="0" r="22" fill="#0b1329" stroke="url(#goldGrad)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="14" fill="url(#goldGrad)"/>
+      <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+      <line x1="-54" y1="0" x2="54" y2="0" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="-54" x2="0" y2="54" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="230" y1="40" x2="230" y2="200" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="230" y1="80" x2="230" y2="160" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Right Side: Typography & Metadata -->
+  <!-- Top: Arabic Title -->
+  <text x="260" y="66" 
+        font-family="'Amiri', 'Traditional Arabic', serif" 
+        font-size="25" 
+        font-weight="700" 
+        fill="url(#goldGrad)" 
+        direction="rtl" 
+        letter-spacing="0.5">
+    الخَطُّ الزَّمَنِيُّ لِلسِّيرَةِ النَّبَوِيَّةِ وَالتَّقْوِيم
+  </text>
+
+  <!-- Middle: English Primary Brand Name -->
+  <text x="260" y="112" 
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="30" 
+        font-weight="800" 
+        letter-spacing="-0.5" 
+        fill="#f9fafb">
+    PROPHETIC TIMELINE <tspan fill="#10b981">&amp;</tspan> CALENDAR
+  </text>
+
+  <!-- Description / Subtitle -->
+  <text x="260" y="148" 
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13.5" 
+        font-weight="500" 
+        fill="#9ca3af" 
+        letter-spacing="0.2">
+    Penyelarasan Falak &amp; Sejarah Menurut Penyelidikan Mahmoud Pasha al-Falaki
+  </text>
+
+  <!-- Badges / Tags -->
+  <g transform="translate(260, 172)">
+    <!-- Badge 1: 7 Calendars -->
+    <rect x="0" y="0" width="136" height="26" rx="13" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#10b981"/>
+    <text x="22" y="17" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#34d399">7 Kalendar Selaras</text>
+
+    <!-- Badge 2: Falaki Grade -->
+    <rect x="146" y="0" width="144" height="26" rx="13" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1"/>
+    <circle cx="158" cy="13" r="3.5" fill="#f59e0b"/>
+    <text x="168" y="17" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#fbbf24">Kajian Falak 571–632 M</text>
+
+    <!-- Badge 3: Maktabah Maftoohah -->
+    <rect x="300" y="0" width="154" height="26" rx="13" fill="#374151" fill-opacity="0.5" stroke="#4b5563" stroke-width="1"/>
+    <text x="312" y="17" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#d1d5db">Maktabah Maftoohah</text>
+  </g>
+</svg>
