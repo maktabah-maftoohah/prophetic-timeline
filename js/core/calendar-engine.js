@@ -44,8 +44,13 @@ export const WEEKDAY_NAMES = {
   ar: ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"]
 };
 
-// Anchor: 1 Muharram 1 AH = Friday 16 July 622 CE (Julian) = JDN 1948440
-export const HIJRAH_EPOCH_JDN = 1948440;
+// Anchor: Astronomical Hijri Epoch: Thursday 15 July 622 CE (Julian) = JDN 1948439
+// Calibrated to Mahmoud Pasha al-Falaki's historical & astronomical milestones:
+// - 9 Rabi' al-Awwal 53 BH (Mawlid) = Monday 20 April 571 CE (Julian) = JDN 1929725
+// - 29 Shawwal 10 AH (Death of Ibrahim & Solar Eclipse) = Monday 27 January 632 CE (Julian) = JDN 1951922
+// - 9 Dhu al-Hijjah 10 AH (Farewell Pilgrimage / Arafah) = Friday 6 March 632 CE (Julian) = JDN 1951961
+// - 14 Jumada al-Akhirah 4 AH (Medina Lunar Eclipse) = Wednesday 20 November 625 CE (Julian) = JDN 1949663
+export const HIJRAH_EPOCH_JDN = 1948439;
 
 // Anchor: 9 Rabi' al-Awwal 53 BH (Mawlid) = Monday 20 April 571 CE (Julian) = JDN 1929725
 export const MAWLID_JDN = 1929725;
@@ -156,6 +161,44 @@ export function jdnToHijri(jdn) {
 }
 
 /**
+ * Convert a Tabular Hijri date to Julian Day Number (JDN)
+ * @param {number} year - Absolute year (e.g. 53 for 53 BH or 10 for 10 AH)
+ * @param {number} month - Month (1 = Muharram, ..., 12 = Zulhijjah)
+ * @param {number} day - Day (1..30)
+ * @param {boolean} isBH - True if Before Hijrah (BH)
+ */
+export function hijriToJDN(year, month, day, isBH = false) {
+  const rawYear = isBH ? -(year - 1) : year;
+  const y = rawYear;
+  return day + Math.ceil(29.5 * (month - 1)) + (y - 1) * 354 + Math.floor((3 + 11 * y) / 30) + HIJRAH_EPOCH_JDN - 1;
+}
+
+/**
+ * Determine the number of days in a given Hijri month (29 or 30 days)
+ */
+export function getDaysInHijriMonth(year, month, isBH = false) {
+  let nextYear = year;
+  let nextMonth = month + 1;
+  let nextIsBH = isBH;
+  if (nextMonth > 12) {
+    nextMonth = 1;
+    if (isBH) {
+      if (year === 1) {
+        nextYear = 1;
+        nextIsBH = false;
+      } else {
+        nextYear = year - 1;
+      }
+    } else {
+      nextYear = year + 1;
+    }
+  }
+  const jdnStart = hijriToJDN(year, month, 1, isBH);
+  const jdnEnd = hijriToJDN(nextYear, nextMonth, 1, nextIsBH);
+  return jdnEnd - jdnStart;
+}
+
+/**
  * Convert JDN to Elephant Era ('Am al-Fil) Year
  * Year 1 of the Elephant starts in 571 CE / 53 BH.
  */
@@ -222,11 +265,13 @@ export function getMultiCalendarSnapshot(jdn, lang = "ms") {
     hijri: {
       year: hijri.year,
       yearType: hijri.yearType,
+      isBH: hijri.isBH,
       month: hijri.month,
       day: hijri.day,
       monthName: HIJRI_MONTH_NAMES[lang][hijri.month - 1] || "",
       archaicMonthName: ARCHAIC_ARAB_MONTHS[hijri.month - 1]?.archaic || "",
-      formatted: `${hijri.day} ${HIJRI_MONTH_NAMES[lang][hijri.month - 1]} ${hijri.year} ${hijri.yearType}`
+      formatted: `${hijri.day} ${HIJRI_MONTH_NAMES[lang][hijri.month - 1]} ${hijri.year} ${hijri.yearType}`,
+      formattedAr: `${String(hijri.day).replace(/[0-9]/g, d => "٠١٢٣٤٥٦٧٨٩"[+d])} ${HIJRI_MONTH_NAMES.ar[hijri.month - 1]} ${String(hijri.year).replace(/[0-9]/g, d => "٠١٢٣٤٥٦٧٨٩"[+d])} ${hijri.yearType === "BH" ? "ق.هـ" : "هـ"}`
     },
     elephantEra: elephant,
     alexanderYear,

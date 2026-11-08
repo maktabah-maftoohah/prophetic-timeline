@@ -305,6 +305,13 @@ body {
   font-family: var(--font-arabic);
   font-size: 1.6rem;
   color: var(--accent-gold);
+  margin-bottom: 0.35rem;
+}
+
+.modal-title-sub {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 

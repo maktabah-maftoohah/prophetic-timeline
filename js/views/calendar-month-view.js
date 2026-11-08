@@ -1,12 +1,15 @@
 /**
  * Prophetic Timeline - Google Calendar-Style Month View
- * Interactive grid supporting multiple calendar drivers: Hijri (default), Elephant Era, Julian, Gregorian.
+ * Interactive grid supporting multiple calendar drivers: Hijri (default), Elephant Era, Julian.
+ * Fully synchronized with Mahmoud Pasha al-Falaki's astronomical and historical determinations.
  */
 
 import {
   julianToJDN,
   jdnToJulian,
   jdnToHijri,
+  hijriToJDN,
+  getDaysInHijriMonth,
   jdnToElephantEra,
   getMultiCalendarSnapshot,
   HIJRI_MONTH_NAMES,
@@ -23,34 +26,66 @@ export class CalendarMonthView {
     this.container = document.getElementById(containerId);
     this.onDayClick = onDayClick;
 
-    // Current viewing center (defaults to Mawlid: April 571 CE / Rabi' al-Awwal 53 BH)
+    // Current viewing center (defaults to Mawlid: 9 Rabi' al-Awwal 53 BH / 20 April 571 CE)
     this.currentYear = 571;
     this.currentMonth = 4; // April
-    this.primarySystem = "hijri"; // 'hijri' | 'elephant_era' | 'julian' | 'gregorian'
+    this.hijriYear = 53;
+    this.hijriMonth = 3; // Rabi' al-Awwal
+    this.hijriIsBH = true;
+    this.primarySystem = "hijri"; // 'hijri' | 'elephant_era' | 'julian'
   }
 
   jumpToJDN(jdn) {
     const julian = jdnToJulian(jdn);
     this.currentYear = julian.year;
     this.currentMonth = julian.month;
+
+    const hijri = jdnToHijri(jdn);
+    this.hijriYear = hijri.year;
+    this.hijriMonth = hijri.month;
+    this.hijriIsBH = hijri.isBH;
+
     this.render();
   }
 
   render() {
     if (!this.container) return;
     const lang = i18n.getLang();
-
-    // Calculate center day JDN (15th of the current month)
-    const midJdn = julianToJDN(this.currentYear, this.currentMonth, 15);
-    const snap = getMultiCalendarSnapshot(midJdn, lang);
+    const isHijriDriver = (this.primarySystem === "hijri" || this.primarySystem === "elephant_era");
 
     let displayTitle = "";
-    if (this.primarySystem === "hijri") {
-      displayTitle = `${snap.hijri.monthName} ${snap.hijri.year} ${snap.hijri.yearType} (${snap.hijri.archaicMonthName})`;
-    } else if (this.primarySystem === "elephant_era") {
-      displayTitle = `${snap.elephantEra.label} • Bulan ${snap.hijri.monthName}`;
+    let subTitle = "";
+
+    if (isHijriDriver) {
+      const startJdn = hijriToJDN(this.hijriYear, this.hijriMonth, 1, this.hijriIsBH);
+      const snapStart = getMultiCalendarSnapshot(startJdn, lang);
+      const daysInMonth = getDaysInHijriMonth(this.hijriYear, this.hijriMonth, this.hijriIsBH);
+      const endJdn = startJdn + daysInMonth - 1;
+      const snapEnd = getMultiCalendarSnapshot(endJdn, lang);
+
+      const archaicText = snapStart.hijri.archaicMonthName ? ` • ${snapStart.hijri.archaicMonthName}` : "";
+
+      if (this.primarySystem === "hijri") {
+        displayTitle = `${snapStart.hijri.monthName} ${this.hijriYear} ${this.hijriIsBH ? "BH" : "AH"}${archaicText}`;
+      } else {
+        displayTitle = `${snapStart.elephantEra.label} • Bulan ${snapStart.hijri.monthName}`;
+      }
+
+      subTitle = `Julian: ${snapStart.julian.day} ${getMonthName(snapStart.julian.month, lang, "julian")} ${snapStart.julian.year} – ${snapEnd.julian.day} ${getMonthName(snapEnd.julian.month, lang, "julian")} ${snapEnd.julian.year} M • ${snapStart.elephantEra.label}`;
     } else {
+      const startJdn = julianToJDN(this.currentYear, this.currentMonth, 1);
+      const snapStart = getMultiCalendarSnapshot(startJdn, lang);
+      let daysInMonth = 31;
+      if (this.currentMonth === 2) {
+        daysInMonth = (this.currentYear % 4 === 0) ? 29 : 28;
+      } else if ([4, 6, 9, 11].includes(this.currentMonth)) {
+        daysInMonth = 30;
+      }
+      const endJdn = startJdn + daysInMonth - 1;
+      const snapEnd = getMultiCalendarSnapshot(endJdn, lang);
+
       displayTitle = `${getMonthName(this.currentMonth, lang, "julian")} ${this.currentYear} M (Julian)`;
+      subTitle = `Hijri: ${snapStart.hijri.monthName} ${snapStart.hijri.year} ${snapStart.hijri.yearType} – ${snapEnd.hijri.monthName} ${snapEnd.hijri.year} ${snapEnd.hijri.yearType} • ${snapStart.elephantEra.label}`;
     }
 
     this.container.innerHTML = `
@@ -65,9 +100,7 @@ export class CalendarMonthView {
 
           <div class="cal-title-center">
             <h2 class="cal-header-title">${displayTitle}</h2>
-            <div class="cal-header-sub">
-              Julian: ${getMonthName(this.currentMonth, lang, "julian")} ${this.currentYear} • Hijri: ${snap.hijri.monthName} ${snap.hijri.year} ${snap.hijri.yearType}
-            </div>
+            <div class="cal-header-sub">${subTitle}</div>
           </div>
 
           <div class="cal-nav-right">
@@ -85,14 +118,14 @@ export class CalendarMonthView {
         <!-- Quick Jump Presets -->
         <div class="quick-jump-presets">
           <span class="preset-label">Lompat Pantas:</span>
-          <button class="cal-preset-pill" data-y="571" data-m="2">Tahun Gajah (Feb 571)</button>
-          <button class="cal-preset-pill" data-y="571" data-m="4">Mawlid (Apr 571)</button>
-          <button class="cal-preset-pill" data-y="610" data-m="2">Bi'thah (Feb 610)</button>
-          <button class="cal-preset-pill" data-y="622" data-m="9">Hijrah (Sep 622)</button>
-          <button class="cal-preset-pill" data-y="625" data-m="11">Gerhana Bulan 4 H (Nov 625)</button>
-          <button class="cal-preset-pill" data-y="632" data-m="1">Gerhana Suria 10 H (Jan 632)</button>
-          <button class="cal-preset-pill" data-y="632" data-m="3">Haji Wada' (Mac 632)</button>
-          <button class="cal-preset-pill" data-y="632" data-m="6">Kewafatan Nabi (Jun 632)</button>
+          <button class="cal-preset-pill" data-jdn="1929669">Tahun Gajah (Feb 571)</button>
+          <button class="cal-preset-pill" data-jdn="1929725">Mawlid (Apr 571)</button>
+          <button class="cal-preset-pill" data-jdn="1943900">Bi'thah (Feb 610)</button>
+          <button class="cal-preset-pill" data-jdn="1948506">Hijrah (Sep 622)</button>
+          <button class="cal-preset-pill" data-jdn="1949663">Gerhana Bulan 4 H (Nov 625)</button>
+          <button class="cal-preset-pill" data-jdn="1951922">Gerhana Suria 10 H (Jan 632)</button>
+          <button class="cal-preset-pill" data-jdn="1951961">Haji Wada' (Mac 632)</button>
+          <button class="cal-preset-pill" data-jdn="1952055">Kewafatan Nabi (Jun 632)</button>
         </div>
 
         <!-- Calendar Month Grid -->
@@ -120,10 +153,36 @@ export class CalendarMonthView {
 
     if (prevBtn) {
       prevBtn.addEventListener("click", () => {
-        this.currentMonth -= 1;
-        if (this.currentMonth < 1) {
-          this.currentMonth = 12;
-          this.currentYear -= 1;
+        if (this.primarySystem === "hijri" || this.primarySystem === "elephant_era") {
+          this.hijriMonth -= 1;
+          if (this.hijriMonth < 1) {
+            this.hijriMonth = 12;
+            if (this.hijriIsBH) {
+              this.hijriYear += 1;
+            } else {
+              if (this.hijriYear === 1) {
+                this.hijriYear = 1;
+                this.hijriIsBH = true;
+              } else {
+                this.hijriYear -= 1;
+              }
+            }
+          }
+          const midJdn = hijriToJDN(this.hijriYear, this.hijriMonth, 15, this.hijriIsBH);
+          const j = jdnToJulian(midJdn);
+          this.currentYear = j.year;
+          this.currentMonth = j.month;
+        } else {
+          this.currentMonth -= 1;
+          if (this.currentMonth < 1) {
+            this.currentMonth = 12;
+            this.currentYear -= 1;
+          }
+          const midJdn = julianToJDN(this.currentYear, this.currentMonth, 15);
+          const h = jdnToHijri(midJdn);
+          this.hijriYear = h.year;
+          this.hijriMonth = h.month;
+          this.hijriIsBH = h.isBH;
         }
         this.render();
       });
@@ -131,10 +190,36 @@ export class CalendarMonthView {
 
     if (nextBtn) {
       nextBtn.addEventListener("click", () => {
-        this.currentMonth += 1;
-        if (this.currentMonth > 12) {
-          this.currentMonth = 1;
-          this.currentYear += 1;
+        if (this.primarySystem === "hijri" || this.primarySystem === "elephant_era") {
+          this.hijriMonth += 1;
+          if (this.hijriMonth > 12) {
+            this.hijriMonth = 1;
+            if (this.hijriIsBH) {
+              if (this.hijriYear === 1) {
+                this.hijriYear = 1;
+                this.hijriIsBH = false;
+              } else {
+                this.hijriYear -= 1;
+              }
+            } else {
+              this.hijriYear += 1;
+            }
+          }
+          const midJdn = hijriToJDN(this.hijriYear, this.hijriMonth, 15, this.hijriIsBH);
+          const j = jdnToJulian(midJdn);
+          this.currentYear = j.year;
+          this.currentMonth = j.month;
+        } else {
+          this.currentMonth += 1;
+          if (this.currentMonth > 12) {
+            this.currentMonth = 1;
+            this.currentYear += 1;
+          }
+          const midJdn = julianToJDN(this.currentYear, this.currentMonth, 15);
+          const h = jdnToHijri(midJdn);
+          this.hijriYear = h.year;
+          this.hijriMonth = h.month;
+          this.hijriIsBH = h.isBH;
         }
         this.render();
       });
@@ -142,9 +227,7 @@ export class CalendarMonthView {
 
     if (todayBtn) {
       todayBtn.addEventListener("click", () => {
-        this.currentYear = 571;
-        this.currentMonth = 4;
-        this.render();
+        this.jumpToJDN(MAWLID_JDN);
       });
     }
 
@@ -157,9 +240,10 @@ export class CalendarMonthView {
 
     presets.forEach(p => {
       p.addEventListener("click", () => {
-        this.currentYear = parseInt(p.getAttribute("data-y"), 10);
-        this.currentMonth = parseInt(p.getAttribute("data-m"), 10);
-        this.render();
+        const jdn = parseInt(p.getAttribute("data-jdn"), 10);
+        if (jdn) {
+          this.jumpToJDN(jdn);
+        }
       });
     });
   }
@@ -169,36 +253,36 @@ export class CalendarMonthView {
     if (!gridBody) return;
 
     const lang = i18n.getLang();
+    const isHijriDriver = (this.primarySystem === "hijri" || this.primarySystem === "elephant_era");
 
-    // First day of current Julian month
-    const firstDayJdn = julianToJDN(this.currentYear, this.currentMonth, 1);
-    const firstWeekday = getWeekday(firstDayJdn); // 0=Sunday, 1=Monday...
+    let firstDayJdn = 0;
+    let daysInMonth = 30;
 
-    // Determine number of days in this Julian month
-    // In Julian: 572 was leap year (572 % 4 == 0), 571 was not
-    let daysInMonth = 31;
-    if (this.currentMonth === 2) {
-      daysInMonth = (this.currentYear % 4 === 0) ? 29 : 28;
-    } else if ([4, 6, 9, 11].includes(this.currentMonth)) {
-      daysInMonth = 30;
+    if (isHijriDriver) {
+      firstDayJdn = hijriToJDN(this.hijriYear, this.hijriMonth, 1, this.hijriIsBH);
+      daysInMonth = getDaysInHijriMonth(this.hijriYear, this.hijriMonth, this.hijriIsBH);
+    } else {
+      firstDayJdn = julianToJDN(this.currentYear, this.currentMonth, 1);
+      if (this.currentMonth === 2) {
+        daysInMonth = (this.currentYear % 4 === 0) ? 29 : 28;
+      } else if ([4, 6, 9, 11].includes(this.currentMonth)) {
+        daysInMonth = 30;
+      } else {
+        daysInMonth = 31;
+      }
     }
 
+    const firstWeekday = getWeekday(firstDayJdn); // 0=Sunday, 1=Monday...
     let cellsHtml = "";
 
     // Empty lead cells for previous month padding
     for (let i = 0; i < firstWeekday; i++) {
       const prevPadJdn = firstDayJdn - (firstWeekday - i);
       const prevPadSnap = getMultiCalendarSnapshot(prevPadJdn, lang);
-      let padPrimary = prevPadSnap.julian.day;
-      let padSub = `${prevPadSnap.hijri.day} ${prevPadSnap.hijri.monthName.slice(0, 3)}`;
-
-      if (this.primarySystem === "hijri") {
-        padPrimary = prevPadSnap.hijri.day;
-        padSub = `${prevPadSnap.julian.day} ${getMonthName(prevPadSnap.julian.month, lang, "julian").slice(0, 3)}`;
-      } else if (this.primarySystem === "elephant_era") {
-        padPrimary = prevPadSnap.hijri.day;
-        padSub = `Thn ${prevPadSnap.elephantEra.year}`;
-      }
+      const padPrimary = isHijriDriver ? prevPadSnap.hijri.day : prevPadSnap.julian.day;
+      const padSub = isHijriDriver
+        ? `${prevPadSnap.julian.day} ${getMonthName(prevPadSnap.julian.month, lang, "julian").slice(0, 3)}`
+        : `${prevPadSnap.hijri.day} ${prevPadSnap.hijri.monthName.slice(0, 3)}`;
 
       cellsHtml += `
         <div class="calendar-day-cell pad-cell" data-jdn="${prevPadJdn}">
@@ -212,7 +296,7 @@ export class CalendarMonthView {
 
     // Days of current month
     for (let day = 1; day <= daysInMonth; day++) {
-      const dayJdn = julianToJDN(this.currentYear, this.currentMonth, day);
+      const dayJdn = firstDayJdn + (day - 1);
       const snap = getMultiCalendarSnapshot(dayJdn, lang);
       const eventsOnDay = eventStore.getEventsByJDN(dayJdn);
 
@@ -221,17 +305,10 @@ export class CalendarMonthView {
       if (isMawlid) cellClasses += " cell-mawlid";
       if (eventsOnDay.length > 0) cellClasses += " has-events";
 
-      // Subscript date depending on primary system
-      let primaryNum = day;
-      let secondarySub = `${snap.hijri.day} ${snap.hijri.monthName.slice(0, 3)}`;
-
-      if (this.primarySystem === "hijri") {
-        primaryNum = snap.hijri.day;
-        secondarySub = `${day} ${getMonthName(this.currentMonth, lang, "julian").slice(0, 3)}`;
-      } else if (this.primarySystem === "elephant_era") {
-        primaryNum = snap.hijri.day;
-        secondarySub = `Thn ${snap.elephantEra.year}`;
-      }
+      const primaryNum = day;
+      const secondarySub = isHijriDriver
+        ? `${snap.julian.day} ${getMonthName(snap.julian.month, lang, "julian").slice(0, 3)}`
+        : `${snap.hijri.day} ${snap.hijri.monthName.slice(0, 3)}`;
 
       cellsHtml += `
         <div class="${cellClasses}" data-jdn="${dayJdn}">
@@ -255,18 +332,12 @@ export class CalendarMonthView {
     const totalRendered = firstWeekday + daysInMonth;
     const trailingPads = (7 - (totalRendered % 7)) % 7;
     for (let j = 1; j <= trailingPads; j++) {
-      const nextPadJdn = julianToJDN(this.currentYear, this.currentMonth, daysInMonth) + j;
+      const nextPadJdn = firstDayJdn + daysInMonth - 1 + j;
       const nextPadSnap = getMultiCalendarSnapshot(nextPadJdn, lang);
-      let padPrimary = nextPadSnap.julian.day;
-      let padSub = `${nextPadSnap.hijri.day} ${nextPadSnap.hijri.monthName.slice(0, 3)}`;
-
-      if (this.primarySystem === "hijri") {
-        padPrimary = nextPadSnap.hijri.day;
-        padSub = `${nextPadSnap.julian.day} ${getMonthName(nextPadSnap.julian.month, lang, "julian").slice(0, 3)}`;
-      } else if (this.primarySystem === "elephant_era") {
-        padPrimary = nextPadSnap.hijri.day;
-        padSub = `Thn ${nextPadSnap.elephantEra.year}`;
-      }
+      const padPrimary = isHijriDriver ? nextPadSnap.hijri.day : nextPadSnap.julian.day;
+      const padSub = isHijriDriver
+        ? `${nextPadSnap.julian.day} ${getMonthName(nextPadSnap.julian.month, lang, "julian").slice(0, 3)}`
+        : `${nextPadSnap.hijri.day} ${nextPadSnap.hijri.monthName.slice(0, 3)}`;
 
       cellsHtml += `
         <div class="calendar-day-cell pad-cell" data-jdn="${nextPadJdn}">
@@ -308,12 +379,13 @@ export class CalendarMonthView {
         </div>
 
         <h2 class="modal-title">${snap.julian.formatted}</h2>
-        <div class="modal-title-ar" dir="rtl">${snap.hijri.formatted}</div>
+        <div class="modal-title-ar" dir="rtl">${snap.hijri.formattedAr}</div>
+        <div class="modal-title-sub">${snap.hijri.formatted}</div>
 
         <div class="modal-concordance-box">
           <h4>${i18n.t("calendar.multiCalendarHeader")}:</h4>
           <div class="multi-cal-table">
-            <div class="mcal-row"><span>Taqwim Hijri:</span><strong>${snap.hijri.formatted} (${snap.hijri.archaicMonthName})</strong></div>
+            <div class="mcal-row"><span>Taqwim Hijri:</span><strong>${snap.hijri.formatted}${snap.hijri.archaicMonthName ? ` • ${snap.hijri.archaicMonthName}` : ""}</strong></div>
             <div class="mcal-row"><span>Tahun Gajah:</span><strong>${snap.elephantEra.label}</strong></div>
             <div class="mcal-row"><span>Masihi (Julian):</span><strong>${snap.julian.formatted}</strong></div>
             <div class="mcal-row"><span>Masihi (Gregorian):</span><strong>${snap.gregorian.formatted}</strong></div>
