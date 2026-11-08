@@ -1,55 +1,554 @@
 /**
- * Prophetic Timeline - Timeline Styles
- * Layout for vertical scrolling timeline, connectors, and cards.
+ * Prophetic Timeline - "Falak Chrono-Navigator" Timeline Stylesheet
+ * High-performance, responsive, zero-build CSS featuring:
+ * - Sticky interactive era scrubber ribbon
+ * - Dual view modes: Story Stream & Proportional Chrono Scale
+ * - Modern Islamic glassmorphic cards with glowing landmark nodes
+ * - Interactive filter chips and Time-Delta Inspector drawer
+ * - Comprehensive Arabic RTL and Light/Dark theme support
  */
 
-.timeline-controls-bar {
+.falak-timeline-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--bg-surface);
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow);
-}
-
-.timeline-controls-bar .search-box {
-  flex: 1;
-}
-
-.timeline-controls-bar .search-box input {
+  flex-direction: column;
+  gap: 1.25rem;
   width: 100%;
 }
 
-.timeline-controls-bar .category-filter {
+/* ==========================================================================
+   1. Sticky Interactive Era Scrubber Ribbon (Minimap)
+   ========================================================================== */
+.timeline-scrubber-wrapper {
+  position: sticky;
+  top: 76px;
+  z-index: 35;
+  background-color: rgba(17, 24, 39, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem 1rem 1.25rem;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+[data-theme="light"] .timeline-scrubber-wrapper {
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+}
+
+.scrubber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.scrubber-title {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.scrubber-icon {
+  font-size: 1.15rem;
+  display: inline-block;
+}
+
+.scrubber-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+}
+
+.dot-ancient { background-color: #8b5cf6; }
+.dot-elephant { background-color: #38bdf8; }
+.dot-makkah { background-color: #f59e0b; }
+.dot-madinah { background-color: #10b981; }
+.dot-wafat { background-color: #14b8a6; }
+
+/* The Track */
+.scrubber-track-container {
+  position: relative;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.scrubber-era-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  border-radius: 9999px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.era-seg {
+  height: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.seg-ancient { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
+.seg-elephant { background: linear-gradient(90deg, #38bdf8, #60a5fa); }
+.seg-makkah { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.seg-madinah { background: linear-gradient(90deg, #10b981, #059669); }
+.seg-wafat { background: linear-gradient(90deg, #14b8a6, #64748b); }
+
+/* Needle Indicator */
+.scrubber-needle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid var(--accent-gold);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.9);
+  pointer-events: none;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+}
+
+/* Scrubber Milestone Pips */
+.scrubber-pips {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.scrubber-pip {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.15rem 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.scrubber-pip:hover {
+  transform: translate(-50%, -60%) scale(1.1);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  z-index: 10;
+}
+
+.scrubber-pip.active {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-card);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+  z-index: 8;
+}
+
+.scrubber-pip .pip-icon {
+  font-size: 0.85rem;
+}
+
+.scrubber-pip .pip-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-main);
   white-space: nowrap;
 }
 
-.timeline-section-heading {
-  margin-bottom: 1.25rem;
+.scrubber-pip .pip-year {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  display: none;
 }
 
-.timeline-section-heading h3 {
+@media (min-width: 900px) {
+  .scrubber-pip .pip-year {
+    display: inline;
+  }
+}
+
+/* ==========================================================================
+   2. Controls Bar & View Switcher
+   ========================================================================== */
+.timeline-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--bg-surface);
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.search-box {
+  position: relative;
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-box input {
+  padding-left: 2.3rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.clear-search-btn:hover {
+  color: var(--text-main);
+}
+
+.timeline-view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switcher-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.btn-group-toggle {
+  display: inline-flex;
+  background-color: var(--bg-card);
+  padding: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  color: var(--text-main);
+}
+
+.toggle-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.timeline-comparator-toggle .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ==========================================================================
+   3. Interactive Filter Chips
+   ========================================================================== */
+.timeline-filter-chips {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scrollbar-width: thin;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--border-light);
+  color: var(--text-main);
+  background-color: var(--bg-card);
+}
+
+.filter-chip.active {
+  background-color: rgba(16, 185, 129, 0.12);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.chip-count {
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+}
+
+.filter-chip.active .chip-count {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* ==========================================================================
+   4. Inline Time-Delta Inspector Drawer
+   ========================================================================== */
+.comparator-drawer {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15);
+  margin-bottom: 0.5rem;
+  animation: slideDown 0.25s ease-out;
+}
+
+[data-theme="light"] .comparator-drawer {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.comparator-drawer.is-hidden {
+  display: none;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.drawer-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.drawer-title strong {
+  color: var(--accent-gold);
+  font-size: 1.05rem;
+}
+
+.drawer-prompt {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.drawer-selectors-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  align-items: flex-end;
+  background-color: var(--bg-card);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.select-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.comparator-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metric-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-card.metric-primary {
+  border-color: var(--accent-gold);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), var(--bg-card));
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.metric-value {
   font-size: 1.25rem;
   color: var(--text-main);
 }
 
+.metric-value strong {
+  color: var(--accent-gold);
+}
+
+.metric-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.comparator-side-by-side {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.side-col {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.side-col .col-header {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.35rem;
+}
+
+.side-col.col-b .badge-tag {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--accent-gold);
+}
+
+.side-col .col-date {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.side-col .col-conc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   5. Headings & Ancient Epochs Grid
+   ========================================================================== */
+.timeline-section-heading {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.heading-badge {
+  display: inline-block;
+  background-color: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+#prophetic-era-section .heading-badge {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--primary);
+}
+
+.timeline-section-heading h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
 .timeline-section-heading .section-notice {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
 }
 
 .mt-6 {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
 }
 
-/* Ancient Epochs Prologue Grid */
 .ancient-epochs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -60,18 +559,22 @@
 .ancient-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.25rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .ancient-card:hover {
   transform: translateY(-2px);
-  border-color: var(--border-light);
+  border-color: #8b5cf6;
+  box-shadow: 0 8px 16px -2px rgba(139, 92, 246, 0.15);
 }
 
 .ancient-card .card-badge {
   display: inline-block;
+  align-self: flex-start;
   background-color: rgba(148, 163, 184, 0.15);
   color: #94a3b8;
   font-size: 0.75rem;
@@ -84,8 +587,8 @@
 .ancient-card .card-title {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
   color: var(--text-main);
+  margin-bottom: 0.25rem;
 }
 
 .ancient-card .card-title-ar {
@@ -100,54 +603,83 @@
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 0.75rem;
+  flex: 1;
 }
 
 .ancient-card .card-source {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-style: italic;
+  margin-bottom: 0.75rem;
 }
 
-/* Vertical Timeline Structure */
+.ancient-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   6. Main Vertical Timeline Structure
+   ========================================================================== */
 .vertical-timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 2.25rem;
+  transition: all 0.3s ease;
 }
 
 .vertical-timeline::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 9px;
+  left: 10px;
   bottom: 0;
   width: 2px;
-  background-color: var(--border-color);
+  background: linear-gradient(180deg, var(--border-color) 0%, var(--primary) 50%, var(--accent-gold) 100%);
+  border-radius: 2px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  transition: all 0.25s ease;
 }
 
 .timeline-marker {
   position: absolute;
-  left: -2rem;
+  left: -2.25rem;
   top: 1.25rem;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color: var(--bg-surface);
   border: 3px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.marker-inner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.7);
 }
 
 .timeline-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  padding: 1.35rem 1.6rem;
   box-shadow: var(--shadow);
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  position: relative;
 }
 
 .timeline-card:hover {
@@ -155,57 +687,70 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Special milestone styling */
+/* Landmark Accents */
 .card-mawlid .timeline-marker {
   border-color: #f59e0b;
   background-color: #f59e0b;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.8);
 }
-
+.card-mawlid .marker-inner { background-color: #ffffff; }
 .card-mawlid .timeline-card {
   border: 2px solid #f59e0b;
-  background: linear-gradient(to right, rgba(245, 158, 11, 0.05), var(--bg-surface));
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), var(--bg-surface));
+  box-shadow: 0 8px 24px -4px rgba(245, 158, 11, 0.25);
 }
 
 .card-wafat .timeline-marker {
   border-color: #10b981;
   background-color: #10b981;
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.8);
 }
-
+.card-wafat .marker-inner { background-color: #ffffff; }
 .card-wafat .timeline-card {
   border: 2px solid #10b981;
-  background: linear-gradient(to right, rgba(16, 185, 129, 0.05), var(--bg-surface));
-}
-
-.card-elephant .timeline-card {
-  border-left: 4px solid #60a5fa;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), var(--bg-surface));
+  box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.25);
 }
 
 .card-eclipse .timeline-card {
-  border-left: 4px solid #f59e0b;
+  border-left: 5px solid #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), var(--bg-surface));
 }
 
 .card-hijrah .timeline-card {
-  border-left: 4px solid #34d399;
+  border-left: 5px solid #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), var(--bg-surface));
 }
 
-/* Card internal elements */
+.card-bithah .timeline-card {
+  border-left: 5px solid #38bdf8;
+}
+
+.card-elephant .timeline-card {
+  border-left: 5px solid #60a5fa;
+}
+
+.card-anchor .timeline-card {
+  border-left: 5px solid #a78bfa;
+}
+
+/* Card Elements */
 .card-header-bar {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   flex-wrap: wrap;
 }
 
 .date-chip {
   background-color: var(--bg-card);
   color: var(--text-main);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
 }
 
 .elephant-chip {
@@ -213,8 +758,8 @@
   color: #60a5fa;
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
 }
 
 .weekday-chip {
@@ -222,15 +767,26 @@
   color: #34d399;
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+.chip-astro {
+  background-color: rgba(167, 139, 250, 0.15);
+  color: #c4b5fd;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
 }
 
 .timeline-title {
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 0.25rem;
+  line-height: 1.4;
 }
 
 .timeline-title-ar {
@@ -238,18 +794,21 @@
   color: var(--accent-gold);
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
+/* Concordance Strip */
 .concordance-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   background-color: var(--bg-card);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
   font-size: 0.8rem;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--border-color);
 }
 
 .concordance-strip strong {
@@ -257,33 +816,43 @@
 }
 
 .timeline-narrative {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
 }
 
 .mawlid-distance-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background-color: rgba(245, 158, 11, 0.1);
   color: #fbbf24;
   border: 1px solid rgba(245, 158, 11, 0.3);
-  padding: 0.3rem 0.7rem;
-  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
   font-size: 0.85rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.badge-age {
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 .card-footer-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
 }
 
-/* Timeline Connectors */
+/* Connectors */
 .timeline-connector {
   position: relative;
-  margin: 0.75rem 0 0.75rem 0;
-  padding-left: 2rem;
+  margin: 0.85rem 0;
+  padding-left: 2.25rem;
   display: flex;
   align-items: center;
 }
@@ -297,16 +866,222 @@
 .connector-pill {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.85rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
   display: flex;
-  gap: 0.4rem;
+  gap: 0.45rem;
   align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .connector-pill .pill-days {
   color: var(--accent-gold);
-  font-weight: 600;
+  font-weight: 700;
 }
+
+/* Proportional Mode Connectors */
+.connector-proportional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0.65rem;
+}
+
+.connector-line-chrono {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 2px;
+  background: repeating-linear-gradient(180deg, var(--border-color), var(--border-color) 4px, transparent 4px, transparent 8px);
+}
+
+.connector-pill-chrono {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.connector-pill-chrono .pill-days {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+/* Pulse Highlight when target jump */
+@keyframes highlightPulse {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  50% { box-shadow: 0 0 20px 8px rgba(245, 158, 11, 0.6); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.pulse-focus {
+  animation: highlightPulse 1.8s ease-out;
+  border-color: var(--accent-gold) !important;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--bg-surface);
+  border-radius: 12px;
+  border: 1px dashed var(--border-color);
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   7. RTL Support (Arabic)
+   ========================================================================== */
+[dir="rtl"] .vertical-timeline {
+  padding-left: 0;
+  padding-right: 2.25rem;
+}
+
+[dir="rtl"] .vertical-timeline::before {
+  left: auto;
+  right: 10px;
+}
+
+[dir="rtl"] .timeline-marker {
+  left: auto;
+  right: -2.25rem;
+}
+
+[dir="rtl"] .timeline-connector {
+  padding-left: 0;
+  padding-right: 2.25rem;
+}
+
+[dir="rtl"] .connector-proportional {
+  padding-left: 0;
+  padding-right: 0.65rem;
+}
+
+[dir="rtl"] .connector-line-chrono {
+  left: auto;
+  right: 10px;
+}
+
+[dir="rtl"] .connector-pill-chrono {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+[dir="rtl"] .search-icon {
+  left: auto;
+  right: 0.85rem;
+}
+
+[dir="rtl"] .search-box input {
+  padding-left: 2rem;
+  padding-right: 2.3rem;
+}
+
+[dir="rtl"] .clear-search-btn {
+  right: auto;
+  left: 0.75rem;
+}
+
+[dir="rtl"] .card-mawlid .timeline-card,
+[dir="rtl"] .card-wafat .timeline-card,
+[dir="rtl"] .card-eclipse .timeline-card,
+[dir="rtl"] .card-hijrah .timeline-card,
+[dir="rtl"] .card-bithah .timeline-card,
+[dir="rtl"] .card-elephant .timeline-card,
+[dir="rtl"] .card-anchor .timeline-card {
+  border-left: 1px solid var(--border-color);
+  border-right-width: 5px;
+  border-right-style: solid;
+}
+
+[dir="rtl"] .card-mawlid .timeline-card { border-right-color: #f59e0b; }
+[dir="rtl"] .card-wafat .timeline-card { border-right-color: #10b981; }
+[dir="rtl"] .card-eclipse .timeline-card { border-right-color: #f59e0b; }
+[dir="rtl"] .card-hijrah .timeline-card { border-right-color: #10b981; }
+[dir="rtl"] .card-bithah .timeline-card { border-right-color: #38bdf8; }
+[dir="rtl"] .card-elephant .timeline-card { border-right-color: #60a5fa; }
+[dir="rtl"] .card-anchor .timeline-card { border-right-color: #a78bfa; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timeline-scrubber-wrapper {
+    top: 60px;
+    padding: 0.6rem 0.85rem;
+  }
+  
+  .scrubber-legend {
+    display: none;
+  }
+
+  .timeline-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .timeline-view-switcher {
+    justify-content: space-between;
+  }
+
+  .vertical-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -1.5rem;
+    width: 18px;
+    height: 18px;
+  }
+
+  [dir="rtl"] .vertical-timeline {
+    padding-right: 1.5rem;
+  }
+
+  [dir="rtl"] .timeline-marker {
+    right: -1.5rem;
+  }
+}
+
+/* Modal Concordance Grid Enhancement */
+.concordance-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem 1rem;
+  margin-top: 0.6rem;
+}
+
+.conc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.65rem;
+  background-color: var(--bg-surface);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  border: 1px solid var(--border-color);
+  gap: 0.5rem;
+}
+
+.conc-row span {
+  color: var(--text-secondary);
+}
+
+.conc-row strong {
+  color: var(--text-main);
+  text-align: right;
+}
+

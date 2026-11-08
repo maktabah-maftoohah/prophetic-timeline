@@ -34,10 +34,19 @@ class App {
     this.initLanguage();
 
     // 4. Initialize views
-    this.timelineView = new TimelineView("view-timeline", (jdn) => {
-      this.switchTab("calendarMonth");
-      this.monthView.jumpToJDN(jdn);
-    });
+    this.timelineView = new TimelineView(
+      "view-timeline",
+      (jdn) => {
+        this.switchTab("calendarMonth");
+        this.monthView.jumpToJDN(jdn);
+      },
+      (eventAId, eventBId) => {
+        this.switchTab("calculator");
+        if (this.dayCalc) {
+          this.dayCalc.selectEvents(eventAId, eventBId);
+        }
+      }
+    );
 
     this.monthView = new CalendarMonthView("view-calendar-month");
     this.yearView = new CalendarYearView("view-calendar-year", (year, month) => {

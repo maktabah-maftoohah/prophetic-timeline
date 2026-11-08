@@ -33,10 +33,12 @@ Aplikasi ini dibina berasaskan kajian bersejarah ahli falak dan matematik Mesir 
 
 ## 2. Ciri-Ciri Utama Aplikasi
 
-1. **📜 Garis Masa Interaktif (Timeline View)**:
-   - **Zon Purba**: Kad makro bagi peristiwa purba (Penciptaan Dunia, Pembinaan Kaabah, Runtuhnya Empangan Ma'rib, Wafat Ka'b ibn Lu'ayy).
-   - **Garis Masa Berketepatan Hari (571–632 M)**: Kad peristiwa dengan penanda hari, jalur padanan 7 kalendar, dan lencana jarak hari dari hari kelahiran (*Mawlid*).
-   - **Garis Penyambung Hari (*Day-Count Connectors*)**: Menunjukkan jarak hari mutlak ($14,174\text{ hari}$, $18,780\text{ hari}$, $22,197\text{ hari}$, $22,329\text{ hari}$).
+1. **📜 Garis Masa Interaktif ("Falak Chrono-Navigator" Timeline View)**:
+   - **Pita Pengemudi Era Kenabian (*Sticky Minimap Scrubber*)**: Jalur navigasi pantas melekat di atas skrin dengan penunjuk kedudukan skrol (*scroll-spy needle*) dan mercu tanda interaktif (Purba, Tahun Gajah, Mawlid, Bi'thah, Hijrah, Fath Makkah, Gerhana, Wafat).
+   - **Dwi-Mod Paparan (Aliran Naratif vs Skala Masa Proporsional)**: Mod proporsional di mana jarak menegak antara kad mencerminkan jurang hari dan tahun astronomi sebenar ($\Delta \text{JDN}$), menonjolkan perbezaan tempoh 40 tahun persediaan vs 10 tahun era Madinah.
+   - **Pemeriksa Jarak Masa Astronomi (*Inline Time-Delta Inspector*)**: Memilih dan membandingkan mana-mana dua peristiwa merentasi 7 sistem kalendar dan menghitung jarak hari mutlak secara langsung.
+   - **Penapis Cip Interaktif (*Interactive Filter Chips*)**: Penapisan pantas berbilang era (Semua, Paksi Falak, Zaman Purba, Tahun Gajah & Mawlid, Makkah, Madinah, Kewafatan).
+   - **Garis Masa Berketepatan Hari (571–632 M)**: Kad peristiwa dengan penanda hari, jalur padanan 7 kalendar, lencana jarak hari dari hari kelahiran (*Mawlid*), serta garisan penyambung hari (*Day-Count Connectors*).
 
 2. **📅 Paparan Kalendar Bulanan ("Google Calendar-Style" Month View)**:
    - Grid 7 hari seminggu dengan cip peristiwa.

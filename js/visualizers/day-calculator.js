@@ -68,6 +68,15 @@ export class DayCalculator {
     this.updateCalculation();
   }
 
+  selectEvents(eventIdA, eventIdB) {
+    this.render();
+    const selectA = document.getElementById("calc-event-a");
+    const selectB = document.getElementById("calc-event-b");
+    if (selectA && eventIdA) selectA.value = eventIdA;
+    if (selectB && eventIdB) selectB.value = eventIdB;
+    this.updateCalculation();
+  }
+
   setupListeners() {
     const selectA = document.getElementById("calc-event-a");
     const selectB = document.getElementById("calc-event-b");
